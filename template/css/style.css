@@ -1,12 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Spartan", sans-serif;
-}
-
  nav .container-fluid .collapse .icon{
   margin: 15px;
 }
@@ -14,6 +7,36 @@
 .banner img{
   max-width: 100%;
   height: auto;
+}
+
+.container-fluid .collapse .active{
+  text-decoration:underline;
+  color: #C5221F;
+}
+
+h2{
+  text-align: center;
+}
+
+.card-text{
+  text-align: center;
+  color: #C5221F;
+  font-size: 24px;
+}
+.col-sm-3{
+
+  margin-bottom: 10px;
+}
+
+.btn{
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 100px;
+}
+
+.card-km{
+  text-align: center;
+  text-decoration:line-through;
 }
 
 footer {
