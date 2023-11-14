@@ -156,7 +156,6 @@ p.h2-mau{
   padding: 10px; 
   margin-left: 5px; 
   margin-top: 2px; 
-  border-left: 1px solid #000000;
 }
 
 
@@ -167,4 +166,41 @@ footer {
 
 footer div{
   margin: auto;
+}
+
+footer div.logo{
+  margin-bottom: 50px;
+}
+
+footer h4{
+  text-align: center;
+  margin-top: -30px;
+  margin-left: 20px;
+}
+
+.bottom-nav {
+  overflow: hidden;
+  border: 1px solid #000000;
+  padding-left: 7px; 
+  padding-right: 7px; 
+  padding-top: 3px; 
+  margin-left: 20px;
+}
+
+
+.bottom-nav input[type=text] {
+  border: none; 
+  outline: none; 
+  background: none; 
+  margin: 0;
+  padding: 10px; 
+  float: left; 
+  font-size: 16px; 
+}
+
+p.give{
+  float: right;
+  color: #C5221F;
+  margin-top: 8px;
+  padding-top: 2px;
 }
