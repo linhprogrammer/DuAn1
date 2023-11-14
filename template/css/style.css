@@ -4,6 +4,10 @@
   margin: 15px;
 }
 
+li.nav-item{
+  font-weight: 700;
+}
+
 .banner img{
   max-width: 100%;
   height: auto;
@@ -158,7 +162,40 @@ p.h2-mau{
   margin-top: 2px; 
 }
 
+div.tongtien{
+  float: right;
+}
 
+p.tong{
+  margin-right: 40px;
+  font-weight: 800;
+}
+
+div.nut{
+  display: flex;
+  width: 100%;
+  margin-right: 40px;
+}
+
+div.btn-left{
+  float: left;
+  margin: auto;
+}
+
+div.btn-right{
+  float: right;
+  margin: auto;
+}
+
+div.btn-left a{
+ padding-left: 50px;
+ padding-right: 50px;
+}
+
+div.btn-right a{
+  padding-left: 100px;
+  padding-right: 100px;
+}
 
 footer {
   display: flex;
