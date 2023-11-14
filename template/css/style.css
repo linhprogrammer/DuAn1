@@ -127,6 +127,40 @@ p.h2-mau{
   -o-transform: scale(1.1);
 }
 
+.topnav {
+  overflow: hidden;
+  background-color: #f1f1f1; 
+  border-radius: 25px; 
+  border: #000000;
+  padding-left: 7px; 
+  padding-right: 7px; 
+  padding-top: 3px; 
+}
+
+
+.topnav input[type=text] {
+  border: none; 
+  outline: none; 
+  background: none; 
+  width: 80%;
+  margin: 0;
+  padding: 10px; 
+  float: left; 
+  font-size: 16px; 
+}
+
+
+.icon-search {
+  float: right;
+  color: #000000;
+  padding: 10px; 
+  margin-left: 5px; 
+  margin-top: 2px; 
+  border-left: 1px solid #000000;
+}
+
+
+
 footer {
   display: flex;
 }
