@@ -222,6 +222,21 @@ p.h2-mau{
   -o-transform: scale(1.1);
 }
 
+div.img-mota {
+  display: flex;
+  gap: 10px; 
+}
+
+div.img-mota img {
+  width: 120px;
+  transition: transform 0.3s ease-in-out; 
+}
+
+div.img-mota img:hover {
+  transform: scale(1.2);
+}
+
+
 div.them{
   display: flex;
 }
@@ -230,14 +245,14 @@ p.mo-ta-them{
   width: 550px;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 p.gia-them{
   width: 550px;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .quantity-counter {
   font-family: Arial, sans-serif;
