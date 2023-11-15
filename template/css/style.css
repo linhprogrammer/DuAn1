@@ -27,6 +27,7 @@ div.icon a{
 
 .container{
   display: flex;
+  margin-bottom: 20px;
 }
 
 .col-md-2{
