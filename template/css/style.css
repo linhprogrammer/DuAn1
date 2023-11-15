@@ -308,18 +308,23 @@ ul.list-group{
 }
 
 footer {
+  height: 500px;
+  background-color: #FBF7F0;
+}
+
+.footer1{
   display: flex;
 }
 
-footer div{
+.footer1 div{
   margin: auto;
 }
 
-footer div.logo{
+.footer1 div.logo{
   margin-bottom: 50px;
 }
 
-footer h4{
+.footer1 h4{
   text-align: center;
   margin-top: -30px;
   margin-left: 20px;
@@ -350,4 +355,11 @@ p.give{
   color: #C5221F;
   margin-top: 8px;
   padding-top: 2px;
+}
+
+p.Xi-food{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-top: 1px solid #000000;
 }
