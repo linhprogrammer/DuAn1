@@ -50,9 +50,15 @@
       </div>
     </nav>
     <div class="container">
-        <div class="col-md-6">
-          <img src="img/food/BÁNH XOÀI ĐÀO.png" width="350px" alt="">
-          </div>
+      <div class="col-md-6">
+        <img src="img/food/Gà Sốt Buffalo  ( 6 miếng ).png" width="350px" id="mainImage" alt="">
+        <div class="img-mota">
+          <img src="img/food/Gà Sốt Buffalo  ( 6 miếng ).png" alt="" onmouseover="changeImage(this)">
+          <img src="img/food/Gà Rán (6 miếng).png" alt="" onmouseover="changeImage(this)">
+          <img src="img/food/Gà Sốt Buffalo  ( 6 miếng ).png" alt="" onmouseover="changeImage(this)">
+          <img src="img/food/Gà Rán (6 miếng).png" alt="" onmouseover="changeImage(this)">
+        </div>
+      </div>
         <div class="col-md-6">
             <h3>Gà Sốt Buffalo (6 miếng)</h3>
             <div class="stars">
@@ -85,7 +91,37 @@
                 <!-- Detail -->
                 <div>
                   <div class="them"> 
-                      <img src="img/food/Cá Nugget (3 miếng).png" width="100px" alt="">
+                      <img src="img/food/Cá Nugget (3 miếng).png" width="120px" height="120px" alt="">
+                      <p class="mo-ta-them">Cá Nugget (3 Miếng)</p>
+                      <p class="gia-them">+25.000 đ</p>
+                      <div class="quantity-counter">
+                        <button class="decrease-btn">-</button>
+                        <input type="text" value="1" class="quantity-input">
+                        <button class="increase-btn">+</button>
+                      </div>
+                  </div>
+                  <div class="them"> 
+                      <img src="img/food/Cá Nugget (3 miếng).png" width="120px" height="120px" alt="">
+                      <p class="mo-ta-them">Cá Nugget (3 Miếng)</p>
+                      <p class="gia-them">+25.000 đ</p>
+                      <div class="quantity-counter">
+                        <button class="decrease-btn">-</button>
+                        <input type="text" value="1" class="quantity-input">
+                        <button class="increase-btn">+</button>
+                      </div>
+                  </div>
+                  <div class="them"> 
+                      <img src="img/food/Cá Nugget (3 miếng).png" width="120px" height="120px" alt="">
+                      <p class="mo-ta-them">Cá Nugget (3 Miếng)</p>
+                      <p class="gia-them">+25.000 đ</p>
+                      <div class="quantity-counter">
+                        <button class="decrease-btn">-</button>
+                        <input type="text" value="1" class="quantity-input">
+                        <button class="increase-btn">+</button>
+                      </div>
+                  </div>
+                  <div class="them"> 
+                      <img src="img/food/Cá Nugget (3 miếng).png" width="120px" height="120px" alt="">
                       <p class="mo-ta-them">Cá Nugget (3 Miếng)</p>
                       <p class="gia-them">+25.000 đ</p>
                       <div class="quantity-counter">
@@ -173,7 +209,10 @@
           let currentValue = parseInt(quantityInput.value);
           quantityInput.value = currentValue + 1;
       }
-
+      function changeImage(image) {
+        var mainImage = document.getElementById('mainImage');
+        mainImage.src = image.src;
+      }
     </script>
 </body>
 </html>
