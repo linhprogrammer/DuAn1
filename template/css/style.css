@@ -463,6 +463,11 @@ ul.list-group{
   font-size: 20px;
 }
 
+div.xoa{
+  margin-top: 43px;
+  margin-left: 35px;
+}
+
 footer {
   height: 500px;
   background-color: #FBF7F0;
@@ -504,6 +509,7 @@ footer {
   padding: 10px; 
   float: left; 
   font-size: 16px; 
+  width: 50%;
 }
 
 p.give{
