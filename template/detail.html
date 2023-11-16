@@ -36,7 +36,7 @@
             </li>
           </ul>
           <div class="topnav">
-            <input type="text" placeholder="Tìm kiếm..."/><i class="fa-solid fa-magnifying-glass icon-search"></i>
+            <input type="search" placeholder="Tìm kiếm..."/><i class="fa-solid fa-magnifying-glass icon-search"></i>
           </div>
           <div class="icon">
             <a href="#" class="nav-link">
@@ -127,11 +127,13 @@
                       <img src="img/food/Cá Nugget (3 miếng).png" width="120px" height="120px" alt="">
                       <p class="mo-ta-them">Cá Nugget (3 Miếng)</p>
                       <p class="gia-them">+25.000 đ</p>
+                      <!-- Tăng giảm số lượng -->
                       <div class="quantity-counter">
                         <button class="decrease-btn">-</button>
                         <input type="text" value="1" class="quantity-input">
                         <button class="increase-btn">+</button>
                       </div>
+                      <!--  -->
                   </div>
                 </div>
                 <!--  -->
@@ -139,11 +141,13 @@
             </form>
             <div class="quantity">
               <p class="so-luong">Số Lượng</p>
+              <!-- Tăng giảm số lượng -->
               <div class="quantity-counter">
                 <button class="decrease-btn">-</button>
                 <input type="text" value="1" class="quantity-input">
                 <button class="increase-btn">+</button>
              </div>
+             <!--  -->
              <div class="heart">
                <i class="fa-regular fa-heart"></i>
              </div>
@@ -226,6 +230,10 @@
           let currentValue = parseInt(quantityInput.value);
           quantityInput.value = currentValue + 1;
       }
+
+
+
+
       function changeImage(image) {
         var mainImage = document.getElementById('mainImage');
         mainImage.src = image.src;
