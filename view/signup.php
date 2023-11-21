@@ -35,14 +35,14 @@
   <div class="hoten">
     <label for="hoten">Họ và tên</label>
     <div class="sec-2">
-      <ion-icon name="mail-outline"></ion-icon>
+    <ion-icon name="person-outline"></ion-icon>
       <input type="text" name="hoten" placeholder="..."/>
     </div>
   </div>
   <div class="sdt">
     <label for="sdt">SĐT</label>
     <div class="sec-2">
-      <ion-icon name="mail-outline"></ion-icon>
+      <<ion-icon name="call-outline"></ion-icon>
       <input type="number" name="sodienthoai" placeholder="...."/>
     </div>
   </div>
