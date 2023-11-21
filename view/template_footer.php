@@ -33,9 +33,6 @@
                             <p class="mb-2 d-flex align-items-center"><i class="fab fa-youtube me-3"></i>YOUTUBE</p>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
             <div class="container">

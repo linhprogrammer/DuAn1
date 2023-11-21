@@ -68,7 +68,7 @@
                             </div>
                         </div>
                         <a href="service.html" class="nav-item nav-link">Dịch Vụ</a>
-                        <a href="about.html" class="nav-item nav-link">Về Chúng Tôi</a>
+                        <a href="index.php?mod=page&act=about" class="nav-item nav-link">Về Chúng Tôi</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined">
                                 account_circle
@@ -102,7 +102,7 @@
                             <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Xem Ngay</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                            <img class="img-fluid" src="img/hero.png" alt="">
+                            <img class="img-fluid" src="template/img/hero.png" alt="">
                         </div>
                     </div>
                 </div>
