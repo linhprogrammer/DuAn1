@@ -477,3 +477,21 @@
     padding-right: 0;
     border-right: none;
 }
+
+ul.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+div.dropdown:hover ul.dropdown-menu {
+    display: block;
+  }
+li.dropdown-item:hover {
+    display: block;
+    color: white;
+  }
+
+

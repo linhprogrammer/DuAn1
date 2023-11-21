@@ -12,7 +12,14 @@
                             </div>
                             <div class="col-auto d-flex">
     <!-- Tạo nút danh mục -->
-    <button class="btn btn-primary" id="categoryBtn">Danh mục</button>
+    <div class="dropdown">
+        <button class="btn btn-primary" id="categoryBtn">Danh mục</button>
+        <ul class="dropdown-menu" id="dropdownMenu">
+            <li><a class="dropdown-item" href="#">Danh mục 1</a></li>
+            <li><a class="dropdown-item" href="#">Danh mục 2</a></li>
+        </ul>
+    </div>
+
 
     <!-- Hiển thị các sự lựa chọn, mặc định ẩn đi -->
     <div id="categoryOptions" style="display: none;">
