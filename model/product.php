@@ -175,7 +175,14 @@ function delete_product($id) {
         return false;
     }
 }
+function hiddensp($masp){
+    global $conn;
+    $sql = "UPDATE sanpham SET `soluong` = 0 WHERE masp = :masp";
 
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':masp', $masp, PDO::PARAM_STR);
+    $stmt->execute();
+}
 function showspmoinhat(){
     global $conn;
 

@@ -121,7 +121,7 @@
                                                             <a class="dropdown-item" href="admin.php?mod=product&act=edit&id=<?=$sp['masp']?>">Sửa</a>
                                                         </li>
                                                         <li>
-                                                            <a class="dropdown-item" href="#">Ẩn khỏi trang show</a>
+                                                            <a class="dropdown-item" href="admin.php?mod=product&act=hidden&id=<?=$sp['masp']?>">Ẩn khỏi trang show </a>
                                                         </li>
                                                         <li>
                                                             <a class="dropdown-item" href="admin.php?mod=product&act=delete&id=<?=$sp['masp']?>">Xóa</a>
