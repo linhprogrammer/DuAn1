@@ -186,6 +186,95 @@ function showspmoinhat(){
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     return $stmt->fetch();
 }
+function showdm1() {
+    global $conn;
 
+    $sql = "SELECT sanpham.*, danhmuc.tendm FROM sanpham
+            INNER JOIN danhmuc ON sanpham.madm = danhmuc.madm
+            WHERE danhmuc.tendm = 'Gà'";
 
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    return $stmt->fetchAll();
+}
+function showdm2() {
+    global $conn;
+
+    $sql = "SELECT sanpham.*, danhmuc.tendm FROM sanpham
+    INNER JOIN danhmuc ON sanpham.madm = danhmuc.madm
+    WHERE danhmuc.tendm = 'Hamburger'";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    return $stmt->fetchAll();
+}
+function showdm3() {
+    global $conn;
+
+    $sql = "SELECT sanpham.*, danhmuc.tendm FROM sanpham
+    INNER JOIN danhmuc ON sanpham.madm = danhmuc.madm
+    WHERE danhmuc.tendm = 'Mì ý'";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    return $stmt->fetchAll();
+}
+function showdm4() {
+    global $conn;
+
+    $sql = "SELECT sanpham.*, danhmuc.tendm FROM sanpham
+    INNER JOIN danhmuc ON sanpham.madm = danhmuc.madm
+    WHERE danhmuc.tendm = 'Đồ ăn phụ'";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    return $stmt->fetchAll();
+}
+function showdm5() {
+    global $conn;
+
+    $sql = "SELECT sanpham.*, danhmuc.tendm FROM sanpham
+    INNER JOIN danhmuc ON sanpham.madm = danhmuc.madm
+    WHERE danhmuc.tendm = 'Tráng miệng'";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    return $stmt->fetchAll();
+}
+function showdm6() {
+    global $conn;
+
+    $sql = "SELECT sanpham.*, danhmuc.tendm FROM sanpham
+    INNER JOIN danhmuc ON sanpham.madm = danhmuc.madm
+    WHERE danhmuc.tendm = 'Thức uống'";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    return $stmt->fetchAll();
+}
+function showdm7() {
+    global $conn;
+
+    $sql = "SELECT sanpham.*, danhmuc.tendm FROM sanpham
+    INNER JOIN danhmuc ON sanpham.madm = danhmuc.madm
+    WHERE danhmuc.tendm = 'Compo'";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    return $stmt->fetchAll();
+}
 ?>

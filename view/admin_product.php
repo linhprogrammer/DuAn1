@@ -1,12 +1,12 @@
 
-    
+<form action="" method="post" enctype="multipart/form-data">
 
             <!-- sa-app__toolbar / end -->
             <!-- sa-app__body -->
             <div id="top" class="sa-app__body">
                 <div class="mx-xxl-3 px-4 px-sm-5">
                     <div class="py-5">
-                        <div class="row g-4 align-items-center">g
+                        <div class="row g-4 align-items-center">
                             <div class="col">
                                 <h1 class="h3 m-0">Sản Phẩm</h1>
                             </div>
@@ -16,29 +16,20 @@
     <div class="dropdown">
         <button class="btn btn-primary" id="categoryBtn" data-bs-toggle="dropdown">Danh mục</button>
         <ul class="dropdown-menu">
-            <li><a href="#" class="dropdown-item">Danh mục 1</a></li>
-            <li><a href="#" class="dropdown-item">Danh mục 2</a></li>
-            <li><a href="#" class="dropdown-item">Danh mục 3</a></li>
+            <li>
+                <button type="submit" name="submit1" class="dropdown-item" value="Gà">Gà
+                <button type="submit" name="submit2" class="dropdown-item" value="Hamburger">Hamburger
+                <button type="submit" name="submit3" class="dropdown-item" value="Gà">Mì ý
+                <button type="submit" name="submit4" class="dropdown-item" value="Gà">Đồ ăn phụ
+                <button type="submit" name="submit5" class="dropdown-item" value="Gà">Tráng miệng
+                <button type="submit" name="submit6" class="dropdown-item" value="Gà">Thức uống
+                <button type="submit" name="submit7" class="dropdown-item" value="Gà">Compo
+                <button type="submit" name="submit" class="dropdown-item" value="Gà">Tất cả
+                </button>
+            </li>
         </ul>
     </div>
 
-<!--    <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-        Danh Mục
-        </button>
-        <ul class="dropdown-menu">
-            <li><a href="#" class="dropdown-item">Danh mục 1</a></li>
-            <li><a href="#" class="dropdown-item">Danh mục 2</a></li>
-            <li><a href="#" class="dropdown-item">Danh mục 3</a></li>
-        </ul>
-    </div> -->
-
-    <!-- Hiển thị các sự lựa chọn, mặc định ẩn đi -->
-    <div id="categoryOptions" style="display: none;">
-        <a href="admin.php?mod=product&act=add&category=ga">Gà</a>
-        <a href="admin.php?mod=product&act=add&category=pizza">Pizza</a>
-        <!-- Thêm các sự lựa chọn khác tại đây -->
-    </div>
 </div>
                             <div class="col-auto d-flex">
                                 <a href="admin.php?mod=product&act=add" class="btn btn-primary">Thêm Sản Phẩm</a>
@@ -149,3 +140,4 @@
                 </div>
             </div>
             <!-- sa-app__body / end -->
+</form>
