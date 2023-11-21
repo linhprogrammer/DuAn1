@@ -139,7 +139,7 @@
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
                             <?php foreach($data['sp'] as $sp): ?>
-    <?php if ($sp['meal'] == 1): ?>
+                                <?php if ($sp['meal'] == 1 && $sp['soluong'] > 0): ?>
         <div class="col-lg-6">
             <div class="d-flex align-items-center">
                 <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 150px;">
@@ -160,7 +160,7 @@
                         <div id="tab-2" class="tab-pane fade show p-0">
                             <div class="row g-4">
                             <?php foreach($data['sp'] as $sp): ?>
-    <?php if ($sp['meal'] == 2): ?>
+                                <?php if ($sp['meal'] == 2 && $sp['soluong'] > 0): ?>
         <div class="col-lg-6">
             <div class="d-flex align-items-center">
                 <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 150px;">
@@ -180,7 +180,7 @@
                         <div id="tab-3" class="tab-pane fade show p-0">
                             <div class="row g-4">
                             <?php foreach($data['sp'] as $sp): ?>
-    <?php if ($sp['meal'] == 3): ?>
+                                <?php if ($sp['meal'] == 3 && $sp['soluong'] > 0): ?>
         <div class="col-lg-6">
             <div class="d-flex align-items-center">
                 <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 150px;">
