@@ -35,7 +35,8 @@ if (isset($_GET['act']))
                     $_FILES['hinhanh']['name'],  // Không truyền nó vào hàm
                     $_POST['sanphamnoibat'],
                     $_POST['ngaynhap'],
-                    $_POST['madm']
+                    $_POST['madm'],
+                    $_POST['meal']
                 );
 
 
@@ -104,7 +105,8 @@ if (isset($_GET['act']))
                     $anh1,
                     $_POST['sanphamnoibat'],
                     $_POST['ngaynhap'],
-                    $_POST['madm']
+                    $_POST['madm'],
+                    $_POST['meal']
                 );
 
                 if (isset($_FILES['hinhanh']) && is_array($_FILES['hinhanh']['name'])) {

@@ -35,14 +35,14 @@
   <div class="hoten">
     <label for="hoten">Họ và tên</label>
     <div class="sec-2">
-      <ion-icon name="person-outline"></ion-icon>
+      <ion-icon name="mail-outline"></ion-icon>
       <input type="text" name="hoten" placeholder="..."/>
     </div>
   </div>
   <div class="sdt">
     <label for="sdt">SĐT</label>
     <div class="sec-2">
-      <ion-icon name="call-outline"></ion-icon>
+      <ion-icon name="mail-outline"></ion-icon>
       <input type="number" name="sodienthoai" placeholder="...."/>
     </div>
   </div>
@@ -56,10 +56,10 @@
   </div>
   <button class="login" name="submit"> Signup</button>
   <?php if(isset($thongbao2)): ?>
-    <div class="alert alert-warning">
-      <?= $thongbao2 ?>
-    </div>
-  <?php endif; unset($thongbao2); ?>
+                            <div class="alert alert-warning">
+                            <?= $thongbao2 ?>
+                        </div>
+                        <?php endif; unset($thongbao2); ?>
 
   <div class="footer"><span><a href="index.php?mod=user&act=login">Đăng nhập</a></span><span>Quên mật khẩu</span></div>
 </div>

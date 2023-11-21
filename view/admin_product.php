@@ -6,13 +6,25 @@
             <div id="top" class="sa-app__body">
                 <div class="mx-xxl-3 px-4 px-sm-5">
                     <div class="py-5">
-                        <div class="row g-4 align-items-center">
+                        <div class="row g-4 align-items-center">g
                             <div class="col">
                                 <h1 class="h3 m-0">Sản Phẩm</h1>
                             </div>
                             <div class="col-auto d-flex">
+    <!-- Tạo nút danh mục -->
+    <button class="btn btn-primary" id="categoryBtn">Danh mục</button>
+
+    <!-- Hiển thị các sự lựa chọn, mặc định ẩn đi -->
+    <div id="categoryOptions" style="display: none;">
+        <a href="admin.php?mod=product&act=add&category=ga">Gà</a>
+        <a href="admin.php?mod=product&act=add&category=pizza">Pizza</a>
+        <!-- Thêm các sự lựa chọn khác tại đây -->
+    </div>
+</div>
+                            <div class="col-auto d-flex">
                                 <a href="admin.php?mod=product&act=add" class="btn btn-primary">Thêm Sản Phẩm</a>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -118,5 +130,3 @@
                 </div>
             </div>
             <!-- sa-app__body / end -->
-           
-            

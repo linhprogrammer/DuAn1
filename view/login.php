@@ -35,7 +35,7 @@
   <div class="sdt">
     <label for="sdt">SĐT</label>
     <div class="sec-2">
-      <ion-icon name="call-outline"></ion-icon>
+      <ion-icon name="mail-outline"></ion-icon>
       <input type="number" name="sodienthoai" placeholder="0123456789"/>
     </div>
   </div>
@@ -49,10 +49,10 @@
   </div>
   <button class="login" name="submit">Đăng nhập</button>
   <?php if(isset($thongbao)): ?>
-    <div class="alert alert-warning">
-      <?= $thongbao ?>
-    </div>
-  <?php endif; unset($thongbao); ?>
+                            <div class="alert alert-warning">
+                            <?= $thongbao ?>
+                        </div>
+                        <?php endif; unset($thongbao); ?>
 
 
   <div class="footer"><span><a href="index.php?mod=user&act=signup">Đăng kí</a></span><span>Quên mật khẩu ?</span></div>

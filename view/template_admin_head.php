@@ -22,4 +22,5 @@
     <link rel="stylesheet" href="template_admin/vendor/nouislider/nouislider.min.css" />
     <link rel="stylesheet" href="template_admin/vendor/fullcalendar/main.min.css" />
     <link rel="stylesheet" href="template_admin/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>

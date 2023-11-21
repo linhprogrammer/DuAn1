@@ -33,6 +33,10 @@
                                         <label for="form-product/description" class="form-label">Giá khuyến mãi</label>
                                         <textarea id="form-product/short-description" class="form-control" rows="2" name="giakm"></textarea>
                                     </div>
+                                    <div class="mb-4">
+                                        <label for="form-product/description" class="form-label">Hiển thị bữa ăn (1.Bữa sáng 2.Bữa trưa 3.Bữa tối)</label>
+                                        <textarea id="form-product/short-description" class="form-control" rows="2" name="meal"></textarea>
+                                    </div>
                                     <div>
                                         <label for="form-product/short-description" class="form-label">Số lượng</label>
                                         <textarea id="form-product/short-description" class="form-control" rows="2" name="soluong"></textarea>
