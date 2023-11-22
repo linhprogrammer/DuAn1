@@ -31,5 +31,13 @@ function checkSDT($sodienthoai){
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     return $stmt->fetch();
 }
+function showinfo(){
+    global $conn;
+    $sql = "SELECT * FROM taikhoan ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    return $stmt->fetch();
+}
 
 ?>
