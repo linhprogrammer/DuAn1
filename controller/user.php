@@ -21,28 +21,42 @@ if (isset($_GET['act'])) {
             // chưa có thì cho đăng kí
             include_once 'view/signup.php';
             break;
-        case 'login':
-            include_once 'model/connect.php';
-            include_once 'model/user.php';
-
-            if (isset($_POST['submit'])) {
-                $kq = login($_POST['sodienthoai'], md5($_POST['matkhau']));
-                if ($kq) {
-                    $_SESSION['user'] = $kq;
-                    if ($kq['quyen'] == "admin") {
-                        header("Location: admin.php");
-                    }
-                    if ($kq['quyen'] == "") {
-                        header("Location: index.php?mod=user&act=home");
-                    }
-                } else {
-                    $thongbao = "SDT hoặc mật khẩu không đúng!";
+            case 'login':
+                include_once 'model/connect.php';
+                include_once 'model/user.php';
+            
+                // Lấy thông tin nếu có id được truyền qua
+                if (isset($_GET['id'])) {
+                    $data['info'] = showinfo($_GET['id']);
                 }
-            }
-
-            include_once 'view/login.php';
-
-            break;
+            
+                // Xử lý đăng nhập khi nhận được dữ liệu từ biểu mẫu
+                if (isset($_POST['submit'])) {
+                    $sodienthoai = $_POST['sodienthoai'];
+                    $matkhau = md5($_POST['matkhau']);
+            
+                    $kq = login($sodienthoai, $matkhau);
+            
+                    if ($kq) {
+                        $_SESSION['user'] = $kq;
+            
+                        // Chuyển hướng dựa vào quyền của người dùng
+                        if ($kq['quyen'] == "admin") {
+                            header("Location: admin.php");
+                            exit(); // Dừng thực hiện script để tránh chuyển hướng không mong muốn
+                        } elseif (empty($kq['quyen'])) {
+                            // Chuyển hướng đến trang home với thông tin người dùng nếu quyền trống
+                            header("Location: index.php?mod=user&act=home&id=" . $kq['matk']);
+                            exit(); // Dừng thực hiện script để tránh chuyển hướng không mong muốn
+                        }
+                    } else {
+                        $thongbao = "Số điện thoại hoặc mật khẩu không đúng!";
+                    }
+                }
+            
+                include_once 'view/login.php';
+                break;
+            
         case 'home':
             if (!(isset($_SESSION['user']) && $_SESSION['user']['quyen'] == "")) {
                 header("Location: index.php");
@@ -52,7 +66,9 @@ if (isset($_GET['act'])) {
             include_once 'model/user.php';
             $data['sp'] = show_product();
             $data1['time'] = showspmoinhat();
-            $data['info'] = showinfo();
+            if (isset($_GET['id'])) {
+                $data['info'] = showinfo($_GET['id']);
+            }
             include_once 'view/page_home2.php';
             include_once 'view/template_footer.php';
             break;
