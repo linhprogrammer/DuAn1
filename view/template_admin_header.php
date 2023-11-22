@@ -35,7 +35,7 @@
                                     </a>
                                 </li>
                                 <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
-                                    <a href="admin.php?mod=category&act=categories" class="sa-nav__link">
+                                    <a href="admin.php?mod=category&act=dashboard" class="sa-nav__link">
                                         <span class="sa-nav__icon">
                                             <i class="fas fa-boxes"></i>
                                         </span>

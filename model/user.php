@@ -31,5 +31,14 @@ function checkSDT($sodienthoai){
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     return $stmt->fetch();
 }
+function showinfo($matk){
+    global $conn;
+    $sql = "SELECT * FROM taikhoan WHERE matk = :matk";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':matk', $matk);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    return $stmt->fetch();
+}
 
 ?>

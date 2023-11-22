@@ -47,7 +47,7 @@
       <ion-icon class="show-hide" name="eye-outline"></ion-icon>
     </div>
   </div>
-  <button class="login" name="submit">Đăng nhập</button>
+  <a href="index.php?mod=user&act=home&id=<?= $data['info']['matk'] ?>"><button class="login" name="submit">Đăng nhập</button></a>
   <?php if(isset($thongbao)): ?>
                             <div class="alert alert-warning">
                             <?= $thongbao ?>
