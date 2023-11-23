@@ -49,10 +49,10 @@
   </div>
   <a href="index.php?mod=user&act=home&id=<?= $data['info']['matk'] ?>"><button class="login" name="submit">Đăng nhập</button></a>
   <?php if(isset($thongbao)): ?>
-      <div class="alert alert-warning">
-        <?= $thongbao ?>
-    </div>
-  <?php endif; unset($thongbao); ?>
+                            <div class="alert alert-warning">
+                            <?= $thongbao ?>
+                        </div>
+                        <?php endif; unset($thongbao); ?>
 
 
   <div class="footer"><span><a href="index.php?mod=user&act=signup">Đăng kí</a></span><span>Quên mật khẩu ?</span></div>

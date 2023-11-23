@@ -15,7 +15,7 @@
 
 </div>
                             <div class="col-auto d-flex">
-                                <a href="admin.php?mod=product&act=add" class="btn btn-primary">Thêm Danh Mục</a>
+                                <a href="admin.php?mod=category&act=add" class="btn btn-primary">Thêm Danh Mục</a>
                             </div>
                             
                         </div>
@@ -81,10 +81,10 @@
                                                     <ul class="dropdown-menu dropdown-menu-end"
                                                         aria-labelledby="product-context-menu-0">
                                                         <li>
-                                                            <a class="dropdown-item" href="admin.php?mod=product&act=edit&id=<?=$dm['madm']?>">Sửa</a>
+                                                            <a class="dropdown-item" href="admin.php?mod=category&act=edit&id=<?=$dm['madm']?>">Sửa</a>
                                                         </li>
                                                         <li>
-                                                            <a class="dropdown-item" href="admin.php?mod=product&act=delete&id=<?=$dm['madm']?>">Xóa</a>
+                                                            <a class="dropdown-item" href="admin.php?mod=category&act=delete&id=<?=$dm['madm']?>">Xóa</a>
                                                         </li>
                                                     </ul>
                                                 </div>

@@ -21,42 +21,42 @@ if (isset($_GET['act'])) {
             // chưa có thì cho đăng kí
             include_once 'view/signup.php';
             break;
-            case 'login':
-                include_once 'model/connect.php';
-                include_once 'model/user.php';
-            
-                // Lấy thông tin nếu có id được truyền qua
-                if (isset($_GET['id'])) {
-                    $data['info'] = showinfo($_GET['id']);
-                }
-            
-                // Xử lý đăng nhập khi nhận được dữ liệu từ biểu mẫu
-                if (isset($_POST['submit'])) {
-                    $sodienthoai = $_POST['sodienthoai'];
-                    $matkhau = md5($_POST['matkhau']);
-            
-                    $kq = login($sodienthoai, $matkhau);
-            
-                    if ($kq) {
-                        $_SESSION['user'] = $kq;
-            
-                        // Chuyển hướng dựa vào quyền của người dùng
-                        if ($kq['quyen'] == "admin") {
-                            header("Location: admin.php");
-                            exit(); // Dừng thực hiện script để tránh chuyển hướng không mong muốn
-                        } elseif (empty($kq['quyen'])) {
-                            // Chuyển hướng đến trang home với thông tin người dùng nếu quyền trống
-                            header("Location: index.php?mod=user&act=home&id=" . $kq['matk']);
-                            exit(); // Dừng thực hiện script để tránh chuyển hướng không mong muốn
-                        }
-                    } else {
-                        $thongbao = "Số điện thoại hoặc mật khẩu không đúng!";
+        case 'login':
+            include_once 'model/connect.php';
+            include_once 'model/user.php';
+
+            // Lấy thông tin nếu có id được truyền qua
+            if (isset($_GET['id'])) {
+                $data['info'] = showinfo($_GET['id']);
+            }
+
+            // Xử lý đăng nhập khi nhận được dữ liệu từ biểu mẫu
+            if (isset($_POST['submit'])) {
+                $sodienthoai = $_POST['sodienthoai'];
+                $matkhau = md5($_POST['matkhau']);
+
+                $kq = login($sodienthoai, $matkhau);
+
+                if ($kq) {
+                    $_SESSION['user'] = $kq;
+
+                    // Chuyển hướng dựa vào quyền của người dùng
+                    if ($kq['quyen'] == "admin") {
+                        header("Location: admin.php");
+                        exit(); // Dừng thực hiện script để tránh chuyển hướng không mong muốn
+                    } elseif (empty($kq['quyen'])) {
+                        // Chuyển hướng đến trang home với thông tin người dùng nếu quyền trống
+                        header("Location: index.php?mod=user&act=home&id=" . $kq['matk']);
+                        exit(); // Dừng thực hiện script để tránh chuyển hướng không mong muốn
                     }
+                } else {
+                    $thongbao = "Số điện thoại hoặc mật khẩu không đúng!";
                 }
-            
-                include_once 'view/login.php';
-                break;
-            
+            }
+
+            include_once 'view/login.php';
+            break;
+
         case 'home':
             if (!(isset($_SESSION['user']) && $_SESSION['user']['quyen'] == "")) {
                 header("Location: index.php");
@@ -76,9 +76,116 @@ if (isset($_GET['act'])) {
             unset($_SESSION['user']);
             header("location: index.php?mod=page&act=home");
             break;
-        default:
+        case 'dashboard':
+            if (!(isset($_SESSION['user']) && $_SESSION['user']['quyen'] == 'admin')) {
+                header("Location: admin.php");
+            }
+            include_once 'model/connect.php';
+            include_once 'model/user.php';
+            $data['dstk'] = get_users();
+            include_once 'view/template_admin_head.php';
+            include_once 'view/template_admin_header.php';
+            include_once 'view/admin_user.php';
+            include_once 'view/template_admin_footer.php';
+            break;
+       
+    case 'add':
+        if (!(isset($_SESSION['user']) && $_SESSION['user']['quyen'] == 'admin')) {
+            header("Location: admin.php");
+        }
+        include_once 'model/connect.php';
+        include_once 'model/user.php';
+        if (isset($_POST['submit'])) {
+            $sodienthoai = $_POST['sodienthoai'];
+        
+            // Kiểm tra xem tên sản phẩm mới có trùng với tên sản phẩm cũ hay không
+            if (checksdt1($sodienthoai)) {
+                echo '<script>alert("Số điện thoại đã tồn tại, vui lòng đặt sdt khác.");</script>';
+            } else {
+                // Tiếp tục xử lý khi tên sản phẩm không trùng
+                $kq = add_user(
+                $_POST['hoten'],
+                $_POST['email'],
+                $_POST['matkhau'],
+                $_POST['sodienthoai'],
+                $_POST['diachi'],
+                $_POST['quyen'],
+                $_FILES['hinhanh']['name']
+            );
+            if ($kq) {
+                if ($_FILES['hinhanh']['error'] == 0) {
+                    move_uploaded_file(
+                        $_FILES['hinhanh']['tmp_name'],
+                        "upload/avatar/" . $_FILES['hinhanh']['name']
+                    );
+                }
+                if (empty($thongbao)) {
+                    echo '<script>alert("Đã thêm Tài khoản thành công !!!"); window.location.href = "admin.php?mod=user&act=dashboard";</script>';
+                }
+            } else {
+                $thongbao = "Có lỗi xảy ra vui lòng thử lại sau.";
+            }
+            }
+        }
+        
+        include_once 'view/template_admin_head.php';
+        include_once 'view/template_admin_header.php';
+        include_once 'view/admin_add_user.php';
+        include_once 'view/template_admin_footer.php';
+        break;
+        case 'edit':
+            if (!(isset($_SESSION['user']) && $_SESSION['user']['quyen'] == 'admin')) {
+                header("Location: admin.php");
+            }
+            include_once 'model/connect.php';
+            include_once 'model/user.php';
+            if (isset($_GET['id'])) {
+                $data['tk'] = get_user($_GET['id']);
+            }
+
+            if (isset($_POST['submit'])) {
+                $anh = $data['tk']['hinhanh']; 
+            
+                if ($_FILES['hinhanh']['error'] === 0) {
+                    $anh = $_FILES['hinhanh']['name'];
+            
+                    $kq = move_uploaded_file(
+                        $_FILES['hinhanh']['tmp_name'],
+                        "upload/avatar/" . $anh
+                    );
+            
+                    if (!$kq) {
+                        $thongbao = "Failed to upload the image.";
+                    }
+                }
+            
+                $kq = edit_user(
+                    $_GET['id'],
+                    $_POST['hoten'],
+                    $_POST['email'],
+                    md5($_POST['matkhau']),
+                    $_POST['sodienthoai'],
+                    $_POST['diachi'],
+                    $_POST['quyen'],
+                    $anh
+                );
+            
+                if ($kq) {
+                    header("location: admin.php?mod=user&act=dashboard");
+                } else {
+                    $thongbao = "có lỗi vui lòng thử lại sau";
+                }
+            }
+            
+
+            include_once 'view/template_admin_head.php';
+            include_once 'view/template_admin_header.php';
+            include_once 'view/admin_edit_user.php';
+            include_once 'view/template_admin_footer.php';
+            break;
+            default:
             #code...
             break;
-    }
+}
 }
 ?>

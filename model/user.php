@@ -40,5 +40,73 @@ function showinfo($matk){
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     return $stmt->fetch();
 }
+function get_users()
+{
+    global $conn;
+    $sql = "SELECT * FROM taikhoan";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    return $stmt->fetchAll(); // Sử dụng fetchAll() để trả về tất cả các hàng dữ liệu
+}
+function add_user($hoten, $email, $matkhau, $sodienthoai, $diachi, $quyen, $hinhanh)
+{
+    global $conn;
+    $sql = "INSERT INTO taikhoan (`hoten`, `email`, `matkhau`, `sodienthoai`, `diachi`, `quyen`, `hinhanh`)
+            VALUES(:hoten, :email, :matkhau, :sodienthoai, :diachi, :quyen, :hinhanh)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(":hoten", $hoten);
+    $stmt->bindParam(":email", $email);
+    $stmt->bindParam(":matkhau", $matkhau);
+    $stmt->bindParam(":sodienthoai", $sodienthoai);
+    $stmt->bindParam(":diachi", $diachi);
+    $stmt->bindParam(":quyen", $quyen);
+    $stmt->bindParam(":hinhanh", $hinhanh);
 
+    $result = $stmt->execute();
+    if ($_FILES['hinhanh']['error'] == 0) {
+        move_uploaded_file(
+            $_FILES['hinhanh']['tmp_name'],
+            "upload/avatar/" . $_FILES['hinhanh']['name']
+        );
+    }
+}
+function edit_user($matk, $hoten, $email, $matkhau, $sodienthoai, $diachi, $quyen, $hinhanh)
+{
+    global $conn;
+    $sql = "UPDATE taikhoan SET `hoten`=:hoten, `email`=:email, `matkhau`=:matkhau, `sodienthoai`=:sodienthoai, `diachi`=:diachi, `quyen`=:quyen, `hinhanh`=:hinhanh WHERE matk=:matk";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(":matk", $matk);
+    $stmt->bindParam(":hoten", $hoten);
+    $stmt->bindParam(":email", $email);
+    $stmt->bindParam(":matkhau", $matkhau);
+    $stmt->bindParam(":sodienthoai", $sodienthoai);
+    $stmt->bindParam(":diachi", $diachi);
+    $stmt->bindParam(":quyen", $quyen);
+    $stmt->bindParam(":hinhanh", $hinhanh);
+    return $stmt->execute();
+    //print_r($stmt->fetch());
+}
+function checksdt1($sodienthoai) {
+    global $conn;
+    $sql = "SELECT * FROM taikhoan WHERE sodienthoai = :sodienthoai";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(":sodienthoai", $sodienthoai);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+
+    // Trả về true nếu tên sản phẩm đã tồn tại, ngược lại trả về false
+    return ($result !== false);
+}
+function get_user($id)
+{
+    global $conn;
+    $sql = "SELECT * from taikhoan WHERE matk=" . $id;
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    return $stmt->fetch();
+
+}
 ?>

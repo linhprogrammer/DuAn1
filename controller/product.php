@@ -42,20 +42,28 @@ if (isset($_GET['act']))
             include_once 'model/category.php';
             $data['dsdm'] = get_categoies();
             if (isset($_POST['submit'])) {
-                $kq = add_product(
-                    $_POST['tensp'],
-                    $_POST['gia'],
-                    $_POST['giakm'],
-                    $_POST['soluong'],
-                    $_POST['motangan'],
-                    $_POST['motachitiet'],
-                    $_FILES['hinhanhshow']['name'],
-                    $_FILES['hinhanh']['name'],  // Không truyền nó vào hàm
-                    $_POST['sanphamnoibat'],
-                    $_POST['ngaynhap'],
-                    $_POST['madm'],
-                    $_POST['meal']
-                );
+                $ten_sp_moi = $_POST['tensp'];
+            
+                // Kiểm tra xem tên sản phẩm mới có trùng với tên sản phẩm cũ hay không
+                if (checktensp($ten_sp_moi)) {
+                    echo '<script>alert("Tên sản phẩm đã tồn tại. Vui lòng chọn tên khác.");</script>';
+                } else {
+                    // Tiếp tục xử lý khi tên sản phẩm không trùng
+                    $kq = add_product(
+                        $ten_sp_moi,
+                        $_POST['gia'],
+                        $_POST['giakm'],
+                        $_POST['soluong'],
+                        $_POST['motangan'],
+                        $_POST['motachitiet'],
+                        $_FILES['hinhanhshow']['name'],
+                        $_FILES['hinhanh']['name'],
+                        $_POST['sanphamnoibat'],
+                        $_POST['ngaynhap'],
+                        $_POST['madm'],
+                        $_POST['meal']
+                    );
+                }
 
 
                 if ($kq) {
@@ -76,8 +84,9 @@ if (isset($_GET['act']))
                     }
 
                     if (empty($thongbao)) {
-                        header("location: admin.php?mod=product&act=dashboard");
+                        echo '<script>alert("Đã thêm sản phẩm thành công !!!"); window.location.href = "admin.php?mod=product&act=dashboard";</script>';
                     }
+                    
                 }
             }
 

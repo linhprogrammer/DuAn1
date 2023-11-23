@@ -43,7 +43,7 @@
                                     </a>
                                 </li>
                                 <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
-                                    <a href="admin.php?mod=user&act=user" class="sa-nav__link">
+                                    <a href="admin.php?mod=user&act=dashboard" class="sa-nav__link">
                                         <span class="sa-nav__icon">
                                             <i class="fas fa-user"></i>
                                         </span>

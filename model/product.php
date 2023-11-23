@@ -284,4 +284,16 @@ function showdm7() {
 
     return $stmt->fetchAll();
 }
+function checktensp($tensp) {
+    global $conn;
+    $sql = "SELECT * FROM sanpham WHERE tensp = :tensp";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(":tensp", $tensp);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+
+    // Trả về true nếu tên sản phẩm đã tồn tại, ngược lại trả về false
+    return ($result !== false);
+}
 ?>
