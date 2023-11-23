@@ -75,7 +75,7 @@
                                 </span></a>
                             <div class="dropdown-menu m-0">
                                 <a href="index.php?mod=user&act=signup" class="dropdown-item">Xin chào <?= $data ['info']['hoten'] ?> </a>
-                                <a href="index.php?mod=user&act=login" class="dropdown-item">Thông tin tài khoản</a>
+                                <a href="index.php?mod=page&act=info&id=<?= $data ['info']['matk'] ?>" class="dropdown-item">Thông tin tài khoản</a>
                                 <a href="#" class="dropdown-item">Đơn hàng</a>
                                 <a href="index.php?mod=user&act=logout" class="dropdown-item">Đăng xuất</a>
                             </div>
