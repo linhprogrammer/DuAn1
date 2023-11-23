@@ -11,6 +11,16 @@ if (isset($_GET['act'])) {
             include_once 'view/page_home.php';
             include_once 'view/template_footer.php';
             break;
+            case 'info':
+                include_once 'model/connect.php';
+                include_once 'model/user.php';
+                if (isset($_GET['id'])) {
+                    $data['info'] = showinfo($_GET['id']);
+                }
+                include_once 'view/template_head.php';
+                include_once 'view/page_info.php';
+                include_once 'view/template_footer.php';
+                break;
         default:
             #code...
             break;
