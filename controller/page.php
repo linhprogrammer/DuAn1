@@ -11,14 +11,6 @@ if (isset($_GET['act'])) {
             include_once 'view/page_home.php';
             include_once 'view/template_footer.php';
             break;
-        case 'about':
-            include_once 'model/connect.php';
-
-            
-            include_once 'view/template_header.php';
-            include_once 'view/page_about.php';
-            include_once 'view/template_footer.php';
-            break;
         default:
             #code...
             break;
