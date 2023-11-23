@@ -15,44 +15,45 @@
             <div class="col-lg-3 col-md-3">
                 <div class="avatar">
                     <img src="img/avatar.jpg" alt="">
-                    <button>Thay ảnh</button>
+                    <input type="button" value="Thay ảnh"></input>
                 </div>
             </div>
             <div class="col-lg-9 col-md-9">
                 <div class="user">
-                    <div class="hoten">
-                        <p>Họ và Tên: Nguyễn Văn Tèo</p>
-                        <button>Thay đổi</button>
-                    </div>
-                    <div class="sdt">
-                        <p>Số Điện Thoại: 0123456789</p>
-                        <button>Thay đổi</button>
-                    </div>
-                    <div class="email">
-                        <p>Email: nguyenvanteo@gmail.com</p>
-                        <button>Thay đổi</button>
-                    </div>
-                    <div class="gioitinh">
-                        <p>Giới tính: 
-                            <input type="radio" id="radioNam" name="gioitinh">
-                            <label for="radio1">Nam</label>
-            
-                            <input type="radio" id="radioNu" name="gioitinh">
-                            <label for="radio2">Nữ</label>
-            
-                            <input type="radio" id="radioKhac" name="gioitinh">
-                            <label for="radio3">Khác</label>
-                        </p>
-                    </div>
-                    <div class="matkhau">
-                        <p>Mật Khẩu: teodethuong123</p>
-                        <button>Thay đổi</button>
-                    </div>  
-
+                    <form action="">
+                        <div class="hoten">
+                            <label>Họ và Tên:</label>
+                            <input type="text" value="Nguyễn Văn Tèo" id="hoten">
+                        </div>
+                        <div class="sdt">
+                            <label>Số Điện Thoại:</label>
+                            <input type="text" value="0123456789" id="sdt"></input>
+                        </div>
+                        <div class="email">
+                            <label>Email:</label>
+                            <input type="text" value="Teo123@gmail.com" id="email">
+                        </div>
+                        <div class="gioitinh">
+                            <label>Giới tính: 
+                                <input type="radio" id="radioNam" name="gioitinh">
+                                <label for="radio1">Nam</label>
+                
+                                <input type="radio" id="radioNu" name="gioitinh">
+                                <label for="radio2">Nữ</label>
+                
+                                <input type="radio" id="radioKhac" name="gioitinh">
+                                <label for="radio3">Khác</label>
+                            </label>
+                        </div>
+                        <div class="matkhau">
+                            <label>Mật Khẩu:</label>
+                            <input type="text" value="teo123123" id="matkhau">
+                        </div>
+                        <input type="submit" value="Lưu thay đổi">
+                    </form>
                 </div>
             </div>
         </div>
-
     </div>
 
 </body>
