@@ -23,7 +23,22 @@
                                 <label>Email:</label>
                                 <input type="text" value="<?= $data ['info']['email'] ?>" id="email">
                             </div>
+                            <div class="diachi">
+                                <label>Địa chỉ:</label>
+                                <div>
+                                    <select id="city">
+                                        <option value="" selected>Chọn tỉnh thành</option>           
+                                    </select>
+                                            
+                                    <select id="district">
+                                        <option value="" selected>Chọn quận huyện</option>
+                                    </select>
 
+                                    <select id="ward">
+                                        <option value="" selected>Chọn phường xã</option>
+                                    </select>
+                                </div> 
+                            </div>
                             <div class="gioitinh">
                                 <label>Giới tính:</label>
                                 <div>
@@ -44,34 +59,18 @@
                             
                             <div class="matkhau">
                                 <label>Mật Khẩu:</label>
-                                <input type="text" value="<?= $data ['info']['matkhau'] ?>" id="matkhau">
+                                <input type="button" value="Thay đổi mật khẩu" id="showForm">
                             </div>
 
-                            <div class="diachi">
-                                <label>Địa chỉ:</label>
-                                <input type="text" value="Quận 12, TP Hồ Chí Minh" id="diachi">
-                                <div>
-                                    <select id="city">
-                                        <option value="" selected>Chọn tỉnh thành</option>           
-                                    </select>
-                                            
-                                    <select id="district">
-                                        <option value="" selected>Chọn quận huyện</option>
-                                    </select>
-
-                                    <select id="ward">
-                                        <option value="" selected>Chọn phường xã</option>
-                                    </select>
-                                </div> 
-                            </div>
                             <div>
                                 <a href=""><input type="button" value="Xem trạng thái đơn hàng"></input> </a>
+                                <input type="submit" value="Lưu thay đổi">
                             </div>
-                            <input type="submit" value="Lưu thay đổi">
-                        </form>
-                    </div>
+
+                    </form>
                 </div>
             </div>
+        </div>
     </div>
 </div>
 
@@ -133,4 +132,6 @@
             }
 
         }
+
 	</script>
+    
