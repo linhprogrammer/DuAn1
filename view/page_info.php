@@ -3,7 +3,7 @@
         <div class="account">
             <div class="col-lg-3 col-md-3">
                 <div class="avatar">
-                    <img src="img/avatar.jpg" alt="">
+                    <img src="template/img/avatar.jpg" alt="">
                     <input type="button" value="Thay ảnh"></input>
                 </div>
             </div>
