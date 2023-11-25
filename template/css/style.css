@@ -604,7 +604,7 @@ input[type="radio"]:checked {
 	background-color: #C5221F;
 }
 
-.container {
+.info .container {
     max-width: 850px;
     margin: 20px auto;
     text-align: center;
