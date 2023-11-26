@@ -31,15 +31,22 @@ function checkSDT($sodienthoai){
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     return $stmt->fetch();
 }
-function showinfo($matk){
+function showinfo($matk) {
     global $conn;
-    $sql = "SELECT * FROM taikhoan WHERE matk = :matk";
+
+    $sql = "SELECT taikhoan.*, diachi.tinh, diachi.huyen, diachi.xa 
+            FROM taikhoan 
+            LEFT JOIN diachi ON taikhoan.matk = diachi.id_tk 
+            WHERE taikhoan.matk = :matk";
+
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':matk', $matk);
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    
     return $stmt->fetch();
 }
+
 function get_users()
 {
     global $conn;
@@ -109,4 +116,75 @@ function get_user($id)
     return $stmt->fetch();
 
 }
+function edit_info($id, $hoten, $sodienthoai, $email, $gioitinh, $hinhanh, $tinh, $huyen, $xa)
+{
+    global $conn;
+
+    try {
+        $conn->beginTransaction();
+
+        // Update product information in the taikhoan table
+        $sql = "UPDATE taikhoan SET `hoten`=:hoten, `sodienthoai`=:sodienthoai, `email`=:email, 
+                `gioitinh`=:gioitinh, `hinhanh`=:hinhanh WHERE matk=:matk";
+
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(":matk", $id);
+        $stmt->bindParam(":hoten", $hoten);
+        $stmt->bindParam(":sodienthoai", $sodienthoai);
+        $stmt->bindParam(":email", $email);
+        $stmt->bindParam(":gioitinh", $gioitinh);
+        $stmt->bindParam(":hinhanh", $hinhanh);
+        $stmt->execute();
+
+        // Update address information in the diachi table
+        // Delete existing address
+        $sqlDelete = "DELETE FROM diachi WHERE id_tk=:matk";
+        $stmtDelete = $conn->prepare($sqlDelete);
+        $stmtDelete->bindParam(":matk", $id);
+        $stmtDelete->execute();
+
+        // Insert new address
+        $sqlInsert = "INSERT INTO diachi (`id_tk`, `tinh`, `huyen`, `xa`) VALUES(:matk, :tinh, :huyen, :xa)";
+        $stmtInsert = $conn->prepare($sqlInsert);
+        $stmtInsert->bindParam(":matk", $id);
+        $stmtInsert->bindParam(":tinh", $tinh);
+        $stmtInsert->bindParam(":huyen", $huyen);
+        $stmtInsert->bindParam(":xa", $xa);
+        $stmtInsert->execute();
+
+        $conn->commit();
+        return true;
+    } catch (Exception $e) {
+        $conn->rollBack();
+        echo "Failed: " . $e->getMessage();
+        return false;
+    }
+}
+function doimatkhau($id, $matkhau)
+{
+    global $conn;
+
+    try {
+        $conn->beginTransaction();
+
+        // Update password in the taikhoan table
+        $sql = "UPDATE taikhoan SET `matkhau` = :matkhau WHERE matk = :matk";
+
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(":matk", $id);
+        $stmt->bindParam(":matkhau", $matkhau);
+        $stmt->execute();
+
+        $conn->commit();
+        return true;
+    } catch (Exception $e) {
+        $conn->rollBack();
+        echo "Failed: " . $e->getMessage();
+        return false;
+    }
+}
+
+
+
+
 ?>
