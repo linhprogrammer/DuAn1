@@ -9,8 +9,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trang chi tiết</title>
 
+    
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="template/css/bootstrap.min.css" type="text/css">
@@ -24,6 +27,59 @@
 </head>
 
 <body>
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <img src="template/img/logo1.png" alt="Logo" style="transform: scale(1.8);">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0 pe-4">
+                        <a href="index.html" class="nav-item nav-link active">Trang Chủ</a>
+                        <div class="nav-item dropdown">
+                            <a href="menu.html" class="nav-item nav-link">Thực Đơn</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="#" class="dropdown-item">Gà Rán</a>
+                                <a href="#" class="dropdown-item">Mì Ý</a>
+                                <a href="#" class="dropdown-item">Hamburger</a>
+                                <a href="#" class="dropdown-item">Đồ Uống</a>
+                                <a href="#" class="dropdown-item">Đồ Ăn Phụ</a>
+                                <a href="#" class="dropdown-item">Tráng Miệng</a>
+                                <a href="#" class="dropdown-item">ComBo</a>
+                            </div>
+                        </div>
+                        <a href="service.html" class="nav-item nav-link">Dịch Vụ</a>
+                        <a href="index.php?mod=page&act=about" class="nav-item nav-link">Về Chúng Tôi</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                account_circle
+                                </span></a>
+                            <div class="dropdown-menu m-0">
+                                <a href="index.php?mod=user&act=signup" class="dropdown-item">Đăng Ký</a>
+                                <a href="index.php?mod=user&act=login" class="dropdown-item">Đăng Nhập</a>
+                            </div>
+                        </div>
+                        <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined">
+                            shopping_cart
+                            </span></a>
+                    </div>
+                    <nav class="navbar bg-body-tertiary">
+                        <div class="container-fluid">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
 
 
     <!-- Product Details Section Begin -->
@@ -92,7 +148,7 @@
                                 <div>
                                     <!-- detail -->
                                     <div class="them">
-                                        <img src="img/product/Cơm Gà Sốt Phô Mai.png" width="120px" height="120px"
+                                        <img src="template/img/product/Cơm Gà Sốt Phô Mai.png" width="120px" height="120px"
                                             alt="">
                                         <p class="mo-ta-them">Cá Nugget (3 Miếng)</p>
                                         <p class="gia-them">+25.000 đ</p>
@@ -104,7 +160,7 @@
                                     </div>
                                     <!--  -->
                                     <div class="them">
-                                        <img src="img/product/Cơm Bò Trứng Phô Mai.png" width="120px" height="120px"
+                                        <img src="template/img/product/Cơm Bò Trứng Phô Mai.png" width="120px" height="120px"
                                             alt="">
                                         <p class="mo-ta-them">Cá Nugget (3 Miếng)</p>
                                         <p class="gia-them">+25.000 đ</p>
@@ -116,7 +172,7 @@
                                     </div>
                                     <!--  -->
                                     <div class="them">
-                                        <img src="img/product/Cơm Teri LChicken.png" width="120px" height="120px"
+                                        <img src="template/img/product/Cơm Teri LChicken.png" width="120px" height="120px"
                                             alt="">
                                         <p class="mo-ta-them">Cá Nugget (3 Miếng)</p>
                                         <p class="gia-them">+25.000 đ</p>
@@ -128,7 +184,7 @@
                                     </div>
                                     <!--  -->
                                     <div class="them">
-                                        <img src="img/product/Combo Burger Double Double.png" width="120px"
+                                        <img src="template/img/product/Combo Burger Double Double.png" width="120px"
                                             height="120px" alt="">
                                         <p class="mo-ta-them">Cá Nugget (3 Miếng)</p>
                                         <p class="gia-them">+25.000 đ</p>

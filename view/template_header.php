@@ -99,7 +99,7 @@
                         <div class="col-lg-6 text-center text-lg-start">
                             <h1 class="display-3 text-white animated slideInLeft">Thư Giãn Cùng<br> Những Món Ăn Tuyệt Vời</h1>
                             <p class="text-white animated slideInLeft mb-4 pb-2">Xì Food cam kết mang đến trải nghiệm ăn uống tuyệt vời đem lại cho bạn những món ăn ngon cùng với giá cả tốt</p>
-                            <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Xem Ngay</a>
+                            <a href="" class="btn btn-danger py-sm-3 px-sm-5 me-3 animated slideInLeft">Xem Ngay</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                             <img class="img-fluid" src="template/img/hero.png" alt="">

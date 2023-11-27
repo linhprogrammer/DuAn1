@@ -4,22 +4,22 @@
         <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4><br>
+                        <h4 class="section-title ff-secondary text-start text-danger fw-normal mb-4">Newsletter</h4><br>
                         <img src="img/logo1.png" width="150px" style="margin-bottom: 20px; margin-left: 20px; border-radius: 50%;" alt="">
                         <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Ý kiến của bạn">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Gửi</button>
+                            <input class="form-control border-danger w-100 py-3 ps-4 pe-5" type="text" placeholder="Ý kiến của bạn">
+                            <button type="button" class="btn btn-danger py-2 position-absolute top-0 end-0 mt-2 me-2">Gửi</button>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Thông Tin</h4>
+                        <h4 class="section-title ff-secondary text-start text-danger fw-normal mb-4">Thông Tin</h4>
                         <a class="btn btn-link" href="">Tin Tức</a>
                         <a class="btn btn-link" href="">Khuyến Mãi</a>
                         <a class="btn btn-link" href="">Tuyển Dụng</a>
                         <a class="btn btn-link" href="">Nhượng Quyền</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Hỗ Trợ</h4>
+                        <h4 class="section-title ff-secondary text-start text-danger fw-normal mb-4">Hỗ Trợ</h4>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Điều khoản sử dụng</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>Chính Sách Bảo Mật</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>Chính Sách Giao Hàng</p>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="col-lg-3 col-md-6 d-flex flex-column">
-                            <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Theo dõi</h4>
+                            <h4 class="section-title ff-secondary text-start text-danger fw-normal mb-4">Theo dõi</h4>
                             <p class="mb-2 d-flex align-items-center"><i class="fab fa-twitter me-3"></i>TWITTER</p>
                             <p class="mb-2 d-flex align-items-center"><i class="fab fa-facebook-f me-3"></i>FACEBOOK</p>
                             <p class="mb-2 d-flex align-items-center"><i class="fab fa-youtube me-3"></i>YOUTUBE</p>

@@ -567,6 +567,7 @@ h2 {
   
   form {
     text-align: left;
+    margin-top: 70px;
   }
   
   label {
@@ -591,6 +592,7 @@ h2 {
 
 .gioitinh label{
 	margin-right: 5px;
+    margin-top: 6px;
 	font-weight: 600;
 	font-size: 20px;
 }
@@ -645,3 +647,46 @@ option:hover {
 }
 
 
+.tongtien{
+    float: right;
+  }
+
+
+  .nut{
+    display: flex;
+    width: 100%;
+    margin-right: 40px;
+  }
+  
+  .btn-left{
+    float: left;
+    margin: auto;
+
+}
+.btn-left a{
+    width: 250px;
+    border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    -ms-border-radius: 200px;
+    -o-border-radius: 200px;
+}
+
+  .btn-right{
+    float: right;
+    margin: auto;
+    border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    -ms-border-radius: 200px;
+    -o-border-radius: 200px;
+}
+
+  .btn-right a{
+    width: 250px;
+    border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    -ms-border-radius: 200px;
+    -o-border-radius: 200px;
+}

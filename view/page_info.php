@@ -1,20 +1,37 @@
+ 
+
 <form action="" method="post" enctype="multipart/form-data">
     <div class="info">
         <div class="container">
             <h2>Thông tin tài khoản</h2>
             <div class="account">
-                <div class="col-lg-3 col-md-3">
+                <div class="col-lg-4 col-md-4">
                     <div class="avatar">
                         <img src="upload/avatar/<?= $data['info']['hinhanh'] ?>" alt="" name="hinhanh">
                         <input type="file" name="hinhanh" value="Thay ảnh"></input>
+                        <div>
+                            <a href=""><input type="button" value="Xem trạng thái đơn hàng"></input></a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-9 col-md-9">
+                <div class="col-lg-8 col-md-8">
                     <div class="user">
                         <form action="">
                             <div class="hoten">
                                 <label>Họ và Tên:</label>
                                 <input type="text" value="<?= $data['info']['hoten'] ?>" name="hoten" id="hoten">
+                            </div>
+                            <div class="gioitinh">
+                                <label>Giới tính:</label>
+                                <div>
+                                    <select id="gioitinh" name="gioitinh">
+                                        <option value="Nam" <?= ($data['info']['gioitinh'] == 'Nam') ? 'selected' : '' ?>>
+                                            Nam</option>
+                                        <option value="Nữ" <?= ($data['info']['gioitinh'] == 'Nữ') ? 'selected' : '' ?>>Nữ
+                                        </option>
+                                        <option value="Khác" <?= ($data['info']['gioitinh'] == 'Khác') ? 'selected' : '' ?>>Khác</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="sdt">
                                 <label>Số Điện Thoại:</label>
@@ -83,12 +100,6 @@
                                 </div>
                             </fieldset>
 
-
-
-
-
-
-
                             <div class="password-change-frame">
                                 <div class="matkhau">
                                     <label>Mật Khẩu:</label>
@@ -109,19 +120,6 @@
                                         onclick="savePasswordChanges()">
                                 </div>
                             </div>
-
-                            <div class="gioitinh">
-                                <label>Giới tính:</label>
-                                <div>
-                                    <select id="gioitinh" name="gioitinh">
-                                        <option value="Nam" <?= ($data['info']['gioitinh'] == 'Nam') ? 'selected' : '' ?>>
-                                            Nam</option>
-                                        <option value="Nữ" <?= ($data['info']['gioitinh'] == 'Nữ') ? 'selected' : '' ?>>Nữ
-                                        </option>
-                                        <option value="Khác" <?= ($data['info']['gioitinh'] == 'Khác') ? 'selected' : '' ?>>Khác</option>
-                                    </select>
-                                </div>
-                            </div>
                             <div>
                                 <?php if (isset($thongbao)): ?>
                                     <div class="alert alert-warning">
@@ -129,7 +127,6 @@
                                     </div>
                                 <?php endif;
                                 unset($thongbao); ?>
-                                <a href=""><input type="button" value="Xem trạng thái đơn hàng"></input></a>
                                 <input type="submit" value="Lưu thay đổi" name="submit">
                             </div>
 
@@ -138,10 +135,11 @@
                     </div>
                 </div>
             </div>
+            <a href="index.php?mod=user&act=home&id=<?= $data ['info']['matk'] ?>"><input type="button" value="Về trang chủ"></a>
         </div>
     </div>
 </form>
-<a href="index.php?mod=user&act=home&id=<?= $data ['info']['matk'] ?>"><input type="button" value="Về trang chủ"></a>
+
 
 
 
@@ -241,8 +239,8 @@
     .password-change-frame {
         border: 1px solid #ccc;
         padding: 10px;
-        margin: 10px;
-        width: 300px;
+        margin-bottom: 10px;
+        width: 550px;
     }
 
     .matkhau,
