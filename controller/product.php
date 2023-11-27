@@ -10,28 +10,42 @@ if (isset($_GET['act']))
             include_once 'model/product.php';
             include_once 'model/category.php';
             $data['ds'] = show_product();
-                if (isset($_POST['submit'])) {
-                    $data['ds'] = show_product();
-                } elseif (isset($_POST['submit1'])) {
-                    $data['ds'] = showdm1();
-                } elseif (isset($_POST['submit2'])) {
-                    $data['ds'] = showdm2();
-                } elseif (isset($_POST['submit3'])) {
-                    $data['ds'] = showdm3();
-                } elseif (isset($_POST['submit4'])) {
-                    $data['ds'] = showdm4();
-                } elseif (isset($_POST['submit5'])) {
-                    $data['ds'] = showdm5();
-                } elseif (isset($_POST['submit6'])) {
-                    $data['ds'] = showdm6();
-                } elseif (isset($_POST['submit7'])) {
-                    $data['ds'] = showdm7();
-                }
-                
+            if (isset($_POST['submit'])) {
+                $data['ds'] = show_product();
+            } elseif (isset($_POST['submit1'])) {
+                $data['ds'] = showdm1();
+            } elseif (isset($_POST['submit2'])) {
+                $data['ds'] = showdm2();
+            } elseif (isset($_POST['submit3'])) {
+                $data['ds'] = showdm3();
+            } elseif (isset($_POST['submit4'])) {
+                $data['ds'] = showdm4();
+            } elseif (isset($_POST['submit5'])) {
+                $data['ds'] = showdm5();
+            } elseif (isset($_POST['submit6'])) {
+                $data['ds'] = showdm6();
+            } elseif (isset($_POST['submit7'])) {
+                $data['ds'] = showdm7();
+            }
+
             include_once 'view/template_admin_head.php';
             include_once 'view/template_admin_header.php';
             include_once 'view/admin_product.php';
             include_once 'view/template_admin_footer.php';
+            break;
+        case 'detail':
+            include_once 'model/connect.php';
+            include_once 'model/product.php';
+            include_once 'model/category.php';
+            $data['sp1'] = show_product();
+            if (isset($_GET['id'])) {
+                $data['sp'] = get_products($_GET['id']);
+                $data['img'] = show_images($_GET['id']);
+            }
+            
+
+            include_once 'view/detail_product.php';
+            include_once 'view/template_footer.php';
             break;
         case 'add':
             if (!(isset($_SESSION['user']) && $_SESSION['user']['quyen'] == 'admin')) {
@@ -43,7 +57,7 @@ if (isset($_GET['act']))
             $data['dsdm'] = get_categoies();
             if (isset($_POST['submit'])) {
                 $ten_sp_moi = $_POST['tensp'];
-            
+
                 // Kiểm tra xem tên sản phẩm mới có trùng với tên sản phẩm cũ hay không
                 if (checktensp($ten_sp_moi)) {
                     echo '<script>alert("Tên sản phẩm đã tồn tại. Vui lòng chọn tên khác.");</script>';
@@ -86,7 +100,7 @@ if (isset($_GET['act']))
                     if (empty($thongbao)) {
                         echo '<script>alert("Đã thêm sản phẩm thành công !!!"); window.location.href = "admin.php?mod=product&act=dashboard";</script>';
                     }
-                    
+
                 }
             }
 
@@ -117,8 +131,8 @@ if (isset($_GET['act']))
                 }
                 $anh1 = $_FILES['hinhanh']['name'];
                 //lỗi không tải ảnh lên thì mất ảnh
-                
-                
+
+
 
                 $kq = edit_product(
                     $_GET['id'],
@@ -183,20 +197,20 @@ if (isset($_GET['act']))
                     $thongbao = "có lỗi vui lòng thử lại sau";
                 }
             }
-            case 'hidden':
-                if (!(isset($_SESSION['user']) && $_SESSION['user']['quyen'] == 'admin')) {
-                    header("Location: admin.php");
+        case 'hidden':
+            if (!(isset($_SESSION['user']) && $_SESSION['user']['quyen'] == 'admin')) {
+                header("Location: admin.php");
+            }
+            include_once 'model/connect.php';
+            include_once 'model/product.php';
+            if (isset($_GET['id'])) {
+                $kq = hiddensp($_GET['id']);
+                if ($kq) {
+                    header("location: admin.php?mod=product&act=dashboard");
+                } else {
+                    header("location: admin.php?mod=product&act=dashboard");
                 }
-                include_once 'model/connect.php';
-                include_once 'model/product.php';
-                if (isset($_GET['id'])) {
-                    $kq = hiddensp($_GET['id']);
-                    if ($kq) {
-                        header("location: admin.php?mod=product&act=dashboard");
-                    } else {
-                        header("location: admin.php?mod=product&act=dashboard");
-                    }
-                }
+            }
             break;
         default:
             #code...

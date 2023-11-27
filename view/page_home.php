@@ -142,10 +142,10 @@
                                 <?php if ($sp['meal'] == 1 && $sp['soluong'] > 0): ?>
         <div class="col-lg-6">
             <div class="d-flex align-items-center">
-                <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 150px;">
+              <a href="index.php?mod=product&act=detail&id=<?=$sp['masp']?>">  <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 150px;">
                 <div class="w-100 d-flex flex-column text-start ps-4">
                     <h5 class="d-flex justify-content-between border-bottom pb-2">
-                        <span><?=$sp['tensp']?></span>
+                        <span><?=$sp['tensp']?></span></a>
                         <span class="text-primary"><?=$sp['giakm']?> VNĐ</span>
                     </h5>
                     <small class="fst-italic"><?=$sp['motangan']?></small>
@@ -163,10 +163,10 @@
                                 <?php if ($sp['meal'] == 2 && $sp['soluong'] > 0): ?>
         <div class="col-lg-6">
             <div class="d-flex align-items-center">
-                <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 150px;">
+              <a href="index.php?mod=product&act=detail&id=<?=$sp['masp']?>">  <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 150px;">
                 <div class="w-100 d-flex flex-column text-start ps-4">
                     <h5 class="d-flex justify-content-between border-bottom pb-2">
-                        <span><?=$sp['tensp']?></span>
+                        <span><?=$sp['tensp']?></span></a>
                         <span class="text-primary"><?=$sp['giakm']?> VNĐ</span>
                     </h5>
                     <small class="fst-italic"><?=$sp['motangan']?></small>
@@ -183,10 +183,10 @@
                                 <?php if ($sp['meal'] == 3 && $sp['soluong'] > 0): ?>
         <div class="col-lg-6">
             <div class="d-flex align-items-center">
-                <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 150px;">
+              <a href="index.php?mod=product&act=detail&id=<?=$sp['masp']?>">  <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 150px;">
                 <div class="w-100 d-flex flex-column text-start ps-4">
                     <h5 class="d-flex justify-content-between border-bottom pb-2">
-                        <span><?=$sp['tensp']?></span>
+                        <span><?=$sp['tensp']?></span></a>
                         <span class="text-primary"><?=$sp['giakm']?> VNĐ</span>
                     </h5>
                     <small class="fst-italic"><?=$sp['motangan']?></small>

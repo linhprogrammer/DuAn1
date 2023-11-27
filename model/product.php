@@ -108,8 +108,6 @@ function show_product(){
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     return $stmt->fetchAll();
 }
-
-
 function show_images($id){
     global $conn;
     $sql = "SELECT images FROM anhchitiet WHERE id_sp = :id";
@@ -141,7 +139,15 @@ function get_product($id){
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     return $stmt->fetch();
 }
-
+function get_products($id){
+    global $conn;
+    $sql = "SELECT * FROM sanpham WHERE masp=".$id;
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    return $stmt->fetch();
+    
+}
 
 function delete_product($id) {
     global $conn;
