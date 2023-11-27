@@ -32,28 +32,28 @@
                     <td>1</td>
                     <td><img src="img/product/Burger Bulgogi.png" width="150px" alt=""></td>
                     <td class="text-start">1 MIẾNG GÀ GIÒN VUI VẺ <p>Kích thước : Lớn</p></td>
-                    <td>10</td>
-                    <td>10.000 đ</td>
-                    <td>100.000 đ</td>
+                    <td>5</td>
+                    <td>50.000 đ</td>
+                    <td>0 đ</td>
                     <td class="text-center">
                         <button class="custom-button">
                             <ion-icon name="trash-outline"></ion-icon>
                         </button>
-                        
                     </td>
                 </tr>
                </tbody>
            </table>
    
-             <div class="tongtien">
-                 <p class="tong" style="font-size: 26px;"> <b> Tổng tiền:</b> 220.000 đ</p>
-             </div>
+           <div class="tongtienAll">
+                <p class="tong" style="font-size: 26px;"><b>Tổng tiền:</b> <span id="totalAmount">0 đ</span></p>
+            </div>
+        
              <div class="nut">
                <div class="btn-left">
-                 <a href="#" class="btn btn-danger">Tiếp tục mua hàng </a>
+                 <a href="#" class="btn">Thêm sản phẩm </a>
                </div>
                <div class="btn-right">
-                 <a href="#" class="btn btn-danger">Tiếp tục</a>
+                 <a href="#" class="btn">Tiếp tục</a>
                </div>
              </div>
 
@@ -81,7 +81,48 @@
         }
 
        </style>
-
        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+       <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const rows = document.querySelectorAll('.table tbody tr');
+
+        rows.forEach((row, index) => {
+            const quantity = parseFloat(row.cells[3].innerText);
+            const unitPrice = parseFloat(row.cells[4].innerText.replace(' đ', '').replace(',', ''));
+            const totalPriceCell = row.cells[5];
+
+            const calculateTotal = () => {
+                const total = quantity * unitPrice *1000;
+                totalPriceCell.innerText = total.toLocaleString('vi-VN') + ' đ'; // Hiển thị tổng tiền với định dạng tiền tệ
+            };
+
+            calculateTotal();
+
+            // Xử lý sự kiện khi thay đổi số lượng
+            const quantityInput = row.cells[3].querySelector('input[type="number"]');
+            quantityInput.addEventListener('input', function () {
+                quantity = parseFloat(this.value);
+                calculateTotal();
+                    });
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', function () {
+            const rows = document.querySelectorAll('.table tbody tr');
+            let totalAmount = 0;
+
+            rows.forEach((row, index) => {
+                const totalPrice = row.cells[5].innerText; // Ô chứa tổng tiền sản phẩm
+                const priceValue = parseFloat(totalPrice.replace(' đ', '').replace(',', ''));
+
+                totalAmount += priceValue * 1000;
+            });
+
+            const totalAmountElement = document.getElementById('totalAmount');
+            totalAmountElement.innerText = totalAmount.toLocaleString('vi-VN') + ' đ';
+             });
+
+
+       </script>
 </body>
 </html>

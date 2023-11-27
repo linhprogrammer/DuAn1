@@ -647,8 +647,9 @@ option:hover {
 }
 
 
-.tongtien{
+.tongtienAll{
     float: right;
+    margin-top: 20px;
   }
 
 
@@ -661,20 +662,39 @@ option:hover {
   .btn-left{
     float: left;
     margin: auto;
+    margin-top: 40px;
 
 }
 .btn-left a{
     width: 250px;
+    background-color: #C5221F;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
     border-radius: 200px;
     -webkit-border-radius: 200px;
     -moz-border-radius: 200px;
     -ms-border-radius: 200px;
     -o-border-radius: 200px;
+}
+
+.btn-left a:hover{
+    background-color: #000000;
+    color: white;
 }
 
   .btn-right{
     float: right;
     margin: auto;
+    margin-top: 40px;
+}
+
+  .btn-right a{
+    width: 250px;
+    background-color: #C5221F;
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
     border-radius: 200px;
     -webkit-border-radius: 200px;
     -moz-border-radius: 200px;
@@ -682,11 +702,7 @@ option:hover {
     -o-border-radius: 200px;
 }
 
-  .btn-right a{
-    width: 250px;
-    border-radius: 200px;
-    -webkit-border-radius: 200px;
-    -moz-border-radius: 200px;
-    -ms-border-radius: 200px;
-    -o-border-radius: 200px;
+.btn-right a:hover{
+    background-color: #000000;
+    color: white;
 }
