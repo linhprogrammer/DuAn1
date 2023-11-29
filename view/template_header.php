@@ -54,7 +54,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Trang Chủ</a>
+                        <a href="index.php?mod=page&act=home" class="nav-item nav-link active">Trang Chủ</a>
                         <div class="nav-item dropdown">
                             <a href="menu.html" class="nav-item nav-link">Thực Đơn</a>
                             <div class="dropdown-menu m-0">
