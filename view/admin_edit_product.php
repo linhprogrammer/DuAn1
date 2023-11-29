@@ -28,9 +28,19 @@
                                             id="form-product/name" name="tensp">
                                     </div>
                                     <div class="mb-4">
-                                        <label for="form-product/description" class="form-label">Giá</label>
-                                        <textarea id="form-product/description" class="sa-quill-control form-control"
-                                            rows="8" name="gia"><?= $data['sp']['gia'] ?></textarea>
+                                    <label for="form-product/short-description" class="form-label">Giá size nhỏ</label>
+                                        <textarea id="form-product/short-description" class="form-control" rows="2"
+                                            name="sizenho"><?= $data['sp']['sizenho'] ?></textarea>
+                                    </div>
+                                    <div class="mb-4">
+                                    <label for="form-product/short-description" class="form-label">Giá size vừa</label>
+                                        <textarea id="form-product/short-description" class="form-control" rows="2"
+                                            name="sizevua"><?= $data['sp']['sizevua'] ?></textarea>
+                                    </div>
+                                    <div class="mb-4">
+                                    <label for="form-product/short-description" class="form-label">Giá size lớn</label>
+                                        <textarea id="form-product/short-description" class="form-control" rows="2"
+                                            name="sizelon"><?= $data['sp']['sizelon'] ?></textarea>
                                     </div>
                                     <div class="mb-4">
                                         <label for="form-product/description" class="form-label">Giá khuyến mãi</label>

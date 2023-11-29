@@ -27,7 +27,90 @@
 </head>
 
 <body>
+<style>
+    .total-price-section {
+    background-color: #C5221F; /* Set a background color */
+    color: #ffffff; /* Set text color */
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px -5px 5px -5px #333; /* Add shadow for separation from content */
+}
 
+.total-price-section p {
+    margin: 0; /* Remove default margin for the paragraph inside the total price section */
+}
+
+#totalPriceDisplay {
+    font-weight: bold; /* Make the total price text bold */
+    font-size: 18px; /* Increase font size for better visibility */
+}
+
+   .quantity .pro-qty {
+    display: none;
+}
+
+.quantity.show-qty .pro-qty {
+    display: block;
+}
+
+.product__details__quantity {
+    margin-top: 20px;
+}
+
+.quantity {
+    position: relative;
+}
+
+.quantity input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 5px;
+    font-size: 16px;
+}
+
+/* Increase and Decrease buttons */
+.quantity input[type="number"]::-webkit-inner-spin-button,
+.quantity input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantity input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Style for increase and decrease buttons */
+.quantity .quantity-controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.quantity .quantity-controls button {
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    background-color: #ddd;
+    border-radius: 0 5px 5px 0;
+}
+
+.quantity .quantity-controls button:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+
+    </style>
 
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
@@ -123,90 +206,58 @@
                             <span>4.5/5</span>
                         </div>
                         <div class="size">
-                            <input type="radio" id="radio1" name="size">
-                            <label for="radio1">Nhỏ</label>
+    <input type="radio" id="radio1" name="size" data-price="<?= $data['sp']['sizenho'] ?>">
+    <label for="radio1">Nhỏ</label>
 
-                            <input type="radio" id="radio2" name="size">
-                            <label for="radio2">Vừa</label>
+    <input type="radio" id="radio2" name="size" data-price="<?= $data['sp']['sizevua'] ?>" checked>
+    <label for="radio2">Vừa</label>
 
-                            <input type="radio" id="radio3" name="size">
-                            <label for="radio3">Lớn</label>
-                        </div>
-                        <div class="product__details__price">
-                            <?= $data['sp']['giakm'] ?>
-                        </div>
-                        <div class="product__details__quantity">
-                            <div class="quantity">
-                                <div class="pro-qty">
-                                    <input type="text" value="1">
-                                </div>
-                            </div>
-                        </div>
+    <input type="radio" id="radio3" name="size" data-price="<?= $data['sp']['sizelon'] ?>">
+    <label for="radio3">Lớn</label>
+</div>
+
+<div class="product__details__quantity">
+    <div class="quantity">
+        <input type="number" value="1" min="1" id="quantityInput">
+    </div>
+</div>
+
+<div class="product__details__price" id="productPrice">
+    <!-- Display the initial price, assuming it's based on the default size -->
+    <?= $data['sp']['sizevua'] ?>
+</div>
+
                         <a href="#" class="primary-btn">ADD TO CARD</a>
-                        <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
                         <form action="" method="post">
                             <div class="h2-mota">
                                 <p class="h2-mau">Ngon hơn khi ăn kèm</p>
                                 <div>
                                     <!-- detail -->
-                                    <div class="them">
-                                        <img src="template/img/product/Cơm Gà Sốt Phô Mai.png" width="120px" height="120px"
-                                            alt="">
-                                        <p class="mo-ta-them">Cá Nugget (3 Miếng)</p>
-                                        <p class="gia-them">+25.000 đ</p>
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <?php foreach ($data['sp2'] as $spphu): ?>
+    <?php if ($spphu['phanloai'] == $data['sp']['madm']): ?>
+        <div class="them">
+            <img src="upload/product_extra/<?= $spphu['hinhanhshow'] ?>" width="150px" alt="">
+            <p class="mo-ta-them"><?= $spphu['tensp'] ?></p>
+            <p class="gia-them"><?= $spphu['gia'] ?> </p>
+            <div class="quantity">
+                <input type="button" class="select-quantity-btn" value="Chọn" onclick="toggleQuantity(this)">
+                <div class="pro-qty">
+                <div class="quantity">
+
+                    <input type="number" value="1" min="1" onchange="updatePrice(this, <?= $spphu['gia'] ?>)">
+                </div>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+<?php endforeach; ?>
+
+
                                     <!--  -->
-                                    <div class="them">
-                                        <img src="template/img/product/Cơm Bò Trứng Phô Mai.png" width="120px" height="120px"
-                                            alt="">
-                                        <p class="mo-ta-them">Cá Nugget (3 Miếng)</p>
-                                        <p class="gia-them">+25.000 đ</p>
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </div>
                                     <!--  -->
-                                    <div class="them">
-                                        <img src="template/img/product/Cơm Teri LChicken.png" width="120px" height="120px"
-                                            alt="">
-                                        <p class="mo-ta-them">Cá Nugget (3 Miếng)</p>
-                                        <p class="gia-them">+25.000 đ</p>
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--  -->
-                                    <div class="them">
-                                        <img src="template/img/product/Combo Burger Double Double.png" width="120px"
-                                            height="120px" alt="">
-                                        <p class="mo-ta-them">Cá Nugget (3 Miếng)</p>
-                                        <p class="gia-them">+25.000 đ</p>
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--  -->
-                                    <div class="so-luong">
-                                        <h5>Số Lượng:</h5>
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                        <div class="heart">
-                                            <i class="fa-regular fa-heart"></i>
-                                        </div>
+                                    <div class="total-price-section">
+    <p>Total Price: <span id="totalPriceDisplay">0 đ</span></p>
+</div>
                                     </div>
                                     <div class="nut-them">
                                         <a href="#" class="btn btn-danger">Thêm vào giỏ hàng</a>
@@ -288,11 +339,106 @@ foreach ($limitedProducts as $sp1):
                 </ul>
             </div>
             <div class="product__item__text">
-                <h6><a href="#"><?= $sp1['tensp'] ?></a></h6>
+                <h6><a href="index.php?mod=product&act=detail&id=<?= $sp1['masp'] ?>"><?= $sp1['tensp'] ?></a></h6>
                 <h5><?= $sp1['giakm'] ?></h5>
             </div>
         </div>
     </div>
+    <script>
+    const sizeInputs = document.querySelectorAll('input[name="size"]');
+    const quantityInput = document.getElementById('quantityInput');
+    const productPrice = document.getElementById('productPrice');
+    const totalPriceDisplay = document.getElementById('totalPriceDisplay');
+    let mainProductPrice = parseFloat('<?= $data['sp']['sizevua'] ?>');
+    let totalExtraPrice = 0;
+
+    sizeInputs.forEach(input => {
+        input.addEventListener('change', function () {
+            mainProductPrice = parseFloat(this.getAttribute('data-price'));
+            updateTotalPrice();
+        });
+    });
+
+    quantityInput.addEventListener('input', function () {
+        updateTotalPrice();
+        // Ensure the currency symbol 'đ' is always displayed after changing the quantity
+        this.value = formatPrice(this.value);
+    });
+
+    function updateTotalPrice() {
+        const quantity = parseInt(quantityInput.value.replace(/[^\d]/g, '')) || 1;
+        const mainProductTotalPrice = quantity * mainProductPrice;
+        const total = mainProductTotalPrice + totalExtraPrice;
+
+        productPrice.textContent = formatPrice(mainProductTotalPrice);
+        totalPriceDisplay.textContent = formatPrice(total);
+    }
+
+    $(document).ready(function () {
+        // Set the default size to "Vừa"
+        $("input[name='size'][value='sizevua']").prop("checked", true);
+        updatePrice();
+
+        // Handle size change event
+        $("input[name='size']").change(function () {
+            updatePrice();
+        });
+
+        // Handle quantity change event
+        $("#quantityInput").change(function () {
+            updatePrice();
+        });
+
+        // Function to update the displayed price
+        function updatePrice() {
+            var selectedSize = $("input[name='size']:checked").data("price");
+            var quantity = $("#quantityInput").val().replace(/[^\d]/g, '') || 1;
+
+            // Calculate the total price
+            var mainProductTotalPrice = selectedSize * quantity;
+
+            // Display the updated price
+            $("#productPrice").text(formatPrice(mainProductTotalPrice));
+            updateTotalPrice();
+        }
+    });
+
+    function toggleQuantity(button) {
+        var quantityDiv = button.parentNode.querySelector('.pro-qty');
+
+        if (quantityDiv.style.display === 'none' || quantityDiv.style.display === '') {
+            quantityDiv.style.display = 'block';
+            button.style.display = 'none';
+        } else {
+            quantityDiv.style.display = 'none';
+            button.style.display = 'block';
+        }
+    }
+
+    function updatePrice(input, gia) {
+        var quantity = input.value;
+        var giaElem = input.closest('.them').querySelector('.gia-them');
+
+        var updatedGia = gia * quantity;
+        giaElem.textContent = formatPrice(updatedGia);
+
+        // Update total extra price
+        totalExtraPrice = 0;
+        $(".pro-qty input").each(function () {
+            totalExtraPrice += ($(this).val() * $(this).closest('.them').find('.gia-them').data('price'));
+        });
+
+        updateTotalPrice();
+    }
+
+    // Function to format the price with 'đ'
+    function formatPrice(price) {
+        return price.toLocaleString();
+    }
+</script>
+
+
+
 <?php endforeach; ?>
             </div>
         </div>

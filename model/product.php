@@ -1,5 +1,5 @@
 <?php
-function add_product($tensp, $gia, $giakm, $soluong, $motangan, $motachitiet, $hinhanhshow, $hinhanh, $sanphamnoibat, $ngaynhap, $madm,$meal)
+function add_product($tensp, $giakm, $soluong, $motangan, $motachitiet, $hinhanhshow, $hinhanh, $sanphamnoibat, $ngaynhap, $madm, $meal, $sizenho, $sizevua, $sizelon)
 {
     global $conn;
 
@@ -7,11 +7,10 @@ function add_product($tensp, $gia, $giakm, $soluong, $motangan, $motachitiet, $h
         $conn->beginTransaction();
 
         // Thêm sản phẩm vào bảng sanpham
-        $sql = "INSERT INTO sanpham (`tensp`, `gia`, `giakm`, `soluong`, `motangan`, `motachitiet`, `hinhanhshow`, `sanphamnoibat`, `ngaynhap`, `madm`,`meal`)
-                            VALUES(:tensp, :gia, :giakm, :soluong, :motangan, :motachitiet, :hinhanhshow, :sanphamnoibat, NOW(), :madm,:meal)";
+        $sql = "INSERT INTO sanpham (`tensp`, `giakm`, `soluong`, `motangan`, `motachitiet`, `hinhanhshow`, `sanphamnoibat`, `ngaynhap`, `madm`, `meal`, `sizenho`, `sizevua`, `sizelon`)
+                            VALUES(:tensp, :giakm, :soluong, :motangan, :motachitiet, :hinhanhshow, :sanphamnoibat, NOW(), :madm, :meal, :sizenho, :sizevua, :sizelon)";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(":tensp", $tensp);
-        $stmt->bindParam(":gia", $gia);
         $stmt->bindParam(":giakm", $giakm);
         $stmt->bindParam(":soluong", $soluong);
         $stmt->bindParam(":motangan", $motangan);
@@ -20,6 +19,9 @@ function add_product($tensp, $gia, $giakm, $soluong, $motangan, $motachitiet, $h
         $stmt->bindParam(":sanphamnoibat", $sanphamnoibat);
         $stmt->bindParam(":madm", $madm);
         $stmt->bindParam(":meal", $meal);
+        $stmt->bindParam(":sizenho", $sizenho);
+        $stmt->bindParam(":sizevua", $sizevua);
+        $stmt->bindParam(":sizelon", $sizelon);
         $stmt->execute();
 
         // Lấy masp của sản phẩm vừa thêm
@@ -46,7 +48,8 @@ function add_product($tensp, $gia, $giakm, $soluong, $motangan, $motachitiet, $h
 
 
 
-function edit_product($masp, $tensp, $gia, $giakm, $soluong, $motangan, $motachitiet, $hinhanhshow, $hinhanh, $sanphamnoibat, $ngaynhap, $madm,$meal)
+
+function edit_product($masp, $tensp, $sizenho, $sizevua, $sizelon, $giakm, $soluong, $motangan, $motachitiet, $hinhanhshow, $hinhanh, $sanphamnoibat, $ngaynhap, $madm, $meal)
 {
     global $conn;
 
@@ -54,14 +57,29 @@ function edit_product($masp, $tensp, $gia, $giakm, $soluong, $motangan, $motachi
         $conn->beginTransaction();
 
         // Update product information in the sanpham table
-        $sql = "UPDATE sanpham SET `tensp`=:tensp, `gia`=:gia, `giakm`=:giakm, `soluong`=:soluong, 
-        `motangan`=:motangan, `motachitiet`=:motachitiet, `hinhanhshow`=:hinhanhshow, 
-        `sanphamnoibat`=:sanphamnoibat, `ngaynhap`=:ngaynhap, `madm`=:madm, `meal`=:meal WHERE masp=:masp
-        ";
+        $sql = "UPDATE sanpham SET 
+                `tensp`=:tensp, 
+                `sizenho`=:sizenho, 
+                `sizevua`=:sizevua, 
+                `sizelon`=:sizelon,
+                `giakm`=:giakm, 
+                `soluong`=:soluong, 
+                `motangan`=:motangan, 
+                `motachitiet`=:motachitiet, 
+                `hinhanhshow`=:hinhanhshow, 
+                `sanphamnoibat`=:sanphamnoibat, 
+                `ngaynhap`=:ngaynhap, 
+                `madm`=:madm, 
+                `meal`=:meal
+ 
+                WHERE masp=:masp";
+
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(":masp", $masp);
         $stmt->bindParam(":tensp", $tensp);
-        $stmt->bindParam(":gia", $gia);
+        $stmt->bindParam(":sizenho", $sizenho);
+        $stmt->bindParam(":sizevua", $sizevua);
+        $stmt->bindParam(":sizelon", $sizelon);
         $stmt->bindParam(":giakm", $giakm);
         $stmt->bindParam(":soluong", $soluong);
         $stmt->bindParam(":motangan", $motangan);
@@ -71,6 +89,7 @@ function edit_product($masp, $tensp, $gia, $giakm, $soluong, $motangan, $motachi
         $stmt->bindParam(":ngaynhap", $ngaynhap);
         $stmt->bindParam(":madm", $madm);
         $stmt->bindParam(":meal", $meal);
+
         $stmt->execute();
 
         // Update images in the anhchitiet table
@@ -141,13 +160,19 @@ function get_product($id){
 }
 function get_products($id){
     global $conn;
-    $sql = "SELECT * FROM sanpham WHERE masp=".$id;
+    
+    $sql = "SELECT *
+            FROM sanpham 
+            WHERE masp = :id";
+
     $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    return $stmt->fetch();
     
+    return $stmt->fetch();
 }
+
 
 function delete_product($id) {
     global $conn;
@@ -302,4 +327,5 @@ function checktensp($tensp) {
     // Trả về true nếu tên sản phẩm đã tồn tại, ngược lại trả về false
     return ($result !== false);
 }
+
 ?>

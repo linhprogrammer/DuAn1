@@ -35,6 +35,14 @@
                                     </a>
                                 </li>
                                 <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
+                                    <a href="admin.php?mod=product_extra&act=dashboard" class="sa-nav__link">
+                                        <span class="sa-nav__icon">
+                                            <i class="fas fa-box"></i>
+                                        </span>
+                                        <span class="sa-nav__title">Sản phẩm phụ</span>
+                                    </a>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
                                     <a href="admin.php?mod=category&act=dashboard" class="sa-nav__link">
                                         <span class="sa-nav__icon">
                                             <i class="fas fa-boxes"></i>

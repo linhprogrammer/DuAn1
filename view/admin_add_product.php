@@ -25,10 +25,17 @@
                                         <label for="form-product/name" class="form-label">Tên sản phẩm</label><input type="text" class="form-control" id="form-product/name" name="tensp">
                                     </div>
                                     <div class="mb-4">
-                                        <label for="form-product/description" class="form-label">Giá</label>
-                                        <textarea id="form-product/short-description" class="form-control" rows="2" name="gia"></textarea>
+                                        <label for="form-product/description" class="form-label">Giá size nhỏ</label>
+                                        <textarea id="form-product/short-description" class="form-control" rows="2" name="sizenho"></textarea>
                                     </div>
-
+                                    <div class="mb-4">
+                                        <label for="form-product/description" class="form-label">Giá size vừa</label>
+                                        <textarea id="form-product/short-description" class="form-control" rows="2" name="sizevua"></textarea>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="form-product/description" class="form-label">Giá size lớn</label>
+                                        <textarea id="form-product/short-description" class="form-control" rows="2" name="sizelon"></textarea>
+                                    </div>
                                     <div class="mb-4">
                                         <label for="form-product/description" class="form-label">Giá khuyến mãi</label>
                                         <textarea id="form-product/short-description" class="form-control" rows="2" name="giakm"></textarea>
