@@ -197,4 +197,16 @@ function showdm7_extra() {
 
     return $stmt->fetchAll();
 }
+function checktensp_extra($tensp) {
+    global $conn;
+    $sql = "SELECT * FROM sanphamphu WHERE tensp = :tensp";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(":tensp", $tensp);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+
+    // Trả về true nếu tên sản phẩm đã tồn tại, ngược lại trả về false
+    return ($result !== false);
+}
 ?>

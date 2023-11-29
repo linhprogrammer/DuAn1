@@ -48,7 +48,7 @@ if (isset($_GET['act']))
                 $ten_sp_moi = $_POST['tensp'];
             
                 // Kiểm tra xem tên sản phẩm mới có trùng với tên sản phẩm cũ hay không
-                if (checktensp($ten_sp_moi)) {
+                if (checktensp_extra($ten_sp_moi)) {
                     echo '<script>alert("Tên sản phẩm đã tồn tại. Vui lòng chọn tên khác.");</script>';
                 } else {
                     // Tiếp tục xử lý khi tên sản phẩm không trùng
