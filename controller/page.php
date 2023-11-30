@@ -89,9 +89,6 @@ if (isset($_GET['act'])) {
                                 }, 1000); // Reload after 1 seconds
                               </script>';
                     }
-                    
-                    
-                    
                 }
                 
             }
@@ -99,7 +96,18 @@ if (isset($_GET['act'])) {
             include_once 'view/page_info.php';
             include_once 'view/template_footer.php';
             break;
-
+            case 'search':
+                include_once 'model/connect.php';
+                include_once 'model/product.php';
+                if (isset($_GET['keyword'])) {
+                    $data['dssp'] = search_products($_GET['keyword']);
+                }
+    
+                include_once 'view/template_head.php';
+                include_once 'view/template_header.php';
+                include_once 'view/page_search.php';
+                include_once 'view/template_footer.php';
+                break;
 
 
         default:

@@ -84,10 +84,13 @@
                     </div>
                     <nav class="navbar bg-body-tertiary">
                         <div class="container-fluid">
-                            <form action="" method="post" class="d-flex" role="search">
-                                <input class="form-control me-2" name="keyword" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
-                            </form>
+                        <form action="index.php" method="get" class="d-flex" role="search">
+    <input class="form-control me-2" name="keyword" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+    <input type="hidden" name="mod" value="page">
+    <input type="hidden" name="act" value="search">
+</form>
+
                         </div>
                     </nav>
                 </div>

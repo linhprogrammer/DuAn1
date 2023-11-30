@@ -81,7 +81,8 @@
             <div class="sa-toolbar sa-toolbar--search-hidden sa-app__toolbar">
                 <div class="sa-toolbar__body">
                     <div class="sa-toolbar__item">
-                        <button class="sa-toolbar__button" type="button" aria-label="Menu" data-sa-toggle-sidebar="">
+
+                       <button class="sa-toolbar__button" type="button" aria-label="Menu" data-sa-toggle-sidebar="">
                             <i class="fas fa-bars"></i>
                         </button>
                     </div>

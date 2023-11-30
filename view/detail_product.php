@@ -234,7 +234,7 @@
                                 <div>
                                     <!-- detail -->
                                     <?php foreach ($data['sp2'] as $spphu): ?>
-    <?php if ($spphu['phanloai'] == $data['sp']['madm']): ?>
+    <?php if ($spphu['phanloai'] == $data['sp']['madm'] && $spphu['soluong'] > 0): ?>
         <div class="them">
             <img src="upload/product_extra/<?= $spphu['hinhanhshow'] ?>" width="150px" alt="">
             <p class="mo-ta-them"><?= $spphu['tensp'] ?></p>
@@ -242,15 +242,15 @@
             <div class="quantity">
                 <input type="button" class="select-quantity-btn" value="Chọn" onclick="toggleQuantity(this)">
                 <div class="pro-qty">
-                <div class="quantity">
-
-                    <input type="number" value="1" min="1" onchange="updatePrice(this, <?= $spphu['gia'] ?>)">
-                </div>
+                    <div class="quantity">
+                        <input type="number" value="1" min="1" onchange="updatePrice(this, <?= $spphu['gia'] ?>)">
+                    </div>
                 </div>
             </div>
         </div>
     <?php endif; ?>
 <?php endforeach; ?>
+
 
 
                                     <!--  -->

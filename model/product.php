@@ -327,5 +327,12 @@ function checktensp($tensp) {
     // Trả về true nếu tên sản phẩm đã tồn tại, ngược lại trả về false
     return ($result !== false);
 }
-
+function search_products($keyword){
+    global $conn;
+    $sql = "SELECT * FROM sanpham WHERE tensp LIKE '%".$keyword."%'";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    return $stmt->fetchAll();
+}
 ?>
