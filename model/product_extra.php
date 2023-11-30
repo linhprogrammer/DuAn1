@@ -1,7 +1,8 @@
 <?php
 function show_product_extra(){
     global $conn;
-    $sql = "SELECT * FROM sanphamphu";
+    $sql = "SELECT * FROM sanphamphu
+    ORDER BY masp DESC";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
