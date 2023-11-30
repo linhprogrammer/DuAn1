@@ -115,6 +115,13 @@ if (isset($_GET['act'])) {
                 include_once 'view/template_footer.php';
                 break;
             
+            case 'menu':
+                include_once 'model/connect.php';
+                include_once 'view/template_head.php';
+                include_once 'view/page_menu.php';
+                include_once 'view/template_footer.php';
+                break;
+            
 
         default:
             #code...

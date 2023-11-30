@@ -56,7 +56,7 @@
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="index.html" class="nav-item nav-link active">Trang Chủ</a>
                         <div class="nav-item dropdown">
-                            <a href="menu.html" class="nav-item nav-link">Thực Đơn</a>
+                            <a href="index.php?mod=page&act=menu" class="nav-item nav-link">Thực Đơn</a>
                             <div class="dropdown-menu m-0">
                                 <a href="#" class="dropdown-item">Gà Rán</a>
                                 <a href="#" class="dropdown-item">Mì Ý</a>
@@ -84,13 +84,12 @@
                     </div>
                     <nav class="navbar bg-body-tertiary">
                         <div class="container-fluid">
-                        <form action="index.php" method="get" class="d-flex" role="search">
-    <input class="form-control me-2" name="keyword" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
-    <input type="hidden" name="mod" value="page">
-    <input type="hidden" name="act" value="search">
-</form>
-
+                            <form action="index.php" method="get" class="d-flex" role="search">
+                                <input class="form-control me-2" name="keyword" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                                <input type="hidden" name="mod" value="page">
+                                <input type="hidden" name="act" value="search">
+                            </form>
                         </div>
                     </nav>
                 </div>
