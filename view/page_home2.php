@@ -54,7 +54,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Trang Chủ</a>
+                        <a href="index.php?mod=user&act=home" class="nav-item nav-link active">Trang Chủ</a>
                         <div class="nav-item dropdown">
                             <a href="menu.html" class="nav-item nav-link">Thực Đơn</a>
                             <div class="dropdown-menu m-0">
@@ -101,7 +101,7 @@
                         <div class="col-lg-6 text-center text-lg-start">
                             <h1 class="display-3 text-white animated slideInLeft">Thư Giãn Cùng<br> Những Món Ăn Tuyệt Vời</h1>
                             <p class="text-white animated slideInLeft mb-4 pb-2">Xì Food cam kết mang đến trải nghiệm ăn uống tuyệt vời đem lại cho bạn những món ăn ngon cùng với giá cả tốt</p>
-                            <a href="" class="btn btn-danger py-sm-3 px-sm-5 me-3 animated slideInLeft">Xem Ngay</a>
+                            <a href="" class="btn btn-danger py-sm-3 px-sm-5 me-3 animated slideInLeft" >Xem Ngay</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                             <img class="img-fluid" src="template/img/hero.png" alt="">
@@ -120,7 +120,7 @@
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
-                                <i class="fa fa-3x fa-user-tie text-danger mb-4"></i>
+                                <i class="fa fa-3x fa-user-tie text-danger mb-4" ></i>
                                 <h5>Đầu Bếp Tuyệt Vời</h5>
                                 <p>Chúng tôi có những đầu bếp tuyệt vời sẽ mang đến cho bạn những món ăn tuyệt vời.</p>
                             </div>
@@ -226,7 +226,7 @@
                                 <i class="fa fa-coffee fa-2x text-danger"></i>
                                 <div class="ps-3">
                                     <small class="text-body">Popular</small>
-                                    <h6 class="mt-n1 mb-0">Bữa Sáng</h6>
+                                    <h6 class="mt-n1 mb-0"style="color: #C5221F;">Bữa Sáng</h6>
                                 </div>
                             </a>
                         </li>
@@ -235,7 +235,7 @@
                                 <i class="fa fa-hamburger fa-2x text-danger"></i>
                                 <div class="ps-3">
                                     <small class="text-body">Special</small>
-                                    <h6 class="mt-n1 mb-0">Bữa Trưa</h6>
+                                    <h6 class="mt-n1 mb-0" style="color: #C5221F;">Bữa Trưa</h6>
                                 </div>
                             </a>
                         </li>
@@ -244,7 +244,7 @@
                                 <i class="fa fa-utensils fa-2x text-danger"></i>
                                 <div class="ps-3">
                                     <small class="text-body">Lovely</small>
-                                    <h6 class="mt-n1 mb-0">Bữa Tối</h6>
+                                    <h6 class="mt-n1 mb-0" style="color: #C5221F;">Bữa Tối</h6>
                                 </div>
                             </a>
                         </li>
