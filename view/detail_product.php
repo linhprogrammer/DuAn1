@@ -109,6 +109,9 @@
     border-radius: 5px 0 0 5px;
 }
 
+.quantity span{
+    display: none;
+}
 
     </style>
 
@@ -116,16 +119,16 @@
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <img src="template/img/logo1.png" alt="Logo" style="transform: scale(1.8);">
+                    <img src="template/img/logo-rem.png" alt="Logo" style="transform: scale(1.8);">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Trang Chủ</a>
+                        <a href="index.php?mod=page&act=home" class="nav-item nav-link active">Trang Chủ</a>
                         <div class="nav-item dropdown">
-                            <a href="menu.html" class="nav-item nav-link">Thực Đơn</a>
+                            <a href="index.php?mod=page&act=menu" class="nav-item nav-link">Thực Đơn</a>
                             <div class="dropdown-menu m-0">
                                 <a href="#" class="dropdown-item">Gà Rán</a>
                                 <a href="#" class="dropdown-item">Mì Ý</a>
@@ -234,30 +237,28 @@
                                 <div>
                                     <!-- detail -->
                                     <?php foreach ($data['sp2'] as $spphu): ?>
-    <?php if ($spphu['phanloai'] == $data['sp']['madm'] && $spphu['soluong'] > 0): ?>
-        <div class="them">
-            <img src="upload/product_extra/<?= $spphu['hinhanhshow'] ?>" width="150px" alt="">
-            <p class="mo-ta-them"><?= $spphu['tensp'] ?></p>
-            <p class="gia-them"><?= $spphu['gia'] ?> </p>
-            <div class="quantity">
-                <input type="button" class="select-quantity-btn" value="Chọn" onclick="toggleQuantity(this)">
-                <div class="pro-qty">
-                    <div class="quantity">
-                        <input type="number" value="1" min="1" onchange="updatePrice(this, <?= $spphu['gia'] ?>)">
-                    </div>
-                </div>
-            </div>
-        </div>
-    <?php endif; ?>
-<?php endforeach; ?>
-
-
+                                        <?php if ($spphu['phanloai'] == $data['sp']['madm'] && $spphu['soluong'] > 0): ?>
+                                            <div class="them">
+                                                <img src="upload/product_extra/<?= $spphu['hinhanhshow'] ?>" width="150px" alt="">
+                                                <p class="mo-ta-them"><?= $spphu['tensp'] ?></p>
+                                                <p class="gia-them"><?= $spphu['gia'] ?> </p>
+                                                <div class="quantity">
+                                                    <input type="button" class="select-quantity-btn" value="Chọn" onclick="toggleQuantity(this)">
+                                                    <div class="pro-qty">
+                                                        <div class="quantity">
+                                                            <input type="number" value="1" min="1" onchange="updatePrice(this, <?= $spphu['gia'] ?>)">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
 
                                     <!--  -->
                                     <!--  -->
                                     <div class="total-price-section">
-    <p>Total Price: <span id="totalPriceDisplay">0 đ</span></p>
-</div>
+                                        <p>Total Price: <span id="totalPriceDisplay">0 đ</span></p>
+                                    </div>
                                     </div>
                                     <div class="nut-them">
                                         <a href="#" class="btn btn-danger">Thêm vào giỏ hàng</a>

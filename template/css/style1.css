@@ -34,6 +34,12 @@
 /* Template default CSS
 /*----------------------------------------*/
 
+:root {
+    --primary: #FEA116;
+    --light: #F1F8FF;
+    --dark: #000000;
+}
+
 html,
 body {
     height: 100%;
@@ -114,6 +120,11 @@ ol {
 
 /*** Navbar ***/
 
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
 .navbar-dark .navbar-nav .nav-link {
     position: relative;
     margin-left: 25px;
@@ -181,7 +192,7 @@ ol {
 /*** Hero Header ***/
 
 .hero-header {
-    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/bg-hero.jpg);
+    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9));
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
