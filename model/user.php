@@ -2,26 +2,35 @@
 function signup($hoten, $sodienthoai, $matkhau)
 {
     global $conn;
-    $sql = "INSERT INTO taikhoan (`hoten`, `sodienthoai`, `matkhau`) VALUES(:hoten, :sodienthoai, :matkhau)";
+    $sql = "INSERT INTO taikhoan (`hoten`, `sodienthoai`, `matkhau`, `blocked`) VALUES(:hoten, :sodienthoai, :matkhau, 0)";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(":hoten", $hoten);
     $stmt->bindParam(":sodienthoai", $sodienthoai);
     $stmt->bindParam(":matkhau", $matkhau);
 
     return $stmt->execute();
-    //print_r($stmt->fetch());
 }
+
 
 function login($sodienthoai, $matkhau){
     global $conn;
-    $sql = "SELECT * FROM taikhoan WHERE sodienthoai='".$sodienthoai." 'AND matkhau='".$matkhau."'";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
-    $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    //print_r($stmt->fetch());
+    $sql = "SELECT * FROM taikhoan WHERE sodienthoai=:sodienthoai AND matkhau=:matkhau AND blocked=0";
     
-    return $stmt->fetch();
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':sodienthoai', $sodienthoai, PDO::PARAM_STR);
+    $stmt->bindParam(':matkhau', $matkhau, PDO::PARAM_STR);
+    
+    $stmt->execute();
+    
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+    if ($user && !$user['blocked']) {
+        return $user;
+    } else {
+        return null; // Hoặc có thể trả về một giá trị khác để biểu thị trạng thái đăng nhập không thành công
+    }
 }
+
 function checkSDT($sodienthoai){
     global $conn;
     $sql = "SELECT * FROM taikhoan WHERE sodienthoai=:sodienthoai";
@@ -181,6 +190,21 @@ function doimatkhau($id, $matkhau)
         $conn->rollBack();
         echo "Failed: " . $e->getMessage();
         return false;
+    }
+}
+function block_user($matk) {
+    global $conn;
+
+    $sql = "UPDATE taikhoan SET blocked = 1 WHERE matk = :matk";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':matk', $matk, PDO::PARAM_INT);
+
+    try {
+        $stmt->execute();
+        return true; // Trả về true nếu cập nhật thành công
+    } catch (PDOException $e) {
+        // Xử lý lỗi nếu cần
+        return false; // Trả về false nếu có lỗi
     }
 }
 

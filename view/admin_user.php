@@ -57,7 +57,7 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="customer-context-menu-0">
                     <li><a class="dropdown-item" href="admin.php?mod=user&act=edit&id=<?=$tk['matk']?>">Chỉnh sửa</a></li>
-                    <li><a class="dropdown-item" href="#">Chặn tài khoản</a></li>
+                    <li><a class="dropdown-item" href="admin.php?mod=user&act=block&id=<?=$tk['matk']?>">Chặn tài khoản</a></li>
                 </ul>
             </div>
         </td>
