@@ -7,7 +7,7 @@
                         <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?= $sp['hinhanhshow'] ?>" alt="" style="width: 310px; margin: auto; margin-top: 20px;">
                         <div class="w-100 text-start ps-4">
                             <h5 class=" justify-content-between border-bottom pb-2">
-                                <p style=" color: #C5221F;margin: auto; text-align: center;"><?= $sp['tensp'] ?></p>
+                                <p style=" color: #C5221F; margin: auto; text-align: center;"><?= $sp['tensp'] ?></p>
                                 <p style=" color: #C5221F; font-size: 16px; margin: auto; text-align: center;"><?= $sp['motangan'] ?></p>           
                             </h5>
                             <p style="font-size: 18px; margin: auto; text-align: center; " class="text-danger"><?= $sp['giakm'] ?> VNĐ</p>
