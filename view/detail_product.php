@@ -209,28 +209,28 @@
                             <span>4.5/5</span>
                         </div>
                         <div class="size">
-    <input type="radio" id="radio1" name="size" data-price="<?= $data['sp']['sizenho'] ?>">
-    <label for="radio1">Nhỏ</label>
+                            <input type="radio" id="radio1" name="size" data-price="<?= $data['sp']['sizenho'] ?>">
+                            <label for="radio1">Nhỏ</label>
 
-    <input type="radio" id="radio2" name="size" data-price="<?= $data['sp']['sizevua'] ?>" checked>
-    <label for="radio2">Vừa</label>
+                            <input type="radio" id="radio2" name="size" data-price="<?= $data['sp']['sizevua'] ?>" checked>
+                            <label for="radio2">Vừa</label>
 
-    <input type="radio" id="radio3" name="size" data-price="<?= $data['sp']['sizelon'] ?>">
-    <label for="radio3">Lớn</label>
-</div>
+                            <input type="radio" id="radio3" name="size" data-price="<?= $data['sp']['sizelon'] ?>">
+                            <label for="radio3">Lớn</label>
+                        </div>
 
-<div class="product__details__quantity">
-    <div class="quantity">
-        <input type="number" value="1" min="1" id="quantityInput">
-    </div>
-</div>
+                        <div class="product__details__quantity">
+                            <div class="quantity">
+                                <input type="number" value="1" min="1" id="quantityInput">
+                            </div>
+                        </div>
 
-<div class="product__details__price" id="productPrice">
-    <!-- Display the initial price, assuming it's based on the default size -->
-    <?= $data['sp']['sizevua'] ?>
-</div>
+                        <div class="product__details__price" id="productPrice">
+                            <!-- Display the initial price, assuming it's based on the default size -->
+                            <?= $data['sp']['sizevua'] ?>
+                        </div>
 
-                        <a href="#" class="primary-btn">ADD TO CARD</a>
+                        <a href="#" class="btn btn-danger">ADD TO CARD</a>
                         <form action="" method="post">
                             <div class="h2-mota">
                                 <p class="h2-mau">Ngon hơn khi ăn kèm</p>
