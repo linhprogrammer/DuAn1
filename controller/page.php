@@ -108,7 +108,13 @@ if (isset($_GET['act'])) {
                 include_once 'view/page_search.php';
                 include_once 'view/template_footer.php';
                 break;
-
+            case 'about':
+                include_once 'model/connect.php';
+                include_once 'view/template_head.php';
+                include_once 'view/page_about.php';
+                include_once 'view/template_footer.php';
+                break;
+            
 
         default:
             #code...

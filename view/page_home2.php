@@ -226,7 +226,7 @@
                                 <i class="fa fa-coffee fa-2x text-danger"></i>
                                 <div class="ps-3">
                                     <small class="text-body">Popular</small>
-                                    <h6 class="mt-n1 mb-0">Bữa Sáng</h6>
+                                    <h6 class="mt-n1 mb-0" style="color: #C5221F;">Bữa Sáng</h6>
                                 </div>
                             </a>
                         </li>
@@ -235,7 +235,7 @@
                                 <i class="fa fa-hamburger fa-2x text-danger"></i>
                                 <div class="ps-3">
                                     <small class="text-body">Special</small>
-                                    <h6 class="mt-n1 mb-0">Bữa Trưa</h6>
+                                    <h6 class="mt-n1 mb-0"  style="color: #C5221F;">Bữa Trưa</h6>
                                 </div>
                             </a>
                         </li>
@@ -244,7 +244,7 @@
                                 <i class="fa fa-utensils fa-2x text-danger"></i>
                                 <div class="ps-3">
                                     <small class="text-body">Lovely</small>
-                                    <h6 class="mt-n1 mb-0">Bữa Tối</h6>
+                                    <h6 class="mt-n1 mb-0"  style="color: #C5221F;">Bữa Tối</h6>
                                 </div>
                             </a>
                         </li>
