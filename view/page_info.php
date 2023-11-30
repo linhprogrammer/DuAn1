@@ -192,7 +192,6 @@
                     </div>
                 </div>
             </div>
-            <a href="index.php?mod=user&act=home&id=<?= $data ['info']['matk'] ?>"><input type="button" value="Về trang chủ"></a>
         </div>
     </div>
 </form>
