@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+</head>
+<body>
+    <style>
+        form {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .them {
+            display: flex;
+            border-radius: 5px;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 100%;
+            height: 237px;
+            flex-shrink: 0;
+        }
+
+        .them img {
+            width: 283px;
+            height: 185px;
+            flex-shrink: 0;
+        }
+
+        .mo-ta-them {
+            width: 425px;color: #000;
+            font-family: Inter;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .gia-them {
+            color: #555;
+            width: 166px;
+            font-family: Inter;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .product__details__quantity {
+            margin-left: 190px;
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        .pro-qty {
+            width: 140px;
+            height: 50px;
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        .pro-qty input {
+            height: 100%;
+            width: 100%;
+            font-size: 16px;
+            color: #6f6f6f;
+            width: 50px;
+            border: none;
+            text-align: center;
+            background-color: #FF706161;
+            border-radius: 5px;
+        }
+
+        .pro-qty .qtybtn {
+            width: 35px;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        .pro-qty span{
+            padding: 14px;
+            background-color: #C5221F;
+            color: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .custom-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            width: 65px;
+            height: 60px;
+            flex-shrink: 0;
+        }
+
+        .custom-button ion-icon {
+            color: #555;
+            font-size: 30px;
+
+        }
+
+        .ghichu {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            background: #FFF;
+        }
+
+        .ghichu h3 {
+            color: #000;
+            margin-bottom: 30px;
+            font-family: Inter;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .ghichu textarea{
+            width: 100%;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid #C5221F;
+            font-family: Inter;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .h2-mau{
+            color: white;
+            width: 100%;
+            background-color: #C5221F;
+            margin-top: 30px;
+            padding: 10px;
+            padding-left: 20px;
+            font-size: 30px;
+        }
+
+        .check {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .check h4 {
+            color: #000;
+            font-family: Inter;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .check label {
+            color: #000;
+            font-family: Inter;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+    </style>
+
+    <div class="container">
+        <a href="#" style="color: black; font-size: 30px;"><ion-icon name="arrow-back-outline"></ion-icon></a>
+        <h2 style="display: flex;">Giỏ hàng của bạn <p style="margin: 15px 0 0 10px; font-size: 16px; color: rgb(102, 102, 99)">(1 sản phẩm)</p></h2>
+        <div>
+            <form action="" method="post">
+                  <div>
+                      <!-- detail -->
+                    <div class="them"> 
+                        <img src="img/product/Cơm Gà Sốt Phô Mai.png" alt="">
+                        <div>
+                            <p class="mo-ta-them">Cá Nugget (3 Miếng)</p>
+                            <p class="gia-them">25.000 đ</p>
+                        </div>
+                        <div class="product__details__quantity">
+                            <div class="quantity">
+                                <div class="pro-qty">
+                                    <span class="dec qtybtn">-</span>
+                                    <input type="text" value="1">
+                                    <span class="inc qtybtn">+</span>
+                                </div>
+                            </div>
+                        </div>                       
+                        <button class="custom-button">
+                            <ion-icon name="trash-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <form action="" method="post">
+                <div class="ghichu">
+                    <h3>Ghi chú cho đơn hàng </h3>
+                    <textarea name="ghichu" id="ghichu" placeholder="Vui lòng thêm lưu ý cho cửa hàng"></textarea>
+                </div>
+            </form>
+
+            <form action="" method="post">
+                <div class="h2-mota">
+                  <p class="h2-mau">Ngon hơn khi ăn kèm</p> 
+                  <div>
+                      <!-- detail -->
+                    <div class="them"> 
+                        <img src="img/product/Burger Bulgogi.png" width="120px" height="120px" alt="">
+                        <p class="mo-ta-them">Cá Nugget (3 Miếng)</p>
+                        <p class="gia-them">+25.000 đ</p>
+                            <div class="quantity">
+                                <div class="pro-qty">
+                                    <span class="dec qtybtn">-</span>
+                                    <input type="text" value="1">
+                                    <span class="inc qtybtn">+</span>
+                                </div>
+                            </div>
+                    </div>
+
+                </div>
+              </form>
+              <div class="check">
+                <h4>Thu thập thông tin cá nhân</h4>
+                <div style="display: flex;">
+                    
+                    <ion-icon name="checkmark-circle-outline" id="collectionIcon" style="font-size: 32px; margin-right: 10px;"></ion-icon>
+                    <label for="allowCollection">Đồng ý cho phép website thu thập thông tin cá nhân</label>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const inc = document.querySelector('.inc');
+            const dec = document.querySelector('.dec');
+            const qtyInput = document.querySelector('.quantity input');
+
+            inc.addEventListener('click', function() {
+                qtyInput.value = parseInt(qtyInput.value) + 1;
+            });
+
+            dec.addEventListener('click', function() {
+                if (parseInt(qtyInput.value) > 1) {
+                    qtyInput.value = parseInt(qtyInput.value) - 1;
+                }
+            });
+        });
+
+        const collectionIcon = document.getElementById('collectionIcon');
+        let isColored = false;
+
+        collectionIcon.addEventListener('click', function() {
+            if (!isColored) {
+                this.style.color = '#C5221F';
+                isColored = true;
+            } else {
+                this.style.color = '';
+                isColored = false;
+            }
+        });
+
+
+
+    </script>
+
+</body>
+</html>
