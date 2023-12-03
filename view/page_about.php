@@ -50,7 +50,7 @@
                     <div class="navbar-nav py-0 pe-4">
                         <a href="index.php?mod=page&act=home" class="nav-item nav-link ">Trang Chủ</a>
                         <div class="nav-item dropdown">
-                            <a href="index.php?mod=page&act=menu" class="nav-item nav-link active" style="color: black;">Thực Đơn</a>
+                            <a href="index.php?mod=page&act=menu" class="nav-item nav-link " style="color: black;">Thực Đơn</a>
                             <div class="dropdown-menu m-0">
                                 <a href="#" class="dropdown-item">Gà Rán</a>
                                 <a href="#" class="dropdown-item">Mì Ý</a>
@@ -62,7 +62,7 @@
                             </div>
                         </div>
                         <a href="service.html" class="nav-item nav-link">Dịch Vụ</a>
-                        <a href="index.php?mod=page&act=about" class="nav-item nav-link">Về Chúng Tôi</a>
+                        <a href="index.php?mod=page&act=about" class="nav-item nav-link active">Về Chúng Tôi</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined">
                                 account_circle
