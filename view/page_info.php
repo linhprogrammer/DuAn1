@@ -1,15 +1,19 @@
+ 
+ 
+ 
+ <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
  <!-- Navbar & Hero Start -->
- <div class="container-xxl position-relative p-0">
+        <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <img src="template/img/logo-rem.png" alt="Logo" style="transform: scale(1.8);">
+                <a href="index.php?mod=page&act=home" class="navbar-brand p-0">
+                    <img src="upload/logo.png" alt="Logo" style="transform: scale(1.8);">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.php?mod=page&act=home" class="nav-item nav-link active">Trang Chủ</a>
+                    <div class="navbar-nav py-0 pe-4">
+                        <a href="index.php?mod=page&act=home" class="nav-item nav-link ">Trang Chủ</a>
                         <div class="nav-item dropdown">
                             <a href="index.php?mod=page&act=menu" class="nav-item nav-link">Thực Đơn</a>
                             <div class="dropdown-menu m-0">
@@ -22,169 +26,129 @@
                                 <a href="#" class="dropdown-item">ComBo</a>
                             </div>
                         </div>
-                        <a href="service.html" class="nav-item nav-link">Dịch Vụ</a>
+                        <a href="service.html" class="nav-item nav-link">Bài Viết</a>
                         <a href="index.php?mod=page&act=about" class="nav-item nav-link">Về Chúng Tôi</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined">
-                                account_circle
-                                </span></a>
-                            <div class="dropdown-menu m-0">
-                                <a href="index.php?mod=user&act=signup" class="dropdown-item">Đăng Ký</a>
-                                <a href="index.php?mod=user&act=login" class="dropdown-item">Đăng Nhập</a>
-                            </div>
-                        </div>
-                        <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined">
-                            shopping_cart
-                            </span></a>
                     </div>
-                    <nav class="navbar bg-body-tertiary">
+                    <nav class="navbar bg-body-tertiary" style="margin-left: auto;">
                         <div class="container-fluid">
                             <form action="index.php" method="get" class="d-flex" role="search">
-                                <input class="form-control me-2" name="keyword" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
+                                <input class="form-control me-2" name="keyword" style="width: 300px;" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit"><ion-icon style="margin-top: 5px;" name="search-outline"></ion-icon></button>
                                 <input type="hidden" name="mod" value="page">
                                 <input type="hidden" name="act" value="search">
                             </form>
                         </div>
                     </nav>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-item nav-link active"><span class="material-symbols-outlined"  style="font-size: 38px; margin-left: 10px;">
+                            account_circle
+                            </span></a>
+                            <div class="dropdown-menu m-0">
+                                <a href="index.php?mod=user&act=signup" class="dropdown-item">Xin chào <?= $data ['info']['hoten'] ?> </a>
+                                <a href="index.php?mod=page&act=info&id=<?= $data ['info']['matk'] ?>" class="dropdown-item">Thông tin tài khoản</a>
+                                <a href="#" class="dropdown-item">Đơn hàng</a>
+                                <a href="index.php?mod=user&act=logout" class="dropdown-item">Đăng xuất</a>
+                            </div>
+                    </div>
+                    <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined" style="font-size: 38px; margin-left: 10px;">shopping_cart</span></a>
                 </div>
             </nav>
 
-            <div class="container-xxl bg-dark hero-header mb-5">
-                    <div class="container-xxl py-5 bg-dark hero-header mb-5">
-                    </div>
+            <div class="container-xxl py-5 hero-header mb-5">
             </div>
         </div>
-        <!-- Navbar & Hero End --> 
+        <!-- Navbar & Hero End -->
+
 
 <form action="" method="post" enctype="multipart/form-data">
     <div class="info">
         <div class="container">
-            <h2>Thông tin tài khoản</h2>
+
             <div class="account">
                 <div class="col-lg-4 col-md-4">
                     <div class="avatar">
                         <img src="upload/avatar/<?= $data['info']['hinhanh'] ?>" alt="" name="hinhanh">
-                        <input type="file" name="hinhanh" value="Thay ảnh"></input>
-                        <div>
-                            <a href=""><input type="button" value="Xem trạng thái đơn hàng"></input></a>
-                        </div>
+                        <label for="changeAvatar" class="change-avatar-btn">Sửa ảnh</label>
+                        <input type="file" id="changeAvatar" name="hinhanh" style="display: none;">
                     </div>
+                    
                 </div>
                 <div class="col-lg-8 col-md-8">
                     <div class="user">
+                        <h2>Thông tin tài khoản</h2>
                         <form action="">
-                            <div class="hoten">
-                                <label>Họ và Tên:</label>
-                                <input type="text" value="<?= $data['info']['hoten'] ?>" name="hoten" id="hoten">
-                            </div>
-                            <div class="gioitinh">
-                                <label>Giới tính:</label>
-                                <div>
-                                    <select id="gioitinh" name="gioitinh">
-                                        <option value="Nam" <?= ($data['info']['gioitinh'] == 'Nam') ? 'selected' : '' ?>>
-                                            Nam</option>
-                                        <option value="Nữ" <?= ($data['info']['gioitinh'] == 'Nữ') ? 'selected' : '' ?>>Nữ
-                                        </option>
-                                        <option value="Khác" <?= ($data['info']['gioitinh'] == 'Khác') ? 'selected' : '' ?>>Khác</option>
-                                    </select>
+                            <div class="cot-1" style="display: flex;">
+                                <div class="hoten col-md-7">
+                                    <input type="text" value="<?= $data['info']['hoten'] ?>" name="hoten" id="hoten" placeholder="Họ và Tên">
+                                </div>
+                                <div class="gioitinh col-md-5">
+                                    <div>
+                                        <select id="gioitinh" name="gioitinh" aria-placeholder="Giới tính">
+
+                                            <option value="Nam" <?= ($data['info']['gioitinh'] == 'Nam') ? 'selected' : '' ?>>
+                                                Nam</option>
+                                            <option value="Nữ" <?= ($data['info']['gioitinh'] == 'Nữ') ? 'selected' : '' ?>>Nữ
+                                            </option>
+                                            <option value="Khác" <?= ($data['info']['gioitinh'] == 'Khác') ? 'selected' : '' ?>>Khác</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="sdt">
-                                <label>Số Điện Thoại:</label>
-                                <input type="text" value="<?= $data['info']['sodienthoai'] ?>" name="sodienthoai"
-                                    id="sdt"></input>
-                            </div>
-                            <div class="email">
-                                <label>Email:</label>
-                                <input type="text" value="<?= $data['info']['email'] ?>" name="email" id="email">
+                            <div class="cot-2" style="display: flex;">
+                                <div class="email col-md-7">
+                                    <input type="text" value="<?= $data['info']['email'] ?>" name="email" id="email" placeholder="Email">
+                                </div>
+
+                                <div class="sdt col-md-5" style="width: 220px;  border-radius: 4px; margin-left: 20px; font-size: 16px;">
+                                    <input type="text" value="<?= $data['info']['sodienthoai'] ?>" name="sodienthoai" id="sdt" placeholder="Số Điện Thoại"></input>
+                                </div>
+                                
+
                             </div>
                             <fieldset class="address-frame">
-                                <legend>Địa chỉ</legend>
 
                                 <div class="diachi">
-                                    <label>Địa chỉ:</label>
+                                    <input type="text" value="<?= $data['info']['diachi'] ?>" name="diachi" id="diachi" placeholder="Địa chỉ">
+                                    <div class="select-boxes">
+                                        <select id="city" name="tinh">
+                                            <option value="Chọn Tỉnh" selected>
+                                                <?= $data['info']['tinh'] ?>
+                                            </option>
+                                            <!-- Add other options as needed -->
+                                        </select>
 
-                                    <div>
-                                        <span>Tỉnh: </span>
-                                        <span>
-                                            <?php echo !empty($data['info']['tinh']) ? $data['info']['tinh'] : 'Bạn chưa chọn tỉnh'; ?>
-                                        </span> <br>
+                                        <select id="district" name="huyen">
+                                            <option value="Chọn Quận/Huyện" selected>
+                                                <?= $data['info']['huyen'] ?>
+                                            </option>
+                                            <!-- Add other options as needed -->
+                                        </select>
 
-                                        <span>Quận/Huyện: </span>
-                                        <span>
-                                            <?php echo !empty($data['info']['huyen']) ? $data['info']['huyen'] : 'Bạn chưa chọn huyện'; ?>
-                                        </span> <br>
-
-                                        <span>Phường/Xã: </span>
-                                        <span>
-                                            <?php echo !empty($data['info']['xa']) ? $data['info']['xa'] : 'Bạn chưa chọn xã'; ?>
-                                        </span> <br>
-                                    </div>
-
-                                    <!-- Add a button to trigger the address editing section -->
-                                    <input type="button" value="Thay đổi địa chỉ" name="thaydoidiachi"
-                                        onclick="toggleAddressSection()">
-
-                                    <!-- Address editing section initially hidden -->
-                                    <div id="diachiSection" style="display: none;">
-                                        <label>Địa chỉ:</label>
-
-                                        <div>
-                                            <select id="city" name="tinh">
-                                                <option value="Chọn Tỉnh" selected>
-                                                    <?= $data['info']['tinh'] ?>
-                                                </option>
-                                                <!-- Add other options as needed -->
-                                            </select>
-
-                                            <select id="district" name="huyen">
-                                                <option value="Chọn Quận/Huyện" selected>
-                                                    <?= $data['info']['huyen'] ?>
-                                                </option>
-                                                <!-- Add other options as needed -->
-                                            </select>
-
-                                            <select id="ward" name="xa">
-                                                <option value="Chọn Phường/Xã" selected>
-                                                    <?= $data['info']['xa'] ?>
-                                                </option>
-                                                <!-- Add other options as needed -->
-                                            </select>
-
-                                        </div>
+                                        <select id="ward" name="xa">
+                                            <option value="Chọn Phường/Xã" selected>
+                                                <?= $data['info']['xa'] ?>
+                                            </option>
+                                            <!-- Add other options as needed -->
+                                        </select>
                                     </div>
                                 </div>
                             </fieldset>
-
-                            <div class="password-change-frame">
-                                <div class="matkhau">
-                                    <label>Mật Khẩu:</label>
-                                    <input type="button" value="Thay đổi mật khẩu" id="showForm">
-                                </div>
-
-                                <div id="passwordChangeForm" style="display: none;">
-                                    <label>Mật khẩu cũ:</label>
-                                    <input type="password" id="oldPassword" name="matkhaucu"> <br>
-
-                                    <label>Mật khẩu mới:</label>
-                                    <input type="password" id="newPassword" name="matkhaumoi"> <br>
-
-                                    <label>Xác nhận mật khẩu mới:</label>
-                                    <input type="password" id="confirmPassword" name="matkhau"> <br>
-
-                                    <input type="submit" value="Lưu thay đổi" name="submit1"
-                                        onclick="savePasswordChanges()">
-                                </div>
+                            <div class="ghichu">
+                                <h3 style="text-align: start;">Thông tin bổ sung</h3>
+                                <p style="text-align: start;">Ghi chú đơn hàng (Tuỳ chọn)</p>
+                                <textarea style="width: 575px; height: 150px;" name="ghichu" id="ghichu" placeholder="Ghi chú về đơn hàng, ví dụ: Thời gian hay chỉ dẫn giao hàng chi tiết hơn."></textarea>
                             </div>
-                            <div>
+
+                            <div style="display: flex;">
                                 <?php if (isset($thongbao)): ?>
                                     <div class="alert alert-warning">
                                         <?= $thongbao ?>
                                     </div>
                                 <?php endif;
                                 unset($thongbao); ?>
-                                <input type="submit" value="Lưu thay đổi" name="submit">
+
+                                <input type="button" style="display: flex; width: 200px; margin-right: 100px;" value="Thay đổi mật khẩu">
+                                <input type="submit" style="display: flex; width: 200px; margin-left: 100px;" value="Lưu thay đổi" name="submit">
                             </div>
 
 
@@ -286,9 +250,42 @@
 
 </script>
 <style>
+    .avatar {
+        position: relative;
+        display: inline-block;
+    }
+
+    .avatar img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ccc;
+    }
+
+    .change-avatar-btn {
+        margin-top: 10px;
+        background-color: #C5221F;
+        color: white;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    .user {
+        border: 2px solid #ccc; 
+        padding: 20px;
+        border-radius: 10px; 
+        width: 100%; 
+        margin: 0 auto; 
+    }
+
     .address-frame {
-        border: 1px solid #ccc;
-        padding: 10px;
         margin-bottom: 10px;
     }
 
@@ -298,6 +295,17 @@
         margin-bottom: 10px;
         width: 550px;
     }
+
+    .select-boxes {
+    display: flex;
+    }
+
+    .select-boxes select {
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
 
     .matkhau,
     #passwordChangeForm {

@@ -544,7 +544,7 @@ h2 {
     background-color: #C5221F;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
   }
@@ -556,7 +556,7 @@ h2 {
     background-color: #C5221F;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
   }
@@ -583,19 +583,8 @@ h2 {
     box-sizing: border-box;
   }
 
+  
 
-.gioitinh{
-    display: flex;
-    margin-right: 50px;
-    width: 400px;
-}   
-
-.gioitinh label{
-	margin-right: 5px;
-    margin-top: 6px;
-	font-weight: 600;
-	font-size: 20px;
-}
   
 input[type="radio"] {
 	-webkit-appearance: none;
@@ -619,18 +608,28 @@ input[type="radio"]:checked {
 }
 
 .info .container {
-    max-width: 850px;
+    max-width: 950px;
     margin: 20px auto;
     text-align: center;
   }
 
 
-select {
+.gioitinh select {
     padding: 8px;
     border-radius: 4px;
     border: 1px solid #ccc;
     margin-bottom: 10px;
-    width: 200px; 
+    width: 220px; 
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.diachi select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 220px; 
     font-size: 16px;
 }
 
