@@ -10,6 +10,7 @@
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +31,8 @@
 
     <!-- Template Stylesheet -->
     <link href="template/css/style.css" rel="stylesheet">
+
+    
 </head>
 
 <body>
@@ -47,7 +50,7 @@
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <img src="template/img/logo-rem.png" alt="Logo" style="transform: scale(1.8);">
+                    <img src="upload/logo.png" alt="Logo" style="transform: scale(1.8);">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -86,7 +89,7 @@
                         <div class="container-fluid">
                             <form action="index.php" method="get" class="d-flex" role="search">
                                 <input class="form-control me-2" name="keyword" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
+                                <button class="btn btn-outline-success" type="submit"><ion-icon style="margin-top: 5px;" name="search-outline"></ion-icon></button>
                                 <input type="hidden" name="mod" value="page">
                                 <input type="hidden" name="act" value="search">
                             </form>
@@ -95,20 +98,7 @@
                 </div>
             </nav>
 
-            <div class="container-xxl py-5 bg-dark hero-header mb-5">
-                <div class="container my-5 py-5">
-                    <div class="row align-items-center g-5">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="display-3 text-white animated slideInLeft">Thư Giãn Cùng<br> Những Món Ăn Tuyệt Vời</h1>
-                            <p class="text-white animated slideInLeft mb-4 pb-2">Xì Food cam kết mang đến trải nghiệm ăn uống tuyệt vời đem lại cho bạn những món ăn ngon cùng với giá cả tốt</p>
-                            <a href="" class="btn btn-danger py-sm-3 px-sm-5 me-3 animated slideInLeft">Xem Ngay</a>
-                        </div>
-                        <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                            <img class="img-fluid" src="template/img/hero.png" alt="">
-                        </div>
-                    </div>
-                </div>
+            <div class="container-xxl py-5 hero-header mb-5">
             </div>
         </div>
         <!-- Navbar & Hero End -->
-

@@ -3,6 +3,7 @@
     --primary: #FEA116;
     --light: #F1F8FF;
     --dark: #000000;
+    --red: #C5221F;
 }
 
 .ff-secondary {
@@ -87,7 +88,7 @@
     margin-left: 25px;
     padding: 35px 0;
     font-size: 15px;
-    color: var(--light) !important;
+    color: var(--dark) !important;
     text-transform: uppercase;
     font-weight: 500;
     outline: none;
@@ -145,14 +146,14 @@
     
     .sticky-top.navbar-dark {
         position: fixed;
-        background: var(--dark) !important;
+        background-color: var(--red) !important;
     }
 }
 
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9).9) url(../img/bg-hero.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9).9);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -222,7 +223,7 @@
 }
 
 .service-item:hover * {
-    color: var(--light) !important;
+    color: var(--dark) !important;
 }
 
 
