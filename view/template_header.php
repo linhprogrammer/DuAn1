@@ -56,7 +56,7 @@
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0 pe-4">
+                    <div class="navbar-nav py-0 pe-4">
                         <a href="index.html" class="nav-item nav-link active">Trang Chủ</a>
                         <div class="nav-item dropdown">
                             <a href="index.php?mod=page&act=menu" class="nav-item nav-link">Thực Đơn</a>
@@ -85,10 +85,10 @@
                             shopping_cart
                             </span></a>
                     </div>
-                    <nav class="navbar bg-body-tertiary">
+                    <nav class="navbar bg-body-tertiary" style="margin-left: auto;">
                         <div class="container-fluid">
                             <form action="index.php" method="get" class="d-flex" role="search">
-                                <input class="form-control me-2" name="keyword" type="search" placeholder="Search" aria-label="Search">
+                                <input class="form-control me-2" name="keyword" style="width: 300px;" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-outline-success" type="submit"><ion-icon style="margin-top: 5px;" name="search-outline"></ion-icon></button>
                                 <input type="hidden" name="mod" value="page">
                                 <input type="hidden" name="act" value="search">
