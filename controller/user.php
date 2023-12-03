@@ -19,7 +19,9 @@ if (isset($_GET['act'])) {
             }
             // kiểm tra SDT xem có trong csdl chưa 
             // chưa có thì cho đăng kí
+            include_once 'view/template_header.php';
             include_once 'view/signup.php';
+            include_once 'view/template_footer.php';
             break;
             case 'login':
                 include_once 'model/connect.php';
@@ -60,7 +62,9 @@ if (isset($_GET['act'])) {
                     }
                 }
             
+                include_once 'view/template_header.php';
                 include_once 'view/login.php';
+                include_once 'view/template_footer.php';
                 break;
             
 
