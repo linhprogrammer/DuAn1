@@ -608,7 +608,7 @@ input[type="radio"]:checked {
 }
 
 .info .container {
-    max-width: 950px;
+    max-width: 980px;
     margin: 20px auto;
     text-align: center;
   }
