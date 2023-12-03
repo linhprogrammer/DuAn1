@@ -50,7 +50,7 @@
                     <div class="navbar-nav py-0 pe-4">
                         <a href="index.php?mod=page&act=home" class="nav-item nav-link ">Trang Chủ</a>
                         <div class="nav-item dropdown">
-                            <a href="index.php?mod=page&act=menu" class="nav-item nav-link " style="color: black;">Thực Đơn</a>
+                            <a href="index.php?mod=page&act=menu" class="nav-item nav-link ">Thực Đơn</a>
                             <div class="dropdown-menu m-0">
                                 <a href="#" class="dropdown-item">Gà Rán</a>
                                 <a href="#" class="dropdown-item">Mì Ý</a>
@@ -61,20 +61,9 @@
                                 <a href="#" class="dropdown-item">ComBo</a>
                             </div>
                         </div>
-                        <a href="service.html" class="nav-item nav-link">Dịch Vụ</a>
+                        <a href="service.html" class="nav-item nav-link">Bài Viết</a>
                         <a href="index.php?mod=page&act=about" class="nav-item nav-link active">Về Chúng Tôi</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined">
-                                account_circle
-                                </span></a>
-                            <div class="dropdown-menu m-0">
-                                <a href="index.php?mod=user&act=signup" class="dropdown-item ">Đăng Ký</a>
-                                <a href="index.php?mod=user&act=login" class="dropdown-item ">Đăng Nhập</a>
-                            </div>
-                        </div>
-                        <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined">
-                            shopping_cart
-                            </span></a>
+
                     </div>
                     <nav class="navbar bg-body-tertiary" style="margin-left: auto;">
                         <div class="container-fluid">
@@ -86,13 +75,23 @@
                             </form>
                         </div>
                     </nav>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined"  style="font-size: 38px; margin-left: 10px;">
+                            account_circle
+                            </span></a>
+                        <div class="dropdown-menu m-0">
+                            <a href="index.php?mod=user&act=signup" class="dropdown-item ">Đăng Ký</a>
+                            <a href="index.php?mod=user&act=login" class="dropdown-item ">Đăng Nhập</a>
+                        </div>
+                    </div>
+                    <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined" style="font-size: 38px; margin-left: 10px;">shopping_cart</span></a>
                 </div>
             </nav>
 
-            <div class="container-xxl bg-dark hero-header mb-5">
-                    <div class="container-xxl py-5 bg-dark hero-header mb-5">
+            <div class="container-xxl hero-header mb-5">
+                    <div class="container-xxl py-5 hero-header mb-5">
                         <div class="container text-center my-5 pt-5 pb-4">
-                            <h1 class="display-3 text-white mb-3 animated slideInDown">Về chúng tôi</h1>
+                            <h1 class="display-3 text-dark mb-3 animated slideInDown">Về chúng tôi</h1>
                             <nav aria-label="breadcrumb"></nav>
                         </div>
                     </div>

@@ -126,9 +126,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.php?mod=page&act=home" class="nav-item nav-link active">Trang Chủ</a>
+                        <a href="index.php?mod=page&act=home" class="nav-item nav-link ">Trang Chủ</a>
                         <div class="nav-item dropdown">
-                            <a href="index.php?mod=page&act=menu" class="nav-item nav-link">Thực Đơn</a>
+                            <a href="index.php?mod=page&act=menu" class="nav-item nav-link active">Thực Đơn</a>
                             <div class="dropdown-menu m-0">
                                 <a href="#" class="dropdown-item">Gà Rán</a>
                                 <a href="#" class="dropdown-item">Mì Ý</a>
@@ -139,20 +139,9 @@
                                 <a href="#" class="dropdown-item">ComBo</a>
                             </div>
                         </div>
-                        <a href="service.html" class="nav-item nav-link">Dịch Vụ</a>
+                        <a href="service.html" class="nav-item nav-link">Bài Viết</a>
                         <a href="index.php?mod=page&act=about" class="nav-item nav-link">Về Chúng Tôi</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined">
-                                account_circle
-                                </span></a>
-                            <div class="dropdown-menu m-0">
-                                <a href="index.php?mod=user&act=signup" class="dropdown-item">Đăng Ký</a>
-                                <a href="index.php?mod=user&act=login" class="dropdown-item">Đăng Nhập</a>
-                            </div>
-                        </div>
-                        <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined">
-                            shopping_cart
-                            </span></a>
+
                     </div>
                     <nav class="navbar bg-body-tertiary">
                         <div class="container-fluid">
@@ -162,6 +151,16 @@
                             </form>
                         </div>
                     </nav>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined"  style="font-size: 38px; margin-left: 10px;">
+                            account_circle
+                            </span></a>
+                        <div class="dropdown-menu m-0">
+                            <a href="index.php?mod=user&act=signup" class="dropdown-item ">Đăng Ký</a>
+                            <a href="index.php?mod=user&act=login" class="dropdown-item ">Đăng Nhập</a>
+                        </div>
+                    </div>
+                    <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined" style="font-size: 38px; margin-left: 10px;">shopping_cart</span></a>
                 </div>
             </nav>
             <div class="container-xxl py-5 bg-dark hero-header mb-5">
@@ -182,11 +181,11 @@
                         </div>
 
                         <div class="product__details__pic__slider owl-carousel">
-    <?php foreach ($data['img'] as $img): ?>
-        <img data-imgbigurl="upload/product/<?= $img['images'] ?>"
-            src="upload/product/<?= $img['images'] ?>" alt="">
-    <?php endforeach; ?>
-</div>
+                            <?php foreach ($data['img'] as $img): ?>
+                                <img data-imgbigurl="upload/product/<?= $img['images'] ?>"
+                                    src="upload/product/<?= $img['images'] ?>" alt="">
+                            <?php endforeach; ?>
+                        </div>
 
                         <div>
                             <p>
@@ -230,7 +229,7 @@
                             <?= $data['sp']['sizevua'] ?>
                         </div>
 
-                        <a href="#" class="btn btn-danger">ADD TO CARD</a>
+                        <a href="#" class="btn btn-danger">Thêm vào giỏ hàng</a>
                         <form action="" method="post">
                             <div class="h2-mota">
                                 <p class="h2-mau">Ngon hơn khi ăn kèm</p>
