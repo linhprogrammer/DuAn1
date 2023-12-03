@@ -31,23 +31,25 @@
 
     <!-- Template Stylesheet -->
     <link href="template/css/style.css" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </head>
 
 <body>
-           <!-- Navbar & Hero Start -->
-           <div class="container-xxl position-relative p-0">
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <img src="template/img/logo-rem.png" alt="Logo" style="transform: scale(1.8);">
+                    <img src="upload/logo.png" alt="Logo" style="transform: scale(1.8);">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.php?mod=page&act=home" class="nav-item nav-link active">Trang Chủ</a>
+                    <div class="navbar-nav py-0 pe-4">
+                        <a href="index.html" class="nav-item nav-link ">Trang Chủ</a>
                         <div class="nav-item dropdown">
-                            <a href="index.php?mod=page&act=menu" class="nav-item nav-link">Thực Đơn</a>
+                            <a href="index.php?mod=page&act=menu" class="nav-item nav-link active" style="color: black;">Thực Đơn</a>
                             <div class="dropdown-menu m-0">
                                 <a href="#" class="dropdown-item">Gà Rán</a>
                                 <a href="#" class="dropdown-item">Mì Ý</a>
@@ -65,19 +67,19 @@
                                 account_circle
                                 </span></a>
                             <div class="dropdown-menu m-0">
-                                <a href="index.php?mod=user&act=signup" class="dropdown-item">Đăng Ký</a>
-                                <a href="index.php?mod=user&act=login" class="dropdown-item">Đăng Nhập</a>
+                                <a href="index.php?mod=user&act=signup" class="dropdown-item ">Đăng Ký</a>
+                                <a href="index.php?mod=user&act=login" class="dropdown-item ">Đăng Nhập</a>
                             </div>
                         </div>
                         <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined">
                             shopping_cart
                             </span></a>
                     </div>
-                    <nav class="navbar bg-body-tertiary">
+                    <nav class="navbar bg-body-tertiary" style="margin-left: auto;">
                         <div class="container-fluid">
                             <form action="index.php" method="get" class="d-flex" role="search">
-                                <input class="form-control me-2" name="keyword" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
+                                <input class="form-control me-2" name="keyword" style="width: 300px;" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit"><ion-icon style="margin-top: 5px;" name="search-outline"></ion-icon></button>
                                 <input type="hidden" name="mod" value="page">
                                 <input type="hidden" name="act" value="search">
                             </form>
@@ -86,9 +88,7 @@
                 </div>
             </nav>
 
-            <div class="container-xxl bg-dark hero-header mb-5">
-                    <div class="container-xxl py-5 bg-dark hero-header mb-5">
-                    </div>
+            <div class="container-xxl py-5 hero-header mb-5">
             </div>
         </div>
         <!-- Navbar & Hero End -->
@@ -97,13 +97,12 @@
        <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title ff-secondary text-center  fw-normal">Thực đơn</h5>
-                    <h1 class="mb-5">Most Popular Items</h1>
+                    <h5 class="section-title ff-secondary text-center  fw-normal"  style="font-size: 38px;">Thực đơn</h5>
                 </div>
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
                     <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
                         <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
+                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active"  style="color: #C5221F; text-decoration: none;" data-bs-toggle="pill" href="#tab-1">
                                 <div class="ps-3">
                                     <!-- <small class="text-body"></small> -->
                                     <h6 class="mt-n1 mb-0">Gà Rán</h6>
@@ -112,7 +111,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
+                            <a class="d-flex align-items-center text-start mx-3 pb-3" style="color: #C5221F; text-decoration: none;" data-bs-toggle="pill" href="#tab-2">
                                 <div class="ps-3">
                                     <h6 class="mt-n1 mb-0">Mỳ Ý</h6>
                                 </div>
@@ -120,7 +119,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3"  style="color: #C5221F; text-decoration: none;" data-bs-toggle="pill" href="#tab-3">
                                 <div class="ps-3">
                                     <h6 class="mt-n1 mb-0">Hamburger</h6>
                                 </div>
@@ -128,7 +127,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-4">
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3"  style="color: #C5221F; text-decoration: none;" data-bs-toggle="pill" href="#tab-4">
                                 <div class="ps-3">
                                     <h6 class="mt-n1 mb-0">Đồ Uống</h6>
                                 </div>
@@ -136,7 +135,7 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-5">
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3"  style="color: #C5221F; text-decoration: none;" data-bs-toggle="pill" href="#tab-5">
                                 <div class="ps-3">
                                     <h6 class="mt-n1 mb-0">Đồ Ăn Phụ</h6>
                                 </div>
@@ -144,7 +143,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-6">
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3"  style="color: #C5221F; text-decoration: none;" data-bs-toggle="pill" href="#tab-6">
                                 <div class="ps-3">
                                     <h6 class="mt-n1 mb-0">Tráng Miệng</h6>
                                 </div>
@@ -152,7 +151,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-7">
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3"  style="color: #C5221F; text-decoration: none;" data-bs-toggle="pill" href="#tab-7">
                                 <div class="ps-3">
                                     <h6 class="mt-n1 mb-0">Combo</h6>
                                 </div>
@@ -167,13 +166,13 @@
                                 <div class="col-lg-3">
                                     <div class="card">
                                         <div class="align-items-center">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 200px; margin: auto; margin-top: 20px;">
+                                            <img class="flex-shrink-0 img-fluid rounded" src="upload/product/7 UP.png" alt="" style="width: 200px; margin: auto; margin-top: 20px;">
                                             <div class="w-100 text-start ps-4">
                                                 <h5 class="justify-content-between pb-2">
-                                                    <p style="margin: auto; text-align: center;">Chicken Burger</p>
-                                                    <p style="font-size: 16px; margin: auto; text-align: center;">Ipsum ipsum clita erat amet dolor justo diam</p>
+                                                    <p style="margin: auto; text-align: center;">7 Up</p>
+                                                    <p style="font-size: 16px; margin: auto; text-align: center;  padding-bottom: 20px;">Ipsum ipsum clita erat amet dolor justo diam</p>
                                                 </h5>
-                                                <p style=" color: #C5221F; font-size: 26px; margin: auto; text-align: center;">$115</p>
+                                                <p style=" color: #C5221F; font-size: 26px; margin: auto; text-align: center;  padding-bottom: 10px;">$115</p>
                                                 <div class="nut-them">
                                                     <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; margin-bottom: 10px; color: white;  width: 90%;">Thêm vào giỏ hàng</a>
                                                     <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; color: white; width: 90%; margin-bottom: 10px;">Mua ngay</a>
