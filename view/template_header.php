@@ -49,7 +49,7 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
+                <a href="index.php?mod=page&act=home" class="navbar-brand p-0">
                     <img src="upload/logo.png" alt="Logo" style="transform: scale(1.8);">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -57,7 +57,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Trang Chủ</a>
+                        <a href="index.php?mod=page&act=home" class="nav-item nav-link active">Trang Chủ</a>
                         <div class="nav-item dropdown">
                             <a href="index.php?mod=page&act=menu" class="nav-item nav-link" style="color: black;">Thực Đơn</a>
                             <div class="dropdown-menu m-0">
