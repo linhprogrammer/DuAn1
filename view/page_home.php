@@ -363,45 +363,45 @@
                 <div class="owl-carousel testimonial-carousel">
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-danger mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" style="width: 50px; height: 50px;">
+
+                        <div class=" align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="upload/avatar/avatar.jpg" style="margin: auto; width: 150px;">
                             <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
+                                <h5 class="mb-1" style=" margin: auto; font-size: 28px; font-weight: 600;">Nguyễn Văn Tèo</h5>
+                                <small style="padding-bottom: 30px; margin: auto; font-size: 18px;">10 điểm không có nhưng. Gà mềm thơm ngon. Mình hay ăn combo cho tiện. Mọi người nên thử Gà Tứ vị cho tiện</small>
                             </div>
                         </div>
                     </div>
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-danger mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg" style="width: 50px; height: 50px;">
+
+                        <div class="align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="upload/avatar/avatar.jpg" style=" margin: auto; width: 150px;">
                             <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
+                                <h5 class="mb-1" style=" margin: auto; font-size: 28px; font-weight: 600;">Ngộ Không</h5>
+                                <small style="padding-bottom: 30px; margin: auto; font-size: 18px;">10 điểm không có nhưng. Gà mềm thơm ngon. Mình hay ăn combo cho tiện. Mọi người nên thử Gà Tứ vị cho tiện</small>
                             </div>
                         </div>
                     </div>
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-danger mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg" style="width: 50px; height: 50px;">
+
+                        <div class=" align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="upload/avatar/avatar.jpg" style=" margin: auto; width: 150px;">
                             <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
+                                <h5 class="mb-1" style=" margin: auto; font-size: 28px; font-weight: 600;">Trư Bát Giới</h5>
+                                <small style="padding-bottom: 30px; margin: auto; font-size: 18px;">10 điểm không có nhưng. Gà mềm thơm ngon. Mình hay ăn combo cho tiện. Mọi người nên thử Gà Tứ vị cho tiện</small>
                             </div>
                         </div>
                     </div>
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-danger mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-4.jpg" style="width: 50px; height: 50px;">
+
+                        <div class=" align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="upload/avatar/avatar.jpg" style=" margin: auto; width: 150px;">
                             <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
+                                <h5 class="mb-1" style=" margin: auto; font-size: 28px; font-weight: 600;">Đường Tăng</h5>
+                                <small style="padding-bottom: 30px; margin: auto; font-size: 18px;">10 điểm không có nhưng. Gà mềm thơm ngon. Mình hay ăn combo cho tiện. Mọi người nên thử Gà Tứ vị cho tiện</small>
                             </div>
                         </div>
                     </div>
