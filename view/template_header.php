@@ -59,7 +59,7 @@
                     <div class="navbar-nav py-0 pe-4">
                         <a href="index.html" class="nav-item nav-link active">Trang Chủ</a>
                         <div class="nav-item dropdown">
-                            <a href="index.php?mod=page&act=menu" class="nav-item nav-link">Thực Đơn</a>
+                            <a href="index.php?mod=page&act=menu" class="nav-item nav-link" style="color: black;">Thực Đơn</a>
                             <div class="dropdown-menu m-0">
                                 <a href="#" class="dropdown-item">Gà Rán</a>
                                 <a href="#" class="dropdown-item">Mì Ý</a>
@@ -77,8 +77,8 @@
                                 account_circle
                                 </span></a>
                             <div class="dropdown-menu m-0">
-                                <a href="index.php?mod=user&act=signup" class="dropdown-item">Đăng Ký</a>
-                                <a href="index.php?mod=user&act=login" class="dropdown-item">Đăng Nhập</a>
+                                <a href="index.php?mod=user&act=signup" class="dropdown-item ">Đăng Ký</a>
+                                <a href="index.php?mod=user&act=login" class="dropdown-item ">Đăng Nhập</a>
                             </div>
                         </div>
                         <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined">
