@@ -106,6 +106,39 @@
             transition: width 1s ease; 
         }
 
+        .hoadon {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 100%;
+            height: 280px;
+        }
+
+        .hoadon p {
+            margin: 10px 0;
+        }
+
+        .nut{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nut input[type="button"] {
+            width: 250px;
+            height: 80px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color:  #C5221F;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 26px;
+            border-radius: 20px;
+        }
+
+        .nut input[type="button"]:hover {
+            background-color: #000000;
+        }
+
     </style>
     
 
@@ -125,18 +158,38 @@
             </div>
         </div>
         
-        
-        <table class="table text-center align-middle">
-            <tbody>
+        <form action="" method="post">
+            <table class="table text-center align-middle">
+                <tbody>
+    
+                    <tr>
+                        <td><img src="img/product/Burger Bulgogi.png" width="150px" alt=""></td>
+                        <td class="text-start">1 MIẾNG GÀ GIÒN VUI VẺ <p>02 Gà Sốt Buffalo 01 Khoai tây chiên 01 Pepsi</p></td>
+                        <td class="gia">50.000 đ</td>
+                    </tr>
+    
+                </tbody>
+            </table>
+            <div class="hoadon">
+                <div class="left" style="float: left; font-size: 26px;">
+                    <p>Tạm tính:</p>
+                    <p>Giảm giá:</p>
+                    <p>Phí ship:</p>
+                    <p>Tổng:</p>
+                </div>
+                <div class="right" style="float: right; font-size: 26px; text-align: center;">
+                    <p>900.000 đ</p>
+                    <p>30%</p>
+                    <p>Miễn phí</p>
+                    <p>900.000 đ</p>
+                </div>
+            </div>
+            <div class="nut">
+                <input type="button" value="Đặt Hàng">
+                <a href="#"><input type="button" value="Quay về trang chủ"></a>
+            </div>
+        </form>
 
-                <tr>
-                    <td><img src="img/product/Burger Bulgogi.png" width="150px" alt=""></td>
-                    <td class="text-start">1 MIẾNG GÀ GIÒN VUI VẺ <p>02 Gà Sốt Buffalo 01 Khoai tây chiên 01 Pepsi</p></td>
-                    <td class="gia">50.000 đ</td>
-                </tr>
-
-            </tbody>
-        </table>
     </div>
     <script src="https://kit.fontawesome.com/592deca63b.js" crossorigin="anonymous"></script>
     <script>
@@ -144,12 +197,12 @@
         const progress = document.querySelector(".progress");
         
         function updateProgressBar(percent) {
-            if (percent >= 35) {
-                progress.style.backgroundColor = "#C5221F"; 
-            } else if (percent >= 75) {
-                progress.style.backgroundColor = "#34A853"; 
-            } else {
+            if (percent <= 35) {
                 progress.style.backgroundColor = "#FBBC04"; 
+            } else if (percent <= 75) {
+                progress.style.backgroundColor = "#C5221F"; 
+            } else {
+                progress.style.backgroundColor = "#34A853"; 
             }
             progress.style.width = percent + "%"; 
         }
@@ -168,13 +221,24 @@
         
         document.addEventListener("DOMContentLoaded", function () {
             const icons = document.querySelector(".icons");
+
             function updateIcons(loadIcons) {
+                const headsetIcon = icons.querySelector(".headset i");
+                const motorcycleIcon = icons.querySelector(".motorcycle i");
+                const checkIcon = icons.querySelector(".check i");
+
                 if (loadIcons >= 50 && loadIcons < 100) {
-                    icons.style.color = "#C5221F"; 
+                    headsetIcon.style.color = "#FBBC04";
+                    motorcycleIcon.style.color = "#C5221F";
+                    checkIcon.style.color = "#D9D9D9";
                 } else if (loadIcons = 100) {
-                    icons.style.color = "#34A853"; 
+                    headsetIcon.style.color = "#FBBC04";
+                    motorcycleIcon.style.color = "#C5221F";
+                    checkIcon.style.color = "#34A853";
                 } else {
-                    icons.style.color = "#D9D9D9"; 
+                    headsetIcon.style.color = "#D9D9D9";
+                    motorcycleIcon.style.color = "#D9D9D9";
+                    checkIcon.style.color = "#D9D9D9";
                 }
             }
 
@@ -188,7 +252,9 @@
                 }
             }, 4000);
 
+
         });
+
 
 
     </script>
