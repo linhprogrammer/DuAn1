@@ -122,11 +122,11 @@ if (isset($_GET['act'])) {
                 include_once 'model/product.php';
                 $data['ds'] = show_product();
                 $data['ds1'] = showdm1();
-                $data['ds2'] = showdm3();
-                $data['ds3'] = showdm2();
-                $data['ds4'] = showdm6();
-                $data['ds5'] = showdm4();
-                $data['ds6'] = showdm5();
+                $data['ds2'] = showdm2();
+                $data['ds3'] = showdm3();
+                $data['ds4'] = showdm4();
+                $data['ds5'] = showdm5();
+                $data['ds6s'] = showdm6();
                 $data['ds7'] = showdm7();
                 
                 include_once 'view/template_head.php';
