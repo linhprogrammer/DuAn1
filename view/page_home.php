@@ -1,22 +1,28 @@
         <div id="slideBanner" class="slideBanner" >
             <div class="carousel-banner">
                 <div class="carousel-item active">
-                    <img src="upload/banner/banner1.jpg" style="width: 1320px; height: 720px;" alt="Banner 1">
+                    <img src="upload/banner/banner1.png" style="width: 1320px; height: 720px;" alt="Banner 1">
                 </div>
                 <div class="carousel-item">
                     <img src="upload/banner/banner2.png" style="width: 1320px; height: 720px;" alt="Banner 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="upload/banner/banner3.jpg" style="width: 1320px; height: 720px;" alt="Banner 3">
+                    <img src="upload/banner/banner3.png" style="width: 1320px; height: 720px;" alt="Banner 3">
                 </div>
                 <div class="carousel-item">
-                    <img src="upload/banner/banner4.jpg" style="width: 1320px; height: 720px;" alt="Banner 4">
+                    <img src="upload/banner/banner4.png" style="width: 1320px; height: 720px;" alt="Banner 4">
                 </div>
                 <div class="carousel-item">
                     <img src="upload/banner/banner5.png" style="width: 1320px; height: 720px;" alt="Banner 5">
                 </div>
                 <div class="carousel-item">
                     <img src="upload/banner/banner6.png" style="width: 1320px; height: 720px;" alt="Banner 6">
+                </div>
+                <div class="carousel-item">
+                    <img src="upload/banner/banner7.png" style="width: 1320px; height: 720px;" alt="Banner 7">
+                </div>
+                <div class="carousel-item">
+                    <img src="upload/banner/banner8.png" style="width: 1320px; height: 720px;" alt="Banner 8">
                 </div>
             </div>
         </div>
@@ -74,18 +80,18 @@
                     <div class="tab-content">
                         <div id="tab" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
-
+                                <?php foreach ($data2['sanphamnoibat'] as $sp): ?>
                                 <div class="col-lg-3">
                                     <div class="card">
                                         <div class="align-items-center">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="upload/product/Burger Phô Mai.png" alt="" style="width: 200px; margin: auto; margin-top: 20px;">
+                                            <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 200px; margin: auto; margin-top: 20px;">
                                             <div class="w-100 text-start ps-4">
                                                 <h5 class="justify-content-between pb-2">
-                                                    <p style="margin: auto; text-align: center;">Burger Phô Mai</p>
-                                                    <p style="display: flex; flex-wrap: wrap; font-size: 16px; margin: auto; text-align: center; color: gray">01 LChicken Burger  01 Fried Fries 01 Pepsi (M)</p>
+                                                    <p style="margin: auto; text-align: center;"><?=$sp['tensp']?></p>
+                                                    <p style="display: flex; flex-wrap: wrap; font-size: 16px; margin: auto; text-align: center; color: gray"><?=$sp['motangan']?></p>
                                                 </h5>
-                                                <p style=" color: #C5221F; font-size: 28px; margin: auto; text-align: center; font-weight: 500;">85.000 ₫</p>
-                                                <p style=" color: #464545; font-size: 18px; margin: auto; text-align: center; text-decoration: line-through;">95.000 ₫</p>
+                                                <p style=" color: #C5221F; font-size: 28px; margin: auto; text-align: center; font-weight: 500;"><?=$sp['sizenho']?> ₫</p>
+                                                <p style=" color: #464545; font-size: 18px; margin: auto; text-align: center; text-decoration: line-through;"><?=$sp['giakm']?> ₫</p>
                                                 <div class="nut-them">
                                                     <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; margin-bottom: 10px; color: white;  width: 90%;">Thêm vào giỏ hàng</a>
                                                     <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; color: white; width: 90%; margin-bottom: 10px;">Mua ngay</a>
@@ -94,139 +100,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
-                                    <div class="card">
-                                        <div class="align-items-center">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="upload/product/Burger Phô Mai.png" alt="" style="width: 200px; margin: auto; margin-top: 20px;">
-                                            <div class="w-100 text-start ps-4">
-                                                <h5 class="justify-content-between pb-2">
-                                                    <p style="margin: auto; text-align: center;">Burger Phô Mai</p>
-                                                    <p style="display: flex; flex-wrap: wrap; font-size: 16px; margin: auto; text-align: center; color: gray">01 LChicken Burger  01 Fried Fries 01 Pepsi (M)</p>
-                                                </h5>
-                                                <p style=" color: #C5221F; font-size: 28px; margin: auto; text-align: center; font-weight: 500;">85.000 ₫</p>
-                                                <p style=" color: #464545; font-size: 18px; margin: auto; text-align: center; text-decoration: line-through;">95.000 ₫</p>
-                                                <div class="nut-them">
-                                                    <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; margin-bottom: 10px; color: white;  width: 90%;">Thêm vào giỏ hàng</a>
-                                                    <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; color: white; width: 90%; margin-bottom: 10px;">Mua ngay</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="card">
-                                        <div class="align-items-center">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="upload/product/Burger Phô Mai.png" alt="" style="width: 200px; margin: auto; margin-top: 20px;">
-                                            <div class="w-100 text-start ps-4">
-                                                <h5 class="justify-content-between pb-2">
-                                                    <p style="margin: auto; text-align: center;">Burger Phô Mai</p>
-                                                    <p style="display: flex; flex-wrap: wrap; font-size: 16px; margin: auto; text-align: center; color: gray">01 LChicken Burger  01 Fried Fries 01 Pepsi (M)</p>
-                                                </h5>
-                                                <p style=" color: #C5221F; font-size: 28px; margin: auto; text-align: center; font-weight: 500;">85.000 ₫</p>
-                                                <p style=" color: #464545; font-size: 18px; margin: auto; text-align: center; text-decoration: line-through;">95.000 ₫</p>
-                                                <div class="nut-them">
-                                                    <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; margin-bottom: 10px; color: white;  width: 90%;">Thêm vào giỏ hàng</a>
-                                                    <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; color: white; width: 90%; margin-bottom: 10px;">Mua ngay</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="card">
-                                        <div class="align-items-center">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="upload/product/Burger Phô Mai.png" alt="" style="width: 200px; margin: auto; margin-top: 20px;">
-                                            <div class="w-100 text-start ps-4">
-                                                <h5 class="justify-content-between pb-2">
-                                                    <p style="margin: auto; text-align: center;">Burger Phô Mai</p>
-                                                    <p style="display: flex; flex-wrap: wrap; font-size: 16px; margin: auto; text-align: center; color: gray">01 LChicken Burger  01 Fried Fries 01 Pepsi (M)</p>
-                                                </h5>
-                                                <p style=" color: #C5221F; font-size: 28px; margin: auto; text-align: center; font-weight: 500;">85.000 ₫</p>
-                                                <p style=" color: #464545; font-size: 18px; margin: auto; text-align: center; text-decoration: line-through;">95.000 ₫</p>
-                                                <div class="nut-them">
-                                                    <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; margin-bottom: 10px; color: white;  width: 90%;">Thêm vào giỏ hàng</a>
-                                                    <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; color: white; width: 90%; margin-bottom: 10px;">Mua ngay</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="card">
-                                        <div class="align-items-center">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="upload/product/Burger Phô Mai.png" alt="" style="width: 200px; margin: auto; margin-top: 20px;">
-                                            <div class="w-100 text-start ps-4">
-                                                <h5 class="justify-content-between pb-2">
-                                                    <p style="margin: auto; text-align: center;">Burger Phô Mai</p>
-                                                    <p style="display: flex; flex-wrap: wrap; font-size: 16px; margin: auto; text-align: center; color: gray">01 LChicken Burger  01 Fried Fries 01 Pepsi (M)</p>
-                                                </h5>
-                                                <p style=" color: #C5221F; font-size: 28px; margin: auto; text-align: center; font-weight: 500;">85.000 ₫</p>
-                                                <p style=" color: #464545; font-size: 18px; margin: auto; text-align: center; text-decoration: line-through;">95.000 ₫</p>
-                                                <div class="nut-them">
-                                                    <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; margin-bottom: 10px; color: white;  width: 90%;">Thêm vào giỏ hàng</a>
-                                                    <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; color: white; width: 90%; margin-bottom: 10px;">Mua ngay</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="card">
-                                        <div class="align-items-center">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="upload/product/Burger Phô Mai.png" alt="" style="width: 200px; margin: auto; margin-top: 20px;">
-                                            <div class="w-100 text-start ps-4">
-                                                <h5 class="justify-content-between pb-2">
-                                                    <p style="margin: auto; text-align: center;">Burger Phô Mai</p>
-                                                    <p style="display: flex; flex-wrap: wrap; font-size: 16px; margin: auto; text-align: center; color: gray">01 LChicken Burger  01 Fried Fries 01 Pepsi (M)</p>
-                                                </h5>
-                                                <p style=" color: #C5221F; font-size: 28px; margin: auto; text-align: center; font-weight: 500;">85.000 ₫</p>
-                                                <p style=" color: #464545; font-size: 18px; margin: auto; text-align: center; text-decoration: line-through;">95.000 ₫</p>
-                                                <div class="nut-them">
-                                                    <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; margin-bottom: 10px; color: white;  width: 90%;">Thêm vào giỏ hàng</a>
-                                                    <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; color: white; width: 90%; margin-bottom: 10px;">Mua ngay</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="card">
-                                        <div class="align-items-center">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="upload/product/Burger Phô Mai.png" alt="" style="width: 200px; margin: auto; margin-top: 20px;">
-                                            <div class="w-100 text-start ps-4">
-                                                <h5 class="justify-content-between pb-2">
-                                                    <p style="margin: auto; text-align: center;">Burger Phô Mai</p>
-                                                    <p style="display: flex; flex-wrap: wrap; font-size: 16px; margin: auto; text-align: center; color: gray">01 LChicken Burger  01 Fried Fries 01 Pepsi (M)</p>
-                                                </h5>
-                                                <p style=" color: #C5221F; font-size: 28px; margin: auto; text-align: center; font-weight: 500;">85.000 ₫</p>
-                                                <p style=" color: #464545; font-size: 18px; margin: auto; text-align: center; text-decoration: line-through;">95.000 ₫</p>
-                                                <div class="nut-them">
-                                                    <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; margin-bottom: 10px; color: white;  width: 90%;">Thêm vào giỏ hàng</a>
-                                                    <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; color: white; width: 90%; margin-bottom: 10px;">Mua ngay</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="card">
-                                        <div class="align-items-center">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="upload/product/Burger Phô Mai.png" alt="" style="width: 200px; margin: auto; margin-top: 20px;">
-                                            <div class="w-100 text-start ps-4">
-                                                <h5 class="justify-content-between pb-2">
-                                                    <p style="margin: auto; text-align: center;">Burger Phô Mai</p>
-                                                    <p style="display: flex; flex-wrap: wrap; font-size: 16px; margin: auto; text-align: center; color: gray">01 LChicken Burger  01 Fried Fries 01 Pepsi (M)</p>
-                                                </h5>
-                                                <p style=" color: #C5221F; font-size: 28px; margin: auto; text-align: center; font-weight: 500;">85.000 ₫</p>
-                                                <p style=" color: #464545; font-size: 18px; margin: auto; text-align: center; text-decoration: line-through;">95.000 ₫</p>
-                                                <div class="nut-them">
-                                                    <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; margin-bottom: 10px; color: white;  width: 90%;">Thêm vào giỏ hàng</a>
-                                                    <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; color: white; width: 90%; margin-bottom: 10px;">Mua ngay</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <?php endforeach; ?>
 
                                 
                             </div>

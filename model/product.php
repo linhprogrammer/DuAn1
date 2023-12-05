@@ -337,4 +337,15 @@ function search_products($keyword){
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     return $stmt->fetchAll();
 }
+
+function show_home(){
+    global $conn;
+    $sql = "SELECT * FROM sanpham WHERE sanphamnoibat = 1 LIMIT 8";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    return $stmt->fetchAll();
+}
+
 ?>
