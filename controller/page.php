@@ -7,6 +7,8 @@ if (isset($_GET['act'])) {
             include_once 'model/product.php';
             $data['sp'] = show_product();
             $data1['time'] = showspmoinhat();
+            $data2['sanphamnoibat'] = show_home();
+            $data2['sanphamnoibat'] = show_home();
             include_once 'view/template_header.php';
             include_once 'view/page_home.php';
             include_once 'view/template_footer.php';
@@ -117,6 +119,16 @@ if (isset($_GET['act'])) {
             
             case 'menu':
                 include_once 'model/connect.php';
+                include_once 'model/product.php';
+                $data['ds'] = show_product();
+                $data['ds1'] = showdm1();
+                $data['ds2'] = showdm3();
+                $data['ds3'] = showdm2();
+                $data['ds4'] = showdm6();
+                $data['ds5'] = showdm4();
+                $data['ds6'] = showdm5();
+                $data['ds7'] = showdm7();
+                
                 include_once 'view/template_head.php';
                 include_once 'view/page_menu.php';
                 include_once 'view/template_footer.php';
