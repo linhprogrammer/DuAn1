@@ -163,7 +163,7 @@
                         </li>
                     </ul>
 
-                    <div class="tab-content">
+                    <div class="tab-content" style="min-height: 700px;">
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
 
