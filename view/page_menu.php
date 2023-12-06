@@ -50,14 +50,20 @@
                         <a href="index.php?mod=page&act=home" class="nav-item nav-link ">Trang Chủ</a>
                         <div class="nav-item dropdown">
                         <a href="index.php?mod=page&act=menu" class="nav-item nav-link active">Thực Đơn</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="#" class="dropdown-item">Gà Rán</a>
-                                <a href="#" class="dropdown-item">Mì Ý</a>
-                                <a href="#" class="dropdown-item">Hamburger</a>
-                                <a href="#" class="dropdown-item">Đồ Uống</a>
-                                <a href="#" class="dropdown-item">Đồ Ăn Phụ</a>
-                                <a href="#" class="dropdown-item">Tráng Miệng</a>
-                                <a href="#" class="dropdown-item">ComBo</a>
+                            <div class="m-0">
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <button type="submit" name="submit1" class="dropdown-item" value="Gà">Gà
+                                        <button type="submit" name="submit2" class="dropdown-item" value="Hamburger">Hamburger
+                                        <button type="submit" name="submit3" class="dropdown-item" value="Gà">Mì ý
+                                        <button type="submit" name="submit4" class="dropdown-item" value="Gà">Đồ ăn phụ
+                                        <button type="submit" name="submit5" class="dropdown-item" value="Gà">Tráng miệng
+                                        <button type="submit" name="submit6" class="dropdown-item" value="Gà">Thức uống
+                                        <button type="submit" name="submit7" class="dropdown-item" value="Gà">Compo
+                                        <button type="submit" name="submit" class="dropdown-item" value="Gà">Tất cả
+                                        </button>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <a href="service.html" class="nav-item nav-link">Bài Viết</a>
