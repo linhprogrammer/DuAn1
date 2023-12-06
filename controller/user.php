@@ -77,6 +77,7 @@ if (isset($_GET['act'])) {
             include_once 'model/user.php';
             $data['sp'] = show_product();
             $data1['time'] = showspmoinhat();
+            $data2['sanphamnoibat'] = show_home();
             if (isset($_GET['id'])) {
                 $data['info'] = showinfo($_GET['id']);
             }

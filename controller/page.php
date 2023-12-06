@@ -8,7 +8,7 @@ if (isset($_GET['act'])) {
             $data['sp'] = show_product();
             $data1['time'] = showspmoinhat();
             $data2['sanphamnoibat'] = show_home();
-            $data2['sanphamnoibat'] = show_home();
+           
             include_once 'view/template_header.php';
             include_once 'view/page_home.php';
             include_once 'view/template_footer.php';
@@ -126,7 +126,7 @@ if (isset($_GET['act'])) {
                 $data['ds3'] = showdm3();
                 $data['ds4'] = showdm4();
                 $data['ds5'] = showdm5();
-                $data['ds6s'] = showdm6();
+                $data['ds6'] = showdm6();
                 $data['ds7'] = showdm7();
                 
                 include_once 'view/template_head.php';

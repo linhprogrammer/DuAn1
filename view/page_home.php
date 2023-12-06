@@ -82,15 +82,16 @@
                             <div class="row g-4">
                                 <?php foreach ($data2['sanphamnoibat'] as $sp): ?>
                                 <div class="col-lg-3">
+                                    <a href="index.php?mod=product&act=detail&id=<?=$sp['masp']?>" style="text-decoration: none; color: #C5221F;">
                                     <div class="card">
                                         <div class="align-items-center">
                                             <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 200px; margin: auto; margin-top: 20px;">
                                             <div class="w-100 text-start ps-4">
                                                 <h5 class="justify-content-between pb-2">
                                                     <p style="margin: auto; text-align: center;"><?=$sp['tensp']?></p>
-                                                    <p style="display: flex; flex-wrap: wrap; font-size: 16px; margin: auto; text-align: center; color: gray"><?=$sp['motangan']?></p>
+                                                    <p style="display: flex; flex-wrap: wrap; font-size: 16px; padding: 30px; margin: auto; text-align: center; color: gray"><?=$sp['motangan']?></p>
                                                 </h5>
-                                                <p style=" color: #C5221F; font-size: 28px; margin: auto; text-align: center; font-weight: 500;"><?=$sp['sizenho']?> ₫</p>
+                                                <p style=" color: #C5221F; font-size: 28px; margin: auto; text-align: center; font-weight: 500;"><?=$sp['sizelon']?> ₫</p>
                                                 <p style=" color: #464545; font-size: 18px; margin: auto; text-align: center; text-decoration: line-through;"><?=$sp['giakm']?> ₫</p>
                                                 <div class="nut-them">
                                                     <a href="#" class="btn" style="background-color: #C5221F; border-radius: 100px; margin-bottom: 10px; color: white;  width: 90%;">Thêm vào giỏ hàng</a>
@@ -99,6 +100,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                </a>
                                 </div>
                                 <?php endforeach; ?>
 

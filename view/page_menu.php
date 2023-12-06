@@ -117,7 +117,7 @@
                         <li class="nav-item">
                             <a class="d-flex align-items-center text-start mx-3 pb-3" style="color: #C5221F; text-decoration: none;" data-bs-toggle="pill" href="#tab-3">
                                 <div class="ps-3">
-                                    <h6 class="mt-n1 mb-0">Mỳ Ý</h6>
+                                    <h6 class="mt-n1 mb-0">Hamburger</h6>
                                 </div>
                             </a>
                         </li>
@@ -125,7 +125,7 @@
                         <li class="nav-item">
                             <a class="d-flex align-items-center text-start mx-3 me-0 pb-3"  style="color: #C5221F; text-decoration: none;" data-bs-toggle="pill" href="#tab-4">
                                 <div class="ps-3">
-                                    <h6 class="mt-n1 mb-0">Hamburger</h6>
+                                    <h6 class="mt-n1 mb-0">Mỳ Ý</h6>
                                 </div>
                             </a>
                         </li>
@@ -133,7 +133,7 @@
                         <li class="nav-item">
                             <a class="d-flex align-items-center text-start mx-3 me-0 pb-3"  style="color: #C5221F; text-decoration: none;" data-bs-toggle="pill" href="#tab-5">
                                 <div class="ps-3">
-                                    <h6 class="mt-n1 mb-0">Đồ Uống</h6>
+                                    <h6 class="mt-n1 mb-0">Đồ Ăn Phụ</h6>
                                 </div>
                             </a>
                         </li>
@@ -141,7 +141,7 @@
                         <li class="nav-item">
                             <a class="d-flex align-items-center text-start mx-3 me-0 pb-3"  style="color: #C5221F; text-decoration: none;" data-bs-toggle="pill" href="#tab-6">
                                 <div class="ps-3">
-                                    <h6 class="mt-n1 mb-0">Đồ Ăn Phụ</h6>
+                                    <h6 class="mt-n1 mb-0">Tráng Miệng</h6>
                                 </div>
                             </a>
                         </li>
@@ -149,7 +149,7 @@
                         <li class="nav-item">
                             <a class="d-flex align-items-center text-start mx-3 me-0 pb-3"  style="color: #C5221F; text-decoration: none;" data-bs-toggle="pill" href="#tab-7">
                                 <div class="ps-3">
-                                    <h6 class="mt-n1 mb-0">Tráng Miệng</h6>
+                                    <h6 class="mt-n1 mb-0">Đồ Uống</h6>
                                 </div>
                             </a>
                         </li>
@@ -241,8 +241,8 @@
                                 <?php endforeach; ?>
 
                                 </div>
-                            </div>
                         </div>
+                        
 
                         <div id="tab-4" class="tab-pane fade show p-0 ">
                             <div class="row g-4">
@@ -377,10 +377,8 @@
                             </div>
                         </div>
                         
+                        </div>
                     </div>
-
                 </div>
-
-            </div>
         </div>
     <!-- Menu End -->

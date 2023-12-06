@@ -309,7 +309,7 @@ function showdm7() {
 
     $sql = "SELECT sanpham.*, danhmuc.tendm FROM sanpham
     INNER JOIN danhmuc ON sanpham.madm = danhmuc.madm
-    WHERE danhmuc.tendm = 'Compo'";
+    WHERE danhmuc.tendm = 'Combo'";
 
     $stmt = $conn->prepare($sql);
     $stmt->execute();
