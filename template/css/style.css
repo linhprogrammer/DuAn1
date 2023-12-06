@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #FEA116;
+    --primary: #C5221F;
     --light: #F1F8FF;
     --dark: #000000;
     --red: #C5221F;
@@ -437,7 +437,7 @@
     margin-bottom: 5px;
     padding: 0;
     text-align: left;
-    color: #FFFFFF;
+    color: black;
     font-size: 15px;
     font-weight: normal;
     text-transform: capitalize;
@@ -464,7 +464,7 @@
 }
 
 .footer .copyright a {
-    color: var(--light);
+    color: var(--dark);
 }
 
 .footer .footer-menu a {

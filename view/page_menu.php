@@ -60,7 +60,7 @@
                                 <a href="#" class="dropdown-item">ComBo</a>
                             </div>
                         </div>
-                        <a href="service.html" class="nav-item nav-link">Dịch Vụ</a>
+                        <a href="service.html" class="nav-item nav-link">Bài Viết</a>
                         <a href="index.php?mod=page&act=about" class="nav-item nav-link">Về Chúng Tôi</a>
                     </div>
                     <nav class="navbar bg-body-tertiary" style="margin-left: auto;">
