@@ -99,7 +99,7 @@
                                     <input type="text" value="<?= $data['info']['email'] ?>" name="email" id="email" placeholder="Email">
                                 </div>
 
-                                <div class="sdt col-md-5" style="width: 220px;  border-radius: 4px; margin-left: 20px; font-size: 16px;">
+                                <div class="sdt col-md-5" style="width: 225px;  border-radius: 4px; margin-left: 20px; font-size: 16px;">
                                     <input type="text" value="<?= $data['info']['sodienthoai'] ?>" name="sodienthoai" id="sdt" placeholder="Số Điện Thoại"></input>
                                 </div>
                                 
@@ -279,7 +279,7 @@
 
     .user {
         border: 2px solid #ccc; 
-        padding: 20px;
+        padding: 15px;
         border-radius: 10px; 
         width: 100%; 
         margin: 0 auto; 
