@@ -59,11 +59,11 @@
                                     </a>
                                 </li>
                                 <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
-                                    <a href="app-orders-list.html" class="sa-nav__link">
+                                    <a href="admin.php?mod=order&act=dashboard" class="sa-nav__link">
                                         <span class="sa-nav__icon">
                                             <i class="fas fa-shopping-cart"></i>
                                         </span>
-                                        <span class="sa-nav__title">Giỏ hàng</span>
+                                        <span class="sa-nav__title">Đơn hàng</span>
                                     </a>
                                 </li>
                             </ul>
@@ -99,11 +99,9 @@
                             </span>
                             <span class="sa-toolbar-user__info">
                                 <span class="sa-toolbar-user__title">
-                                    <?=$_SESSION['user']['hoten']?>
+                                <?= $_SESSION['user']['username'] ?>
                                 </span>
-                                <span class="sa-toolbar-user__subtitle">
-                                <?=$_SESSION['user']['email']?>
-                                </span>
+                                
                             </span>
                         </button>
                         <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
