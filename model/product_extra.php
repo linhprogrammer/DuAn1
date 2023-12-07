@@ -210,4 +210,14 @@ function checktensp_extra($tensp) {
     // Trả về true nếu tên sản phẩm đã tồn tại, ngược lại trả về false
     return ($result !== false);
 }
+
+function get_sp_extra_add_to_cart($id){
+    global $conn;
+    $sql = "SELECT * FROM sanphamphu WHERE masp = :id";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    return $stmt->fetch();
+}
 ?>

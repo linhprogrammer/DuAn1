@@ -172,15 +172,16 @@
                     <div class="tab-content" style="min-height: 700px;">
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
-
+                                
                                 <?php foreach($data['ds'] as $sp): ?>
                                 <div class="col-lg-3">
+                                    <a href="index.php?mod=product&act=detail&id=<?=$sp['masp']?>" style="text-decoration: none; color: #C5221F;">
                                     <div class="card">
                                         <div class="align-items-center">
                                             <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 200px; height: 200px; margin: auto; margin-top: 20px;">
                                             <div class="w-100 text-start ps-4">
                                                 <h5 class="justify-content-between pb-2">
-                                                    <p style="margin: auto; text-align: center;"><?=$sp['tensp']?></p>
+                                                    <p style="margin: auto; text-align: center; min-height: 40px;"><?=$sp['tensp']?></p>
                                                     <p style="font-size: 16px; margin: auto; text-align: center;  padding-bottom: 20px;"><?=$sp['motangan']?></p>
                                                 </h5>
                                                 <p style=" color: #C5221F; font-size: 26px; margin: auto; text-align: center;  padding-bottom: 10px;"><?=$sp['giakm']?></p>
@@ -191,22 +192,24 @@
                                             </div>
                                         </div>
                                     </div>
+                                    </a>
                                 </div>
                                 <?php endforeach; ?>
-
                             </div>
                         </div>
 
                         <div id="tab-2" class="tab-pane fade show p-0 ">
                             <div class="row g-4">
+
                             <?php foreach($data['ds1'] as $sp): ?>
                                 <div class="col-lg-3">
+                                    <a href="index.php?mod=product&act=detail&id=<?=$sp['masp']?>" style="text-decoration: none; color: #C5221F;">
                                     <div class="card">
                                         <div class="align-items-center">
                                             <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 200px; height: 200px; margin: auto; margin-top: 20px;">
                                             <div class="w-100 text-start ps-4">
                                                 <h5 class="justify-content-between pb-2">
-                                                    <p style="margin: auto; text-align: center;"><?=$sp['tensp']?></p>
+                                                    <p style="margin: auto; text-align: center; padding-bottom: 20px;"><?=$sp['tensp']?></p>
                                                     <p style="font-size: 16px; margin: auto; text-align: center;  padding-bottom: 20px;"><?=$sp['motangan']?></p>
                                                 </h5>
                                                 <p style=" color: #C5221F; font-size: 26px; margin: auto; text-align: center;  padding-bottom: 10px;"><?=$sp['giakm']?></p>
@@ -217,6 +220,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    </a>
                                 </div>
                                 <?php endforeach; ?>
                             </div>
@@ -227,12 +231,13 @@
 
                                 <?php foreach($data['ds2'] as $sp): ?>
                                 <div class="col-lg-3">
+                                    <a href="index.php?mod=product&act=detail&id=<?=$sp['masp']?>" style="text-decoration: none; color: #C5221F;">
                                     <div class="card">
                                         <div class="align-items-center">
                                             <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 200px; height: 200px; margin: auto; margin-top: 20px;">
                                             <div class="w-100 text-start ps-4">
                                                 <h5 class="justify-content-between pb-2">
-                                                    <p style="margin: auto; text-align: center;"><?=$sp['tensp']?></p>
+                                                    <p style="margin: auto; text-align: center; padding-bottom: 20px;"><?=$sp['tensp']?></p>
                                                     <p style="font-size: 16px; margin: auto; text-align: center;  padding-bottom: 20px;"><?=$sp['motangan']?></p>
                                                 </h5>
                                                 <p style=" color: #C5221F; font-size: 26px; margin: auto; text-align: center;  padding-bottom: 10px;"><?=$sp['giakm']?></p>
@@ -243,6 +248,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                </a>
                                 </div>
                                 <?php endforeach; ?>
 
@@ -254,12 +260,13 @@
                             <div class="row g-4">
                             <?php foreach($data['ds3'] as $sp): ?>
                                 <div class="col-lg-3">
+                                    <a href="index.php?mod=product&act=detail&id=<?=$sp['masp']?>" style="text-decoration: none; color: #C5221F;">
                                     <div class="card">
                                         <div class="align-items-center">
                                             <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 200px; height: 200px; margin: auto; margin-top: 20px;">
                                             <div class="w-100 text-start ps-4">
                                                 <h5 class="justify-content-between pb-2">
-                                                    <p style="margin: auto; text-align: center;"><?=$sp['tensp']?></p>
+                                                    <p style="margin: auto; text-align: center; padding-bottom: 20px;"><?=$sp['tensp']?></p>
                                                     <p style="font-size: 16px; margin: auto; text-align: center;  padding-bottom: 20px;"><?=$sp['motangan']?></p>
                                                 </h5>
                                                 <p style=" color: #C5221F; font-size: 26px; margin: auto; text-align: center;  padding-bottom: 10px;"><?=$sp['giakm']?></p>
@@ -270,6 +277,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    </a>
                                 </div>
                                 <?php endforeach; ?>
                             </div>
@@ -280,12 +288,13 @@
 
                             <?php foreach($data['ds4'] as $sp): ?>
                                 <div class="col-lg-3">
+                                    <a href="index.php?mod=product&act=detail&id=<?=$sp['masp']?>" style="text-decoration: none; color: #C5221F;">
                                     <div class="card">
                                         <div class="align-items-center">
                                             <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 200px; height: 200px; margin: auto; margin-top: 20px;">
                                             <div class="w-100 text-start ps-4">
                                                 <h5 class="justify-content-between pb-2">
-                                                    <p style="margin: auto; text-align: center;"><?=$sp['tensp']?></p>
+                                                    <p style="margin: auto; text-align: center; padding-bottom: 20px;"><?=$sp['tensp']?></p>
                                                     <p style="font-size: 16px; margin: auto; text-align: center;  padding-bottom: 20px;"><?=$sp['motangan']?></p>
                                                 </h5>
                                                 <p style=" color: #C5221F; font-size: 26px; margin: auto; text-align: center;  padding-bottom: 10px;"><?=$sp['giakm']?></p>
@@ -296,6 +305,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    </a>
                                 </div>
                                 <?php endforeach; ?>
 
@@ -307,12 +317,13 @@
 
                             <?php foreach($data['ds5'] as $sp): ?>
                                 <div class="col-lg-3">
+                                    <a href="index.php?mod=product&act=detail&id=<?=$sp['masp']?>" style="text-decoration: none; color: #C5221F;">
                                     <div class="card">
                                         <div class="align-items-center">
                                             <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 200px; height: 200px; margin: auto; margin-top: 20px;">
                                             <div class="w-100 text-start ps-4">
                                                 <h5 class="justify-content-between pb-2">
-                                                    <p style="margin: auto; text-align: center;"><?=$sp['tensp']?></p>
+                                                    <p style="margin: auto; text-align: center; padding-bottom: 20px;"><?=$sp['tensp']?></p>
                                                     <p style="font-size: 16px; margin: auto; text-align: center;  padding-bottom: 20px;"><?=$sp['motangan']?></p>
                                                 </h5>
                                                 <p style=" color: #C5221F; font-size: 26px; margin: auto; text-align: center;  padding-bottom: 10px;"><?=$sp['giakm']?></p>
@@ -323,6 +334,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    </a>
                                 </div>
                                 <?php endforeach; ?>
 
@@ -334,12 +346,13 @@
 
                             <?php foreach($data['ds6'] as $sp): ?>
                                 <div class="col-lg-3">
+                                    <a href="index.php?mod=product&act=detail&id=<?=$sp['masp']?>" style="text-decoration: none; color: #C5221F;">
                                     <div class="card">
                                         <div class="align-items-center">
                                             <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 200px; height: 200px; margin: auto; margin-top: 20px;">
                                             <div class="w-100 text-start ps-4">
                                                 <h5 class="justify-content-between pb-2">
-                                                    <p style="margin: auto; text-align: center;"><?=$sp['tensp']?></p>
+                                                    <p style="margin: auto; text-align: center; padding-bottom: 20px;"><?=$sp['tensp']?></p>
                                                     <p style="font-size: 16px; margin: auto; text-align: center;  padding-bottom: 20px;"><?=$sp['motangan']?></p>
                                                 </h5>
                                                 <p style=" color: #C5221F; font-size: 26px; margin: auto; text-align: center;  padding-bottom: 10px;"><?=$sp['giakm']?></p>
@@ -350,6 +363,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    </a>
                                 </div>
                                 <?php endforeach; ?>
 
@@ -361,12 +375,13 @@
 
                             <?php foreach($data['ds7'] as $sp): ?>
                                 <div class="col-lg-3">
+                                    <a href="index.php?mod=product&act=detail&id=<?=$sp['masp']?>" style="text-decoration: none; color: #C5221F;">
                                     <div class="card">
                                         <div class="align-items-center">
                                             <img class="flex-shrink-0 img-fluid rounded" src="upload/product/<?=$sp['hinhanhshow']?>" alt="" style="width: 200px; height: 200px; margin: auto; margin-top: 20px;">
                                             <div class="w-100 text-start ps-4">
                                                 <h5 class="justify-content-between pb-2">
-                                                    <p style="margin: auto; text-align: center;"><?=$sp['tensp']?></p>
+                                                    <p style="margin: auto; text-align: center; padding-bottom: 20px;"><?=$sp['tensp']?></p>
                                                     <p style="font-size: 16px; margin: auto; text-align: center;  padding-bottom: 20px;"><?=$sp['motangan']?></p>
                                                 </h5>
                                                 <p style=" color: #C5221F; font-size: 26px; margin: auto; text-align: center;  padding-bottom: 10px;"><?=$sp['giakm']?></p>
@@ -377,6 +392,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    </a>
                                 </div>
                                 <?php endforeach; ?>
 

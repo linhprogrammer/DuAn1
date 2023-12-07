@@ -348,4 +348,55 @@ function show_home(){
     return $stmt->fetchAll();
 }
 
+function get_sp_add_to_cart($id){
+    global $conn;
+    $sql = "SELECT * FROM sanpham WHERE masp = :id";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    return $stmt->fetch();
+}
+
+function removeFromCart($index) {
+    // Kiểm tra xem session cart có tồn tại không
+    if (isset($_SESSION['cart_' . $_SESSION['user']['id']]) && is_array($_SESSION['cart_' . $_SESSION['user']['id']])) {
+        // Kiểm tra xem index có hợp lệ không
+        if ($index >= 0 && $index < count($_SESSION['cart_' . $_SESSION['user']['id']])) {
+            // Xóa sản phẩm tại index
+            unset($_SESSION['cart_' . $_SESSION['user']['id']][$index]);
+
+            // Cập nhật lại session cart để loại bỏ khoảng trắng
+            $_SESSION['cart_' . $_SESSION['user']['id']] = array_values($_SESSION['cart_' . $_SESSION['user']['id']]);
+
+            // Kiểm tra xem giỏ hàng có trống không
+            if (empty($_SESSION['cart_' . $_SESSION['user']['id']])) {
+                // Nếu giỏ hàng trống, xóa hết session
+                session_unset();
+                session_destroy();
+                return 'empty_cart';
+            }
+
+            // Trả về kết quả thành công
+            return true;
+        }
+    }
+
+    // Trả về kết quả thất bại
+    return false;
+}
+
+function getImageSource($item)
+{
+    if (isset($item['type']) && $item['type'] == 'main') {
+        // Type is main, use upload/product folder
+        return 'upload/product/' . $item['image']; // Assuming 'image' is the key for the image name in your session data
+    } elseif (isset($item['type']) && $item['type'] == 'extra') {
+        // Type is extra, use upload/product_extra folder
+        return 'upload/product_extra/' . $item['image'];
+    }
+
+    // Default fallback image source
+    return 'path_to_default_image'; // Replace with the path to your default image
+}
 ?>
