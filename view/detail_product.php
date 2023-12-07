@@ -118,71 +118,7 @@
     </style>
 
  
-       <!-- Navbar & Hero Start -->
-       <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.php?mod=page&act=home" class="navbar-brand p-0">
-                    <img src="upload/logo.png" alt="Logo" style="transform: scale(1.8);">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav py-0 pe-4">
-                        <a href="index.php?mod=user&act=home" class="nav-item nav-link active">Trang Chủ</a>
-                        <div class="nav-item dropdown">
-                            <a href="index.php?mod=page&act=menu" class="nav-item nav-link">Thực Đơn</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="#" class="dropdown-item">Gà Rán</a>
-                                <a href="#" class="dropdown-item">Mì Ý</a>
-                                <a href="#" class="dropdown-item">Hamburger</a>
-                                <a href="#" class="dropdown-item">Đồ Uống</a>
-                                <a href="#" class="dropdown-item">Đồ Ăn Phụ</a>
-                                <a href="#" class="dropdown-item">Tráng Miệng</a>
-                                <a href="#" class="dropdown-item">ComBo</a>
-                            </div>
-                        </div>
-                        <a href="service.html" class="nav-item nav-link">Bài Viết</a>
-                        <a href="index.php?mod=page&act=about" class="nav-item nav-link">Về Chúng Tôi</a>
-                    </div>
-                    <nav class="navbar bg-body-tertiary" style="margin-left: auto;">
-                        <div class="container-fluid">
-                            <form action="index.php" method="get" class="d-flex" role="search">
-                                <input class="form-control me-2" name="keyword" style="width: 300px;" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit"><ion-icon style="margin-top: 5px;" name="search-outline"></ion-icon></button>
-                                <input type="hidden" name="mod" value="page">
-                                <input type="hidden" name="act" value="search">
-                            </form>
-                        </div>
-                    </nav>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined"  style="font-size: 38px; margin-left: 10px;">
-                            account_circle
-                            </span></a>
-                            <div class="dropdown-menu m-0">
-                                <a href="index.php?mod=user&act=signup" class="dropdown-item">Xin chào  <?= $_SESSION['user']['username'] ?> </a>
-                                <a href="index.php?mod=page&act=info&id=<?= $_SESSION['user']['id'] ?>" class="dropdown-item">Thông tin tài khoản</a>
-                                <a href="#" class="dropdown-item">Đơn hàng</a>
-                                <a href="index.php?mod=user&act=logout" class="dropdown-item">Đăng xuất</a>
-                            </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a href="index.php?mod=page&act=cart"  class="nav-item nav-link"><span class="material-symbols-outlined" style="font-size: 38px; margin-left: 10px;">
-                            shopping_cart
-                            </span></a>
-                            <div class="dropdown-menu m-0">
-                                <a href="index.php?mod=order&act=status" class="dropdown-item">Đơn hàng</a>
-                                <a href="index.php?mod=page&act=info&id=" class="dropdown-item">Lịch sử mua hàng</a>
-                            </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <!-- Navbar & Hero End -->
 
-
-
-    <!-- Product Details Section Begin -->
     <section class="product-details spad">
         <div class="container">
             <div class="row">

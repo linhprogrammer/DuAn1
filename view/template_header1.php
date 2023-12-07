@@ -106,7 +106,7 @@
                 </div>
             </nav>
 
-            <div class="container-xxl py-5 hero-header mb-5">
+            <div class="container-xxl bg-light py-5 hero-header mb-5">
             </div>
         </div>
         <!-- Navbar & Hero End -->

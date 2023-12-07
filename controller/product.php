@@ -45,7 +45,11 @@ if (isset($_GET['act']))
                 $data['img'] = show_images($_GET['id']);
             }
             
-
+            if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
+                include_once 'view/template_header1.php';
+            } else {
+                include_once 'view/template_header.php';
+            }
             include_once 'view/detail_product.php';
             include_once 'view/template_footer.php';
             break;

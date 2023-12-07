@@ -36,66 +36,7 @@
 </head>
 
 <body>
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.php?mod=page&act=home" class="navbar-brand p-0">
-                    <img src="upload/logo.png" alt="Logo" style="transform: scale(1.8);">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav py-0 pe-4">
-                        <a href="index.php?mod=page&act=home" class="nav-item nav-link ">Trang Chủ</a>
-                        <div class="nav-item dropdown">
-                        <a href="index.php?mod=page&act=menu" class="nav-item nav-link active">Thực Đơn</a>
-                            <div class="m-0">
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <button type="submit" name="submit1" class="dropdown-item" value="Gà">Gà
-                                        <button type="submit" name="submit2" class="dropdown-item" value="Hamburger">Hamburger
-                                        <button type="submit" name="submit3" class="dropdown-item" value="Gà">Mì ý
-                                        <button type="submit" name="submit4" class="dropdown-item" value="Gà">Đồ ăn phụ
-                                        <button type="submit" name="submit5" class="dropdown-item" value="Gà">Tráng miệng
-                                        <button type="submit" name="submit6" class="dropdown-item" value="Gà">Thức uống
-                                        <button type="submit" name="submit7" class="dropdown-item" value="Gà">Compo
-                                        <button type="submit" name="submit" class="dropdown-item" value="Gà">Tất cả
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <a href="service.html" class="nav-item nav-link">Bài Viết</a>
-                        <a href="index.php?mod=page&act=about" class="nav-item nav-link">Về Chúng Tôi</a>
-                    </div>
-                    <nav class="navbar bg-body-tertiary" style="margin-left: auto;">
-                        <div class="container-fluid">
-                            <form action="index.php" method="get" class="d-flex" role="search">
-                                <input class="form-control me-2" name="keyword" style="width: 300px;" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit"><ion-icon style="margin-top: 5px;" name="search-outline"></ion-icon></button>
-                                <input type="hidden" name="mod" value="page">
-                                <input type="hidden" name="act" value="search">
-                            </form>
-                        </div>
-                    </nav>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined"  style="font-size: 38px; margin-left: 10px;">
-                            account_circle
-                            </span></a>
-                        <div class="dropdown-menu m-0">
-                            <a href="index.php?mod=user&act=signup" class="dropdown-item ">Đăng Ký</a>
-                            <a href="index.php?mod=user&act=login" class="dropdown-item ">Đăng Nhập</a>
-                        </div>
-                    </div>
-                    <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined" style="font-size: 38px; margin-left: 10px;">shopping_cart</span></a>
-                </div>
-            </nav>
 
-            <div class="container-xxl py-5 hero-header mb-5">
-            </div>
-        </div>
-        <!-- Navbar & Hero End -->
 
     <!-- Menu Start -->
        <div class="container-xxl">
