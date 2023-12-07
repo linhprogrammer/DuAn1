@@ -16,7 +16,9 @@
       margin-bottom: 20px;
       text-align: center;
     }
-
+    .screen-1{
+      min-height: 600px;
+    }
     .sdt,
     .password,.hovaten {
       margin-bottom: 20px;
